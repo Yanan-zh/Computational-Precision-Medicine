@@ -1,4 +1,4 @@
-"patient"	"gender"	"age"	"treatment response"	"tissue"	"timepoint"
+"patient"	"gender"	"age"	"treatment_response"	"tissue"	"timepoint"
 "VC"	"Male"	"69y"	"Non-responder (NR)"	"Mucosa"	"pretreatment"
 "VC"	"Male"	"69y"	"Non-responder (NR)"	"Tumor"	"pretreatment"
 "VC"	"Male"	"69y"	"Non-responder (NR)"	"Tumor"	"3 weeks after start of treatment"
