@@ -1,0 +1,74 @@
+---
+title: "Untitled"
+author: "yanan zhao"
+date: '2022-06-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+```{r}
+install.packages(c("devtools","curl")) ##Installs devtools and the MCPcounter dependancy 'curl'
+library(devtools)
+install_github("ebecht/MCPcounter",ref="master", subdir="Source")
+```
+
+
+
+```{r}
+expr = read.table('data/expr.txt')
+expression = expr %>% data.frame(names = row.names(expr))
+
+```
+
+
+```{r}
+matchlist= read.table('data/probeID_GeneSymbol.txt', header = TRUE)
+
+matchlist = matchlist %>%  rename(names=probeID)
+```
+
+```{r}
+mcp = left_join(expression, matchlist, by = "names") 
+```
+
+
+```{r}
+
+expressionall = mcp %>% select(-51) %>% filter(!grepl('---',GeneSymbol)) %>% na.omit() 
+
+
+expressionfinal = aggregate(expressionall[, 1:50], list(expressionall$GeneSymbol), mean)
+
+
+expressionfinal = expressionfinal %>% remove_rownames %>% column_to_rownames(var="Group.1") 
+
+```
+
+
+```{r}
+RESULT = MCPcounter.estimate(expressionfinal,featuresType='HUGO_symbols')
+heatmap(as.matrix(RESULT),col=colorRampPalette(c("blue","white","red"))(100)) 
+```
+
+
+```{r}
+
+expressionexclude = expressionfinal %>% filter(rownames(expressionfinal) %in% matchlist[["GeneSymbol"]])
+
+```
+
+
