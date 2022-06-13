@@ -26,7 +26,9 @@ probeID_GeneSymbol <- microarray_platform %>%
     rename(probeID = ID,
            GeneSymbol = Gene.Symbol) %>% 
     mutate(GeneSymbol = str_split(GeneSymbol, pattern = " /// ")) %>% 
-    unnest(GeneSymbol)
+    unnest(GeneSymbol) %>% 
+    filter(!str_detect(GeneSymbol, pattern = "//")) %>% 
+    filter(GeneSymbol != "")
 
 # Save data
 write.table(expr, "data/expr.txt", sep = "\t", row.names = TRUE, quote = FALSE)
