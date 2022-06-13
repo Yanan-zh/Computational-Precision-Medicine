@@ -89,8 +89,8 @@ AFFYMETRIX_3PRIME_IVT_ID	Name	Species	name_abbr
 11746958_s_at	acid sensing ion channel subunit 1(ASIC1)	Homo sapiens	ASIC1
 11729959_a_at	acid sensing ion channel subunit 1(ASIC1)	Homo sapiens	ASIC1
 11752092_s_at	acid sensing ion channel subunit 1(ASIC1)	Homo sapiens	ASIC1
-11733280_a_at	acetylcholinesterase (Cartwright blood group)(ACHE)	Homo sapiens	Cartwright blood group
-11733279_a_at	acetylcholinesterase (Cartwright blood group)(ACHE)	Homo sapiens	Cartwright blood group
+11733280_a_at	acetylcholinesterase (Cartwright blood group)(ACHE)	Homo sapiens	ACHE
+11733279_a_at	acetylcholinesterase (Cartwright blood group)(ACHE)	Homo sapiens	ACHE
 11720773_x_at	DnaJ heat shock protein family (Hsp40) member C19(DNAJC19)	Homo sapiens	Hsp40
 11720774_s_at	DnaJ heat shock protein family (Hsp40) member C19(DNAJC19)	Homo sapiens	Hsp40
 11720620_s_at	ATP citrate lyase(ACLY)	Homo sapiens	ACLY
@@ -260,26 +260,26 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11721606_a_at	adducin 3(ADD3)	Homo sapiens	ADD3
 11742746_a_at	perilipin 2(PLIN2)	Homo sapiens	PLIN2
 11742745_a_at	perilipin 2(PLIN2)	Homo sapiens	PLIN2
-11728639_x_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	class I
-11722994_s_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	class I
-11728638_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	class I
-11747167_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	class I
-11758877_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	class I
-11746322_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	class I
-11722995_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	class I
-11746898_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	class I
-11730779_at	alcohol dehydrogenase 1C (class I), gamma polypeptide(ADH1C)	Homo sapiens	class I
-11730780_x_at	alcohol dehydrogenase 1C (class I), gamma polypeptide(ADH1C)	Homo sapiens	class I
-11754277_a_at	alcohol dehydrogenase 4 (class II), pi polypeptide(ADH4)	Homo sapiens	class II
-11716392_s_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	class III
-11716394_x_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	class III
-11716393_x_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	class III
-11758757_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	class III
-11751669_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	class V
-11735686_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	class V
-11744437_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	class V
-11755742_a_at	alcohol dehydrogenase 7 (class IV), mu or sigma polypeptide(ADH7)	Homo sapiens	class IV
-11728753_at	alcohol dehydrogenase 7 (class IV), mu or sigma polypeptide(ADH7)	Homo sapiens	class IV
+11728639_x_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	ADH1A
+11722994_s_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	ADH1A
+11728638_at	alcohol dehydrogenase 1A (class I), alpha polypeptide(ADH1A)	Homo sapiens	ADH1A
+11747167_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	ADH1B
+11758877_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	ADH1B
+11746322_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	ADH1B
+11722995_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	ADH1B
+11746898_x_at	alcohol dehydrogenase 1B (class I), beta polypeptide(ADH1B)	Homo sapiens	ADH1B
+11730779_at	alcohol dehydrogenase 1C (class I), gamma polypeptide(ADH1C)	Homo sapiens	ADH1C
+11730780_x_at	alcohol dehydrogenase 1C (class I), gamma polypeptide(ADH1C)	Homo sapiens	ADH1C
+11754277_a_at	alcohol dehydrogenase 4 (class II), pi polypeptide(ADH4)	Homo sapiens	ADH4
+11716392_s_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	ADH5
+11716394_x_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	ADH5
+11716393_x_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	ADH5
+11758757_at	alcohol dehydrogenase 5 (class III), chi polypeptide(ADH5)	Homo sapiens	ADH5
+11751669_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	ADH6
+11735686_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	ADH6
+11744437_a_at	alcohol dehydrogenase 6 (class V)(ADH6)	Homo sapiens	ADH6
+11755742_a_at	alcohol dehydrogenase 7 (class IV), mu or sigma polypeptide(ADH7)	Homo sapiens	ADH7
+11728753_at	alcohol dehydrogenase 7 (class IV), mu or sigma polypeptide(ADH7)	Homo sapiens	ADH7
 11741777_x_at	polyamine oxidase(PAOX)	Homo sapiens	PAOX
 11753732_a_at	polyamine oxidase(PAOX)	Homo sapiens	PAOX
 11742127_a_at	polyamine oxidase(PAOX)	Homo sapiens	PAOX
@@ -611,10 +611,10 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11758637_x_at	amylase alpha 1A(AMY1A)	Homo sapiens	AMY1A
 11761392_x_at	amylase alpha 1A(AMY1A)	Homo sapiens	AMY1A
 11715490_s_at	amylase alpha 1A(AMY1A)	Homo sapiens	AMY1A
-11748067_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	NMD candidate
-11750355_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	NMD candidate
-11748068_x_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	NMD candidate
-11723007_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	NMD candidate
+11748067_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	DNAAF4-CCPG1
+11750355_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	DNAAF4-CCPG1
+11748068_x_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	DNAAF4-CCPG1
+11723007_a_at	DNAAF4-CCPG1 readthrough (NMD candidate)(DNAAF4-CCPG1)	Homo sapiens	DNAAF4-CCPG1
 11744433_x_at	amylase alpha 2B(AMY2B)	Homo sapiens	AMY2B
 11721569_a_at	angiogenin(ANG)	Homo sapiens	ANG
 11726693_s_at	angiopoietin 1(ANGPT1)	Homo sapiens	ANGPT1
@@ -834,16 +834,16 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11727274_a_at	shroom family member 2(SHROOM2)	Homo sapiens	SHROOM2
 11727273_a_at	shroom family member 2(SHROOM2)	Homo sapiens	SHROOM2
 11746168_a_at	shroom family member 2(SHROOM2)	Homo sapiens	SHROOM2
-11715942_a_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	Colton blood group
-11715941_s_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	Colton blood group
-11756045_s_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	Colton blood group
-11747177_x_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	Colton blood group
+11715942_a_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	AQP1
+11715941_s_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	AQP1
+11756045_s_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	AQP1
+11747177_x_at	aquaporin 1 (Colton blood group)(AQP1)	Homo sapiens	AQP1
 11729930_at	aquaporin 2(AQP2)	Homo sapiens	AQP2
 11729928_a_at	aquaporin 2(AQP2)	Homo sapiens	AQP2
 11729929_a_at	aquaporin 2(AQP2)	Homo sapiens	AQP2
-11756585_a_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	Gill blood group
-11747494_a_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	Gill blood group
-11760931_x_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	Gill blood group
+11756585_a_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	AQP3
+11747494_a_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	AQP3
+11760931_x_at	aquaporin 3 (Gill blood group)(AQP3)	Homo sapiens	AQP3
 11752685_a_at	aquaporin 4(AQP4)	Homo sapiens	AQP4
 11722621_a_at	aquaporin 4(AQP4)	Homo sapiens	AQP4
 11722619_a_at	aquaporin 4(AQP4)	Homo sapiens	AQP4
@@ -1595,12 +1595,12 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11715816_at	ZFP36 ring finger protein like 2(ZFP36L2)	Homo sapiens	ZFP36L2
 11715818_at	ZFP36 ring finger protein like 2(ZFP36L2)	Homo sapiens	ZFP36L2
 11737304_at	bombesin receptor subtype 3(BRS3)	Homo sapiens	BRS3
-11739875_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
-11735705_s_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
-11739877_x_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
-11754083_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
-11739876_s_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
-11735706_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	Ok blood group
+11739875_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
+11735705_s_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
+11739877_x_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
+11754083_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
+11739876_s_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
+11735706_a_at	basigin (Ok blood group)(BSG)	Homo sapiens	BSG
 11729846_a_at	bone marrow stromal cell antigen 1(BST1)	Homo sapiens	BST1
 11716035_at	bone marrow stromal cell antigen 2(BST2)	Homo sapiens	BST2
 11716034_a_at	bone marrow stromal cell antigen 2(BST2)	Homo sapiens	BST2
@@ -1657,7 +1657,7 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11721099_at	complement C3a receptor 1(C3AR1)	Homo sapiens	C3AR1
 11715155_s_at	tubulin beta 8 class VIII pseudogene 7(TUBB8P7)	Homo sapiens	TUBB8P7
 11759455_s_at	tubulin beta 8 class VIII pseudogene 7(TUBB8P7)	Homo sapiens	TUBB8P7
-11718934_a_at	complement C4A (Rodgers blood group)(C4A)	Homo sapiens	Rodgers blood group
+11718934_a_at	complement C4A (Rodgers blood group)(C4A)	Homo sapiens	C4A
 11723949_a_at	complement component 4 binding protein alpha(C4BPA)	Homo sapiens	C4BPA
 11744719_x_at	complement component 4 binding protein alpha(C4BPA)	Homo sapiens	C4BPA
 11722974_a_at	WD repeat domain 90(WDR90)	Homo sapiens	WDR90
@@ -1833,9 +1833,9 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11717528_a_at	solute carrier family 25 member 20(SLC25A20)	Homo sapiens	SLC25A20
 11717529_at	solute carrier family 25 member 20(SLC25A20)	Homo sapiens	SLC25A20
 11718531_a_at	carbamoyl-phosphate synthetase 2, aspartate transcarbamylase, and dihydroorotase(CAD)	Homo sapiens	CAD
-11734042_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	NMD candidate
-11742707_a_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	NMD candidate
-11745392_a_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	NMD candidate
+11734042_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	APOC4-APOC2
+11742707_a_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	APOC4-APOC2
+11745392_a_at	APOC4-APOC2 readthrough (NMD candidate)(APOC4-APOC2)	Homo sapiens	APOC4-APOC2
 11725979_a_at	calbindin 1(CALB1)	Homo sapiens	CALB1
 11754472_a_at	calbindin 1(CALB1)	Homo sapiens	CALB1
 11725082_a_at	calbindin 2(CALB2)	Homo sapiens	CALB2
@@ -1883,8 +1883,8 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11726101_s_at	calmodulin like 3(CALML3)	Homo sapiens	CALML3
 11715375_x_at	calreticulin(CALR)	Homo sapiens	CALR
 11715374_a_at	calreticulin(CALR)	Homo sapiens	CALR
-11741450_a_at	P2RX5-TAX1BP3 readthrough (NMD candidate)(P2RX5-TAX1BP3)	Homo sapiens	NMD candidate
-11715876_at	P2RX5-TAX1BP3 readthrough (NMD candidate)(P2RX5-TAX1BP3)	Homo sapiens	NMD candidate
+11741450_a_at	P2RX5-TAX1BP3 readthrough (NMD candidate)(P2RX5-TAX1BP3)	Homo sapiens	P2RX5-TAX1BP3
+11715876_at	P2RX5-TAX1BP3 readthrough (NMD candidate)(P2RX5-TAX1BP3)	Homo sapiens	P2RX5-TAX1BP3
 11725307_s_at	calumenin(CALU)	Homo sapiens	CALU
 11725306_s_at	calumenin(CALU)	Homo sapiens	CALU
 11725308_a_at	calumenin(CALU)	Homo sapiens	CALU
@@ -1944,9 +1944,9 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11720911_a_at	calpain 6(CAPN6)	Homo sapiens	CAPN6
 11742730_a_at	calcyphosine(CAPS)	Homo sapiens	CAPS
 11740241_x_at	calcyphosine(CAPS)	Homo sapiens	CAPS
-11751318_s_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	NMD candidate
-11751319_x_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	NMD candidate
-11743120_s_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	NMD candidate
+11751318_s_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	SENP3-EIF4A1
+11751319_x_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	SENP3-EIF4A1
+11743120_s_at	SENP3-EIF4A1 readthrough (NMD candidate)(SENP3-EIF4A1)	Homo sapiens	SENP3-EIF4A1
 11739008_x_at	capping actin protein of muscle Z-line subunit alpha 1(CAPZA1)	Homo sapiens	CAPZA1
 11739006_x_at	capping actin protein of muscle Z-line subunit alpha 1(CAPZA1)	Homo sapiens	CAPZA1
 11739007_at	capping actin protein of muscle Z-line subunit alpha 1(CAPZA1)	Homo sapiens	CAPZA1
@@ -2279,16 +2279,16 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11731818_a_at	CD40 molecule(CD40)	Homo sapiens	CD40
 11735106_at	CD40 ligand(CD40LG)	Homo sapiens	CD40LG
 11735105_a_at	CD40 ligand(CD40LG)	Homo sapiens	CD40LG
-11742043_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11753292_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11750189_s_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11715916_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11744654_s_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11753291_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11739617_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11715915_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11750190_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
-11715917_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	Indian blood group
+11742043_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11753292_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11750189_s_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11715916_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11744654_s_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11753291_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11739617_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11715915_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11750190_x_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
+11715917_a_at	CD44 molecule (Indian blood group)(CD44)	Homo sapiens	CD44
 11743348_a_at	CD47 molecule(CD47)	Homo sapiens	CD47
 11743347_a_at	CD47 molecule(CD47)	Homo sapiens	CD47
 11735329_a_at	CD47 molecule(CD47)	Homo sapiens	CD47
@@ -2302,11 +2302,11 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11724689_a_at	CD58 molecule(CD58)	Homo sapiens	CD58
 11754000_x_at	CD58 molecule(CD58)	Homo sapiens	CD58
 11737835_at	CD58 molecule(CD58)	Homo sapiens	CD58
-11718100_s_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59 blood group
-11757306_s_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59 blood group
-11718101_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59 blood group
-11763244_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59 blood group
-11718102_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59 blood group
+11718100_s_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59
+11757306_s_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59
+11718101_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59
+11763244_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59
+11718102_at	CD59 molecule (CD59 blood group)(CD59)	Homo sapiens	CD59
 11744260_a_at	CD63 molecule(CD63)	Homo sapiens	CD63
 11757417_x_at	CD63 molecule(CD63)	Homo sapiens	CD63
 11729741_x_at	CD68 molecule(CD68)	Homo sapiens	CD68
@@ -2332,11 +2332,11 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11715394_s_at	CD81 molecule(CD81)	Homo sapiens	CD81
 11718680_a_at	adhesion G protein-coupled receptor E5(ADGRE5)	Homo sapiens	ADGRE5
 11750408_a_at	adhesion G protein-coupled receptor E5(ADGRE5)	Homo sapiens	ADGRE5
-11741144_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	Raph blood group
-11735702_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	Raph blood group
-11744333_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	Raph blood group
-11735701_a_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	Raph blood group
-11735716_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	Raph blood group
+11741144_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	CD151
+11735702_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	CD151
+11744333_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	CD151
+11735701_a_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	CD151
+11735716_x_at	CD151 molecule (Raph blood group)(CD151)	Homo sapiens	CD151
 11753626_a_at	cytidine deaminase(CDA)	Homo sapiens	CDA
 11755103_a_at	cytidine deaminase(CDA)	Homo sapiens	CDA
 11745843_a_at	cyclin dependent kinase 1(CDK1)	Homo sapiens	CDK1
@@ -2442,15 +2442,15 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11717845_a_at	cyclin dependent kinase 7(CDK7)	Homo sapiens	CDK7
 11763387_s_at	cyclin dependent kinase 8(CDK8)	Homo sapiens	CDK8
 11745882_s_at	cyclin dependent kinase 8(CDK8)	Homo sapiens	CDK8
-11756682_x_at	INO80B-WBP1 readthrough (NMD candidate)(INO80B-WBP1)	Homo sapiens	NMD candidate
+11756682_x_at	INO80B-WBP1 readthrough (NMD candidate)(INO80B-WBP1)	Homo sapiens	INO80B-WBP1
 11720661_at	cyclin dependent kinase 9(CDK9)	Homo sapiens	CDK9
 11720659_at	cyclin dependent kinase 9(CDK9)	Homo sapiens	CDK9
 11720660_s_at	cyclin dependent kinase 9(CDK9)	Homo sapiens	CDK9
-11721722_x_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	NMD candidate
-11721721_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	NMD candidate
-11753392_x_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	NMD candidate
-11752185_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	NMD candidate
-11756458_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	NMD candidate
+11721722_x_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	MSH5-SAPCD1
+11721721_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	MSH5-SAPCD1
+11753392_x_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	MSH5-SAPCD1
+11752185_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	MSH5-SAPCD1
+11756458_a_at	MSH5-SAPCD1 readthrough (NMD candidate)(MSH5-SAPCD1)	Homo sapiens	MSH5-SAPCD1
 11715388_s_at	cyclin dependent kinase inhibitor 1A(CDKN1A)	Homo sapiens	CDKN1A
 11715387_at	cyclin dependent kinase inhibitor 1A(CDKN1A)	Homo sapiens	CDKN1A
 11748603_a_at	cyclin dependent kinase inhibitor 1B(CDKN1B)	Homo sapiens	CDKN1B
@@ -2478,8 +2478,8 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11753880_x_at	cyclin dependent kinase inhibitor 3(CDKN3)	Homo sapiens	CDKN3
 11753788_x_at	cyclin dependent kinase inhibitor 3(CDKN3)	Homo sapiens	CDKN3
 11753831_x_at	cyclin dependent kinase inhibitor 3(CDKN3)	Homo sapiens	CDKN3
-11752117_x_at	NPHP3-ACAD11 readthrough (NMD candidate)(NPHP3-ACAD11)	Homo sapiens	NMD candidate
-11747825_a_at	NPHP3-ACAD11 readthrough (NMD candidate)(NPHP3-ACAD11)	Homo sapiens	NMD candidate
+11752117_x_at	NPHP3-ACAD11 readthrough (NMD candidate)(NPHP3-ACAD11)	Homo sapiens	NPHP3-ACAD11
+11747825_a_at	NPHP3-ACAD11 readthrough (NMD candidate)(NPHP3-ACAD11)	Homo sapiens	NPHP3-ACAD11
 11717913_at	cysteine dioxygenase type 1(CDO1)	Homo sapiens	CDO1
 11737482_x_at	cerebellar degeneration related protein 1(CDR1)	Homo sapiens	CDR1
 11737481_s_at	cerebellar degeneration related protein 1(CDR1)	Homo sapiens	CDR1
@@ -3129,9 +3129,9 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11732524_a_at	carnitine palmitoyltransferase 1B(CPT1B)	Homo sapiens	CPT1B
 11733255_a_at	carnitine palmitoyltransferase 1B(CPT1B)	Homo sapiens	CPT1B
 11742926_at	carnitine palmitoyltransferase 2(CPT2)	Homo sapiens	CPT2
-11762183_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	Knops blood group
-11733587_a_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	Knops blood group
-11747196_s_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	Knops blood group
+11762183_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	CR1
+11733587_a_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	CR1
+11747196_s_at	complement C3b/C4b receptor 1 (Knops blood group)(CR1)	Homo sapiens	CR1
 11747197_x_at	complement C3b/C4b receptor 1 like(CR1L)	Homo sapiens	CR1L
 11743227_at	complement C3b/C4b receptor 1 like(CR1L)	Homo sapiens	CR1L
 11743228_x_at	complement C3b/C4b receptor 1 like(CR1L)	Homo sapiens	CR1L
@@ -3605,18 +3605,18 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11720317_a_at	defender against cell death 1(DAD1)	Homo sapiens	DAD1
 11754060_a_at	defender against cell death 1(DAD1)	Homo sapiens	DAD1
 11757687_x_at	defender against cell death 1(DAD1)	Homo sapiens	DAD1
-11762060_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11755084_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11746180_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11760294_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11752832_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11728701_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11762726_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	Cromer blood group
-11742094_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	NMD candidate
-11748923_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	NMD candidate
-11754036_s_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	NMD candidate
-11742096_x_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	NMD candidate
-11742095_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	NMD candidate
+11762060_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11755084_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11746180_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11760294_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11752832_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11728701_a_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11762726_x_at	CD55 molecule (Cromer blood group)(CD55)	Homo sapiens	CD55
+11742094_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	UBE2F-SCLY
+11748923_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	UBE2F-SCLY
+11754036_s_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	UBE2F-SCLY
+11742096_x_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	UBE2F-SCLY
+11742095_a_at	UBE2F-SCLY readthrough (NMD candidate)(UBE2F-SCLY)	Homo sapiens	UBE2F-SCLY
 11715548_a_at	dystroglycan 1(DAG1)	Homo sapiens	DAG1
 11715550_at	dystroglycan 1(DAG1)	Homo sapiens	DAG1
 11757880_s_at	dystroglycan 1(DAG1)	Homo sapiens	DAG1
@@ -3776,7 +3776,7 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11732988_at	defensin alpha 6(DEFA6)	Homo sapiens	DEFA6
 11723845_a_at	defensin beta 1(DEFB1)	Homo sapiens	DEFB1
 11723846_at	defensin beta 1(DEFB1)	Homo sapiens	DEFB1
-11748155_a_at	ZNF670-ZNF695 readthrough (NMD candidate)(ZNF670-ZNF695)	Homo sapiens	NMD candidate
+11748155_a_at	ZNF670-ZNF695 readthrough (NMD candidate)(ZNF670-ZNF695)	Homo sapiens	ZNF670-ZNF695
 11738511_at	defensin beta 4A(DEFB4A)	Homo sapiens	DEFB4A
 11717048_a_at	desmin(DES)	Homo sapiens	DES
 11717049_s_at	desmin(DES)	Homo sapiens	DES
@@ -3788,13 +3788,13 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11726263_x_at	DNA fragmentation factor subunit alpha(DFFA)	Homo sapiens	DFFA
 11726261_at	DNA fragmentation factor subunit alpha(DFFA)	Homo sapiens	DFFA
 11739517_x_at	DNA fragmentation factor subunit alpha(DFFA)	Homo sapiens	DFFA
-11720020_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11746619_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11756620_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11720021_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11720019_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11745427_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
-11741588_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	NMD candidate
+11720020_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11746619_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11756620_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11720021_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11720019_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11745427_x_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
+11741588_a_at	RTEL1-TNFRSF6B readthrough (NMD candidate)(RTEL1-TNFRSF6B)	Homo sapiens	RTEL1-TNFRSF6B
 11745694_x_at	DNA fragmentation factor subunit beta(DFFB)	Homo sapiens	DFFB
 11745693_a_at	DNA fragmentation factor subunit beta(DFFB)	Homo sapiens	DFFB
 11731383_a_at	DNA fragmentation factor subunit beta(DFFB)	Homo sapiens	DFFB
@@ -4371,9 +4371,9 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11717861_a_at	early growth response 1(EGR1)	Homo sapiens	EGR1
 11717860_a_at	early growth response 1(EGR1)	Homo sapiens	EGR1
 11751643_x_at	early growth response 1(EGR1)	Homo sapiens	EGR1
-11738539_a_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	NMD candidate
-11763935_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	NMD candidate
-11728961_a_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	NMD candidate
+11738539_a_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	TSNAX-DISC1
+11763935_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	TSNAX-DISC1
+11728961_a_at	TSNAX-DISC1 readthrough (NMD candidate)(TSNAX-DISC1)	Homo sapiens	TSNAX-DISC1
 11756832_a_at	early growth response 2(EGR2)	Homo sapiens	EGR2
 11734811_a_at	early growth response 2(EGR2)	Homo sapiens	EGR2
 11722728_a_at	early growth response 2(EGR2)	Homo sapiens	EGR2
@@ -4557,9 +4557,9 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11743265_a_at	endosulfine alpha(ENSA)	Homo sapiens	ENSA
 11741326_x_at	endosulfine alpha(ENSA)	Homo sapiens	ENSA
 11716274_a_at	endosulfine alpha(ENSA)	Homo sapiens	ENSA
-11760896_x_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	Augustine blood group
-11760895_a_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	Augustine blood group
-11717162_a_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	Augustine blood group
+11760896_x_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	SLC29A1
+11760895_a_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	SLC29A1
+11717162_a_at	solute carrier family 29 member 1 (Augustine blood group)(SLC29A1)	Homo sapiens	SLC29A1
 11725127_at	E1A binding protein p300(EP300)	Homo sapiens	EP300
 11715411_a_at	endothelial PAS domain protein 1(EPAS1)	Homo sapiens	EPAS1
 11715412_a_at	endothelial PAS domain protein 1(EPAS1)	Homo sapiens	EPAS1
@@ -4567,10 +4567,10 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11739122_a_at	erythrocyte membrane protein band 4.1(EPB41)	Homo sapiens	EPB41
 11746365_a_at	erythrocyte membrane protein band 4.1(EPB41)	Homo sapiens	EPB41
 11746366_x_at	erythrocyte membrane protein band 4.1(EPB41)	Homo sapiens	EPB41
-11731608_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	NMD candidate
-11751168_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	NMD candidate
-11762111_x_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	NMD candidate
-11753258_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	NMD candidate
+11731608_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	PPT2-EGFL8
+11751168_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	PPT2-EGFL8
+11762111_x_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	PPT2-EGFL8
+11753258_s_at	PPT2-EGFL8 readthrough (NMD candidate)(PPT2-EGFL8)	Homo sapiens	PPT2-EGFL8
 11747976_x_at	erythrocyte membrane protein band 4.1 like 1(EPB41L1)	Homo sapiens	EPB41L1
 11721168_a_at	erythrocyte membrane protein band 4.1 like 1(EPB41L1)	Homo sapiens	EPB41L1
 11721167_a_at	erythrocyte membrane protein band 4.1 like 1(EPB41L1)	Homo sapiens	EPB41L1
@@ -4615,13 +4615,13 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11731250_a_at	EPH receptor A8(EPHA8)	Homo sapiens	EPHA8
 11731251_at	EPH receptor A8(EPHA8)	Homo sapiens	EPHA8
 11734494_at	EPH receptor A8(EPHA8)	Homo sapiens	EPHA8
-200041_PM_s_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11715527_x_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11736015_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11715526_s_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11715525_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11715529_x_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
-11715528_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	NMD candidate
+200041_PM_s_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11715527_x_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11736015_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11715526_s_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11715525_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11715529_x_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
+11715528_a_at	ATP6V1G2-DDX39B readthrough (NMD candidate)(ATP6V1G2-DDX39B)	Homo sapiens	ATP6V1G2-DDX39B
 11755617_s_at	EPH receptor B1(EPHB1)	Homo sapiens	EPHB1
 11763797_s_at	EPH receptor B1(EPHB1)	Homo sapiens	EPHB1
 11763796_at	EPH receptor B1(EPHB1)	Homo sapiens	EPHB1
@@ -5400,13 +5400,13 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11760727_at	alpha-L-fucosidase 2(FUCA2)	Homo sapiens	FUCA2
 11730167_at	gastrin(GAST)	Homo sapiens	GAST
 11745190_a_at	FUS RNA binding protein(FUS)	Homo sapiens	FUS
-11725290_at	fucosyltransferase 1 (H blood group)(FUT1)	Homo sapiens	H blood group
-11725291_at	fucosyltransferase 1 (H blood group)(FUT1)	Homo sapiens	H blood group
+11725290_at	fucosyltransferase 1 (H blood group)(FUT1)	Homo sapiens	FUT1
+11725291_at	fucosyltransferase 1 (H blood group)(FUT1)	Homo sapiens	FUT1
 11730927_x_at	fucosyltransferase 2(FUT2)	Homo sapiens	FUT2
 11749583_a_at	fucosyltransferase 2(FUT2)	Homo sapiens	FUT2
-11728008_x_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	Lewis blood group
-11739970_a_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	Lewis blood group
-11728007_x_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	Lewis blood group
+11728008_x_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	FUT3
+11739970_a_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	FUT3
+11728007_x_at	fucosyltransferase 3 (Lewis blood group)(FUT3)	Homo sapiens	FUT3
 11728155_s_at	fucosyltransferase 4(FUT4)	Homo sapiens	FUT4
 11728154_s_at	fucosyltransferase 4(FUT4)	Homo sapiens	FUT4
 11741926_x_at	fucosyltransferase 5(FUT5)	Homo sapiens	FUT5
@@ -5422,7 +5422,7 @@ AFFX-HSAC07/X00351_5_at	actin beta(ACTB)	Homo sapiens	ACTB
 11751627_a_at	3-ketodihydrosphingosine reductase(KDSR)	Homo sapiens	KDSR
 11730181_s_at	3-ketodihydrosphingosine reductase(KDSR)	Homo sapiens	KDSR
 11730180_s_at	3-ketodihydrosphingosine reductase(KDSR)	Homo sapiens	KDSR
-11757035_a_at	atypical chemokine receptor 1 (Duffy blood group)(ACKR1)	Homo sapiens	Duffy blood group
+11757035_a_at	atypical chemokine receptor 1 (Duffy blood group)(ACKR1)	Homo sapiens	ACKR1
 11724004_a_at	FYN binding protein 1(FYB1)	Homo sapiens	FYB1
 11730373_a_at	FYN binding protein 1(FYB1)	Homo sapiens	FYB1
 11730372_a_at	FYN binding protein 1(FYB1)	Homo sapiens	FYB1
@@ -6282,7 +6282,7 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11762338_at	glutathione S-transferase pi 1(GSTP1)	Homo sapiens	GSTP1
 11715344_at	glutathione S-transferase pi 1(GSTP1)	Homo sapiens	GSTP1
 11719246_a_at	glutathione S-transferase theta 1(GSTT1)	Homo sapiens	GSTT1
-11722903_s_at	glutathione S-transferase theta 2 (gene/pseudogene)(GSTT2)	Homo sapiens	gene/pseudogene
+11722903_s_at	glutathione S-transferase theta 2 (gene/pseudogene)(GSTT2)	Homo sapiens	GSTT2
 11741826_a_at	glutathione S-transferase zeta 1(GSTZ1)	Homo sapiens	GSTZ1
 11727400_a_at	glutathione S-transferase zeta 1(GSTZ1)	Homo sapiens	GSTZ1
 11741827_x_at	glutathione S-transferase zeta 1(GSTZ1)	Homo sapiens	GSTZ1
@@ -6378,23 +6378,23 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11737814_a_at	glycogenin 1(GYG1)	Homo sapiens	GYG1
 11750078_a_at	glycogenin 1(GYG1)	Homo sapiens	GYG1
 11744373_s_at	glycogenin 1(GYG1)	Homo sapiens	GYG1
-11763251_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11745661_x_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11732237_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11732236_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11751870_x_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11732235_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	MNS blood group
-11745557_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11753827_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11745299_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11763150_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11753662_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11763093_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11763092_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11763149_a_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	MNS blood group
-11717775_s_at	glycophorin C (Gerbich blood group)(GYPC)	Homo sapiens	Gerbich blood group
-11755052_s_at	glycophorin E (MNS blood group)(GYPE)	Homo sapiens	MNS blood group
-11735856_s_at	glycophorin E (MNS blood group)(GYPE)	Homo sapiens	MNS blood group
+11763251_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11745661_x_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11732237_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11732236_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11751870_x_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11732235_a_at	glycophorin A (MNS blood group)(GYPA)	Homo sapiens	GYPA
+11745557_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11753827_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11745299_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11763150_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11753662_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11763093_x_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11763092_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11763149_a_at	glycophorin B (MNS blood group)(GYPB)	Homo sapiens	GYPB
+11717775_s_at	glycophorin C (Gerbich blood group)(GYPC)	Homo sapiens	GYPC
+11755052_s_at	glycophorin E (MNS blood group)(GYPE)	Homo sapiens	GYPE
+11735856_s_at	glycophorin E (MNS blood group)(GYPE)	Homo sapiens	GYPE
 11764237_at	long intergenic non-protein coding RNA 1799(LINC01799)	Homo sapiens	LINC01799
 11764159_a_at	long intergenic non-protein coding RNA 1799(LINC01799)	Homo sapiens	LINC01799
 11744088_a_at	TYMS opposite strand RNA(TYMSOS)	Homo sapiens	TYMSOS
@@ -6991,14 +6991,14 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11718146_a_at	hippocalcin like 1(HPCAL1)	Homo sapiens	HPCAL1
 11748002_a_at	hippocalcin like 1(HPCAL1)	Homo sapiens	HPCAL1
 11724552_s_at	hippocalcin like 1(HPCAL1)	Homo sapiens	HPCAL1
-11759333_s_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
-11739985_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
-11747083_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
-11733844_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
-11739986_x_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
-11759334_x_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	NMD candidate
+11759333_s_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
+11739985_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
+11747083_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
+11733844_a_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
+11739986_x_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
+11759334_x_at	C1QTNF3-AMACR readthrough (NMD candidate)(C1QTNF3-AMACR)	Homo sapiens	C1QTNF3-AMACR
 11727840_at	4-hydroxyphenylpyruvate dioxygenase(HPD)	Homo sapiens	HPD
-11733584_a_at	TM4SF19-DYNLT2B readthrough (NMD candidate)(TM4SF19-DYNLT2B)	Homo sapiens	NMD candidate
+11733584_a_at	TM4SF19-DYNLT2B readthrough (NMD candidate)(TM4SF19-DYNLT2B)	Homo sapiens	TM4SF19-DYNLT2B
 11743655_a_at	15-hydroxyprostaglandin dehydrogenase(HPGD)	Homo sapiens	HPGD
 11753601_x_at	15-hydroxyprostaglandin dehydrogenase(HPGD)	Homo sapiens	HPGD
 11758083_s_at	15-hydroxyprostaglandin dehydrogenase(HPGD)	Homo sapiens	HPGD
@@ -7020,14 +7020,14 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11761720_x_at	HPS1 biogenesis of lysosomal organelles complex 3 subunit 1(HPS1)	Homo sapiens	HPS1
 11761719_at	HPS1 biogenesis of lysosomal organelles complex 3 subunit 1(HPS1)	Homo sapiens	HPS1
 11727901_a_at	HPS1 biogenesis of lysosomal organelles complex 3 subunit 1(HPS1)	Homo sapiens	HPS1
-11757724_x_at	HNRNPUL2-BSCL2 readthrough (NMD candidate)(HNRNPUL2-BSCL2)	Homo sapiens	NMD candidate
+11757724_x_at	HNRNPUL2-BSCL2 readthrough (NMD candidate)(HNRNPUL2-BSCL2)	Homo sapiens	HNRNPUL2-BSCL2
 11740564_a_at	family with sequence similarity 76 member A(FAM76A)	Homo sapiens	FAM76A
 11741803_a_at	family with sequence similarity 76 member A(FAM76A)	Homo sapiens	FAM76A
 11742834_a_at	family with sequence similarity 76 member A(FAM76A)	Homo sapiens	FAM76A
 11740517_a_at	family with sequence similarity 76 member A(FAM76A)	Homo sapiens	FAM76A
 11740516_a_at	family with sequence similarity 76 member A(FAM76A)	Homo sapiens	FAM76A
 11755269_a_at	URGCP-MRPS24 readthrough(URGCP-MRPS24)	Homo sapiens	URGCP-MRPS24
-11727082_a_at	STX16-NPEPL1 readthrough (NMD candidate)(STX16-NPEPL1)	Homo sapiens	NMD candidate
+11727082_a_at	STX16-NPEPL1 readthrough (NMD candidate)(STX16-NPEPL1)	Homo sapiens	STX16-NPEPL1
 11761784_at	hemopexin(HPX)	Homo sapiens	HPX
 11718783_a_at	hemopexin(HPX)	Homo sapiens	HPX
 11750047_a_at	hemopexin(HPX)	Homo sapiens	HPX
@@ -7287,8 +7287,8 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11762233_x_at	intercellular adhesion molecule 3(ICAM3)	Homo sapiens	ICAM3
 11762232_a_at	intercellular adhesion molecule 3(ICAM3)	Homo sapiens	ICAM3
 11755072_a_at	intercellular adhesion molecule 3(ICAM3)	Homo sapiens	ICAM3
-11741590_x_at	intercellular adhesion molecule 4 (Landsteiner-Wiener blood group)(ICAM4)	Homo sapiens	Landsteiner-Wiener blood group
-11737716_x_at	intercellular adhesion molecule 4 (Landsteiner-Wiener blood group)(ICAM4)	Homo sapiens	Landsteiner-Wiener blood group
+11741590_x_at	intercellular adhesion molecule 4 (Landsteiner-Wiener blood group)(ICAM4)	Homo sapiens	ICAM4
+11737716_x_at	intercellular adhesion molecule 4 (Landsteiner-Wiener blood group)(ICAM4)	Homo sapiens	ICAM4
 11717873_x_at	interferon regulatory factor 8(IRF8)	Homo sapiens	IRF8
 11717874_a_at	interferon regulatory factor 8(IRF8)	Homo sapiens	IRF8
 11717872_a_at	interferon regulatory factor 8(IRF8)	Homo sapiens	IRF8
@@ -7312,26 +7312,26 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11733847_a_at	coiled-coil and C2 domain containing 1B(CC2D1B)	Homo sapiens	CC2D1B
 11763184_at	insulin degrading enzyme(IDE)	Homo sapiens	IDE
 11753919_a_at	insulin degrading enzyme(IDE)	Homo sapiens	IDE
-11746174_s_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	NADP(+
-11718475_s_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	NADP(+
-11718474_a_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	NADP(+
-11715536_a_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	NADP(+
-11715537_x_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	NADP(+
-11747814_a_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	NADP(+
-11758723_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	NADP(+
-11745965_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	NAD(+
-11756565_x_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	NAD(+
-11737793_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	NAD(+
-11737792_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	NAD(+
-11749830_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	NAD(+
-11745812_x_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
-11730186_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
-11733576_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
-11744207_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
-11730187_x_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
-11745811_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	NAD(+
+11746174_s_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	IDH1
+11718475_s_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	IDH1
+11718474_a_at	isocitrate dehydrogenase (NADP(+)) 1(IDH1)	Homo sapiens	IDH1
+11715536_a_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	IDH2
+11715537_x_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	IDH2
+11747814_a_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	IDH2
+11758723_at	isocitrate dehydrogenase (NADP(+)) 2(IDH2)	Homo sapiens	IDH2
+11745965_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	IDH3A
+11756565_x_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	IDH3A
+11737793_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	IDH3A
+11737792_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	IDH3A
+11749830_a_at	isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha(IDH3A)	Homo sapiens	IDH3A
+11745812_x_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
+11730186_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
+11733576_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
+11744207_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
+11730187_x_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
+11745811_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta(IDH3B)	Homo sapiens	IDH3B
 11745243_x_at	NBPF member 11(NBPF11)	Homo sapiens	NBPF11
-11726266_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit gamma(IDH3G)	Homo sapiens	NAD(+
+11726266_a_at	isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit gamma(IDH3G)	Homo sapiens	IDH3G
 11724491_at	NudC domain containing 2(NUDCD2)	Homo sapiens	NUDCD2
 11739383_a_at	isopentenyl-diphosphate delta isomerase 1(IDI1)	Homo sapiens	IDI1
 11744474_s_at	isopentenyl-diphosphate delta isomerase 1(IDI1)	Homo sapiens	IDI1
@@ -7457,13 +7457,13 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11764130_s_at	immunoglobulin heavy locus(IGH)	Homo sapiens	IGH
 11762099_x_at	immunoglobulin heavy constant alpha 1(IGHA1)	Homo sapiens	IGHA1
 11760137_x_at	immunoglobulin heavy constant alpha 1(IGHA1)	Homo sapiens	IGHA1
-11763114_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11763115_a_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11763095_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11763117_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11763113_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11763116_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	G1m marker
-11761467_x_at	immunoglobulin heavy constant gamma 3 (G3m marker)(IGHG3)	Homo sapiens	G3m marker
+11763114_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11763115_a_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11763095_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11763117_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11763113_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11763116_x_at	immunoglobulin heavy constant gamma 1 (G1m marker)(IGHG1)	Homo sapiens	IGHG1
+11761467_x_at	immunoglobulin heavy constant gamma 3 (G3m marker)(IGHG3)	Homo sapiens	IGHG3
 11764046_x_at	immunoglobulin heavy constant mu(IGHM)	Homo sapiens	IGHM
 11759815_a_at	immunoglobulin heavy constant mu(IGHM)	Homo sapiens	IGHM
 11759816_x_at	immunoglobulin heavy constant mu(IGHM)	Homo sapiens	IGHM
@@ -8055,7 +8055,7 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11746153_a_at	von Willebrand factor A domain containing 3B(VWA3B)	Homo sapiens	VWA3B
 11731660_a_at	von Willebrand factor A domain containing 3B(VWA3B)	Homo sapiens	VWA3B
 11746152_a_at	von Willebrand factor A domain containing 3B(VWA3B)	Homo sapiens	VWA3B
-11726225_at	Kell metallo-endopeptidase (Kell blood group)(KEL)	Homo sapiens	Kell blood group
+11726225_at	Kell metallo-endopeptidase (Kell blood group)(KEL)	Homo sapiens	KEL
 11737370_at	trace amine associated receptor 1(TAAR1)	Homo sapiens	TAAR1
 11729680_a_at	ketohexokinase(KHK)	Homo sapiens	KHK
 11755098_a_at	ketohexokinase(KHK)	Homo sapiens	KHK
@@ -8601,8 +8601,8 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11723193_s_at	lactotransferrin(LTF)	Homo sapiens	LTF
 11742069_x_at	leukocyte receptor tyrosine kinase(LTK)	Homo sapiens	LTK
 11741808_a_at	leukocyte receptor tyrosine kinase(LTK)	Homo sapiens	LTK
-11755939_a_at	basal cell adhesion molecule (Lutheran blood group)(BCAM)	Homo sapiens	Lutheran blood group
-11744043_x_at	basal cell adhesion molecule (Lutheran blood group)(BCAM)	Homo sapiens	Lutheran blood group
+11755939_a_at	basal cell adhesion molecule (Lutheran blood group)(BCAM)	Homo sapiens	BCAM
+11744043_x_at	basal cell adhesion molecule (Lutheran blood group)(BCAM)	Homo sapiens	BCAM
 11715796_s_at	lumican(LUM)	Homo sapiens	LUM
 11715419_at	lymphocyte antigen 6 family member E(LY6E)	Homo sapiens	LY6E
 11729436_a_at	lymphocyte antigen 6 family member H(LY6H)	Homo sapiens	LY6H
@@ -9098,9 +9098,9 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11752297_x_at	class II major histocompatibility complex transactivator(CIITA)	Homo sapiens	CIITA
 11753193_a_at	class II major histocompatibility complex transactivator(CIITA)	Homo sapiens	CIITA
 11743900_at	class II major histocompatibility complex transactivator(CIITA)	Homo sapiens	CIITA
-11745958_a_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	Xg blood group
-11754019_x_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	Xg blood group
-11741449_s_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	Xg blood group
+11745958_a_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	CD99
+11754019_x_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	CD99
+11741449_s_at	CD99 molecule (Xg blood group)(CD99)	Homo sapiens	CD99
 11727620_a_at	lipase H(LIPH)	Homo sapiens	LIPH
 11748223_a_at	lipase H(LIPH)	Homo sapiens	LIPH
 11727621_a_at	lipase H(LIPH)	Homo sapiens	LIPH
@@ -11342,7 +11342,7 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11715891_at	pancreatic lipase(PNLIP)	Homo sapiens	PNLIP
 11756801_a_at	pancreatic lipase related protein 1(PNLIPRP1)	Homo sapiens	PNLIPRP1
 11760652_at	pancreatic lipase related protein 1(PNLIPRP1)	Homo sapiens	PNLIPRP1
-11717232_a_at	pancreatic lipase related protein 2 (gene/pseudogene)(PNLIPRP2)	Homo sapiens	gene/pseudogene
+11717232_a_at	pancreatic lipase related protein 2 (gene/pseudogene)(PNLIPRP2)	Homo sapiens	PNLIPRP2
 11723832_a_at	transmembrane anterior posterior transformation 1(TAPT1)	Homo sapiens	TAPT1
 11755810_s_at	transmembrane anterior posterior transformation 1(TAPT1)	Homo sapiens	TAPT1
 11757593_s_at	transmembrane anterior posterior transformation 1(TAPT1)	Homo sapiens	TAPT1
@@ -13753,10 +13753,10 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11741582_a_at	solute carrier family 3 member 2(SLC3A2)	Homo sapiens	SLC3A2
 11741149_x_at	solute carrier family 3 member 2(SLC3A2)	Homo sapiens	SLC3A2
 11733071_a_at	solute carrier family 3 member 2(SLC3A2)	Homo sapiens	SLC3A2
-11758430_s_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	Diego blood group
-11726491_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	Diego blood group
-11726490_a_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	Diego blood group
-11726489_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	Diego blood group
+11758430_s_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	SLC4A1
+11726491_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	SLC4A1
+11726490_a_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	SLC4A1
+11726489_at	solute carrier family 4 member 1 (Diego blood group)(SLC4A1)	Homo sapiens	SLC4A1
 11760806_at	solute carrier family 4 member 2(SLC4A2)	Homo sapiens	SLC4A2
 11725464_a_at	solute carrier family 4 member 2(SLC4A2)	Homo sapiens	SLC4A2
 11744668_x_at	solute carrier family 4 member 2(SLC4A2)	Homo sapiens	SLC4A2
@@ -13808,7 +13808,7 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11740016_at	solute carrier family 6 member 11(SLC6A11)	Homo sapiens	SLC6A11
 11764083_at	solute carrier family 6 member 11(SLC6A11)	Homo sapiens	SLC6A11
 11761459_at	solute carrier family 6 member 11(SLC6A11)	Homo sapiens	SLC6A11
-11755976_a_at	caspase 12 (gene/pseudogene)(CASP12)	Homo sapiens	gene/pseudogene
+11755976_a_at	caspase 12 (gene/pseudogene)(CASP12)	Homo sapiens	CASP12
 11740494_a_at	solute carrier family 6 member 12(SLC6A12)	Homo sapiens	SLC6A12
 11740495_x_at	solute carrier family 6 member 12(SLC6A12)	Homo sapiens	SLC6A12
 11731647_a_at	solute carrier family 6 member 12(SLC6A12)	Homo sapiens	SLC6A12
@@ -13883,9 +13883,9 @@ AFFX-HUMGAPDH/M33197_3_at	glyceraldehyde-3-phosphate dehydrogenase(GAPDH)	Homo s
 11722034_x_at	solute carrier family 12 member 4(SLC12A4)	Homo sapiens	SLC12A4
 11737344_at	solute carrier family 13 member 1(SLC13A1)	Homo sapiens	SLC13A1
 11750706_a_at	solute carrier family 13 member 1(SLC13A1)	Homo sapiens	SLC13A1
-11727969_a_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	Kidd blood group
-11727970_a_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	Kidd blood group
-11733360_x_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	Kidd blood group
+11727969_a_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	SLC14A1
+11727970_a_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	SLC14A1
+11733360_x_at	solute carrier family 14 member 1 (Kidd blood group)(SLC14A1)	Homo sapiens	SLC14A1
 11762662_at	solute carrier family 15 member 1(SLC15A1)	Homo sapiens	SLC15A1
 11735143_at	solute carrier family 15 member 1(SLC15A1)	Homo sapiens	SLC15A1
 11752275_a_at	solute carrier family 15 member 1(SLC15A1)	Homo sapiens	SLC15A1
@@ -14831,11 +14831,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11736973_a_at	T-box transcription factor 5(TBX5)	Homo sapiens	TBX5
 11731300_x_at	T-box transcription factor 6(TBX6)	Homo sapiens	TBX6
 11731299_at	T-box transcription factor 6(TBX6)	Homo sapiens	TBX6
-11753054_at	Putative uncharacterized protein UNQ6190/PRO20217(UNQ6190/PRO20217)	Homo sapiens	UNQ6190/PRO20217
+11753054_at	Putative uncharacterized protein UNQ6190/PRO20217(UNQ6190/PRO20217)	Homo sapiens	NA
 11749639_a_at	zinc finger protein 449(ZNF449)	Homo sapiens	ZNF449
 11758540_s_at	zinc finger protein 449(ZNF449)	Homo sapiens	ZNF449
-11752475_at	Putative uncharacterized protein UNQ9370/PRO34162(UNQ9370/PRO34162)	Homo sapiens	UNQ9370/PRO34162
-11752476_x_at	Putative uncharacterized protein UNQ9370/PRO34162(UNQ9370/PRO34162)	Homo sapiens	UNQ9370/PRO34162
+11752475_at	Putative uncharacterized protein UNQ9370/PRO34162(UNQ9370/PRO34162)	Homo sapiens	NA
+11752476_x_at	Putative uncharacterized protein UNQ9370/PRO34162(UNQ9370/PRO34162)	Homo sapiens	NA
 11755755_a_at	integrator complex subunit 6 like(INTS6L)	Homo sapiens	INTS6L
 11739862_a_at	integrator complex subunit 6 like(INTS6L)	Homo sapiens	INTS6L
 11729001_a_at	T-box transcription factor 15(TBX15)	Homo sapiens	TBX15
@@ -15502,7 +15502,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11740860_a_at	zinc finger protein 384(ZNF384)	Homo sapiens	ZNF384
 11740153_a_at	zinc finger protein 384(ZNF384)	Homo sapiens	ZNF384
 11726853_a_at	transmembrane phosphatase with tensin homology(TPTE)	Homo sapiens	TPTE
-11757228_s_at	ABHD11 antisense RNA 1 (tail to tail)(ABHD11-AS1)	Homo sapiens	tail to tail
+11757228_s_at	ABHD11 antisense RNA 1 (tail to tail)(ABHD11-AS1)	Homo sapiens	ABHD11-AS1
 11715248_s_at	cysteine rich secretory protein 2(CRISP2)	Homo sapiens	CRISP2
 11732833_a_at	cilia and flagella associated protein 95(CFAP95)	Homo sapiens	CFAP95
 11744501_a_at	ASXL transcriptional regulator 1(ASXL1)	Homo sapiens	ASXL1
@@ -16116,7 +16116,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11729575_a_at	X-box binding protein 1(XBP1)	Homo sapiens	XBP1
 11733464_at	xanthine dehydrogenase(XDH)	Homo sapiens	XDH
 11733465_at	xanthine dehydrogenase(XDH)	Homo sapiens	XDH
-11733399_a_at	Xg glycoprotein (Xg blood group)(XG)	Homo sapiens	Xg blood group
+11733399_a_at	Xg glycoprotein (Xg blood group)(XG)	Homo sapiens	XG
 11759750_at	zinc finger protein 880(ZNF880)	Homo sapiens	ZNF880
 11744853_a_at	zinc finger protein 880(ZNF880)	Homo sapiens	ZNF880
 11732579_s_at	zinc finger protein 880(ZNF880)	Homo sapiens	ZNF880
@@ -16825,10 +16825,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11721094_a_at	solute carrier family 39 member 7(SLC39A7)	Homo sapiens	SLC39A7
 11721095_x_at	solute carrier family 39 member 7(SLC39A7)	Homo sapiens	SLC39A7
 11750939_a_at	solute carrier family 39 member 7(SLC39A7)	Homo sapiens	SLC39A7
-11750829_at	Putative uncharacterized protein UNQ9165/PRO28630(UNQ9165/PRO28630)	Homo sapiens	UNQ9165/PRO28630
-11750830_x_at	Putative uncharacterized protein UNQ9165/PRO28630(UNQ9165/PRO28630)	Homo sapiens	UNQ9165/PRO28630
+11750829_at	Putative uncharacterized protein UNQ9165/PRO28630(UNQ9165/PRO28630)	Homo sapiens	NA
+11750830_x_at	Putative uncharacterized protein UNQ9165/PRO28630(UNQ9165/PRO28630)	Homo sapiens	NA
 11724919_a_at	hydroxysteroid 17-beta dehydrogenase 8(HSD17B8)	Homo sapiens	HSD17B8
-11762946_at	Putative uncharacterized protein UNQ6493/PRO21345(UNQ6493/PRO21345)	Homo sapiens	UNQ6493/PRO21345
+11762946_at	Putative uncharacterized protein UNQ6493/PRO21345(UNQ6493/PRO21345)	Homo sapiens	NA
 11737557_at	amelotin(AMTN)	Homo sapiens	AMTN
 11738333_at	TMPRSS11B N-terminal like, pseudogene(TMPRSS11BNL)	Homo sapiens	TMPRSS11BNL
 11738334_x_at	TMPRSS11B N-terminal like, pseudogene(TMPRSS11BNL)	Homo sapiens	TMPRSS11BNL
@@ -17568,10 +17568,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11727456_a_at	OFD1 centriole and centriolar satellite protein(OFD1)	Homo sapiens	OFD1
 11762700_at	OFD1 centriole and centriolar satellite protein(OFD1)	Homo sapiens	OFD1
 11759897_x_at	OFD1 centriole and centriolar satellite protein(OFD1)	Homo sapiens	OFD1
-11726571_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	John Milton Hagen blood group
-11726572_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	John Milton Hagen blood group
-11741755_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	John Milton Hagen blood group
-11726573_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	John Milton Hagen blood group
+11726571_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	SEMA7A
+11726572_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	SEMA7A
+11741755_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	SEMA7A
+11726573_a_at	semaphorin 7A (John Milton Hagen blood group)(SEMA7A)	Homo sapiens	SEMA7A
 11743818_a_at	cartilage intermediate layer protein(CILP)	Homo sapiens	CILP
 11737382_x_at	galanin receptor 3(GALR3)	Homo sapiens	GALR3
 11753472_a_at	gem nuclear organelle associated protein 2(GEMIN2)	Homo sapiens	GEMIN2
@@ -18070,9 +18070,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11737660_a_at	beta-1,4-galactosyltransferase 2(B4GALT2)	Homo sapiens	B4GALT2
 11718715_a_at	beta-1,4-galactosyltransferase 2(B4GALT2)	Homo sapiens	B4GALT2
 11726055_at	beta-1,3-galactosyltransferase 4(B3GALT4)	Homo sapiens	B3GALT4
-11731011_a_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	globoside blood group
-11750834_s_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	globoside blood group
-11737780_a_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	globoside blood group
+11731011_a_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	B3GALNT1
+11750834_s_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	B3GALNT1
+11737780_a_at	beta-1,3-N-acetylgalactosaminyltransferase 1 (globoside blood group)(B3GALNT1)	Homo sapiens	B3GALNT1
 11729250_at	beta-1,3-galactosyltransferase 2(B3GALT2)	Homo sapiens	B3GALT2
 11737552_at	beta-1,3-galactosyltransferase 1(B3GALT1)	Homo sapiens	B3GALT1
 11737551_at	beta-1,3-galactosyltransferase 1(B3GALT1)	Homo sapiens	B3GALT1
@@ -19599,8 +19599,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11721596_s_at	chromodomain Y like(CDYL)	Homo sapiens	CDYL
 11745058_a_at	chromodomain Y like(CDYL)	Homo sapiens	CDYL
 11730646_a_at	endothelin converting enzyme like 1(ECEL1)	Homo sapiens	ECEL1
-11724537_a_at	ATP binding cassette subfamily G member 2 (Junior blood group)(ABCG2)	Homo sapiens	Junior blood group
-11724538_a_at	ATP binding cassette subfamily G member 2 (Junior blood group)(ABCG2)	Homo sapiens	Junior blood group
+11724537_a_at	ATP binding cassette subfamily G member 2 (Junior blood group)(ABCG2)	Homo sapiens	ABCG2
+11724538_a_at	ATP binding cassette subfamily G member 2 (Junior blood group)(ABCG2)	Homo sapiens	ABCG2
 11718909_x_at	carbohydrate sulfotransferase 2(CHST2)	Homo sapiens	CHST2
 11718908_s_at	carbohydrate sulfotransferase 2(CHST2)	Homo sapiens	CHST2
 11742585_a_at	natural cytotoxicity triggering receptor 2(NCR2)	Homo sapiens	NCR2
@@ -19761,10 +19761,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11756693_a_at	MAGE family member D1(MAGED1)	Homo sapiens	MAGED1
 11715507_s_at	MAGE family member D1(MAGED1)	Homo sapiens	MAGED1
 11757585_x_at	MAGE family member D1(MAGED1)	Homo sapiens	MAGED1
-11725205_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	without C2 domains
-11725204_a_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	without C2 domains
-11745088_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	without C2 domains
-11748866_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	without C2 domains
+11725205_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	RPH3AL
+11725204_a_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	RPH3AL
+11745088_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	RPH3AL
+11748866_x_at	rabphilin 3A like (without C2 domains)(RPH3AL)	Homo sapiens	RPH3AL
 11732477_at	X antigen family member 2(XAGE2)	Homo sapiens	XAGE2
 11732478_s_at	X antigen family member 2(XAGE2)	Homo sapiens	XAGE2
 11723866_a_at	chondrolectin(CHODL)	Homo sapiens	CHODL
@@ -21320,7 +21320,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11755364_a_at	mastermind like domain containing 1(MAMLD1)	Homo sapiens	MAMLD1
 11750004_a_at	mastermind like domain containing 1(MAMLD1)	Homo sapiens	MAMLD1
 11749420_a_at	mastermind like domain containing 1(MAMLD1)	Homo sapiens	MAMLD1
-11742631_at	olfactory receptor family 4 subfamily C member 45 (gene/pseudogene)(OR4C45)	Homo sapiens	gene/pseudogene
+11742631_at	olfactory receptor family 4 subfamily C member 45 (gene/pseudogene)(OR4C45)	Homo sapiens	OR4C45
 11731927_at	cystatin 8(CST8)	Homo sapiens	CST8
 11757841_s_at	RAN binding protein 9(RANBP9)	Homo sapiens	RANBP9
 11747937_a_at	DnaJ heat shock protein family (Hsp40) member B6(DNAJB6)	Homo sapiens	Hsp40
@@ -21359,11 +21359,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11751955_a_at	ATP binding cassette subfamily C member 5(ABCC5)	Homo sapiens	ABCC5
 11727314_a_at	ATP binding cassette subfamily C member 5(ABCC5)	Homo sapiens	ABCC5
 11730509_s_at	ATP binding cassette subfamily C member 5(ABCC5)	Homo sapiens	ABCC5
-11737754_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	Langereis blood group
-11751468_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	Langereis blood group
-11737755_s_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	Langereis blood group
-11716829_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	Langereis blood group
-11716187_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	Langereis blood group
+11737754_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	ABCB6
+11751468_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	ABCB6
+11737755_s_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	ABCB6
+11716829_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	ABCB6
+11716187_a_at	ATP binding cassette subfamily B member 6 (Langereis blood group)(ABCB6)	Homo sapiens	ABCB6
 11742549_at	olfactory receptor family 5 subfamily K member 3(OR5K3)	Homo sapiens	OR5K3
 11742435_a_at	dynamin 1 like(DNM1L)	Homo sapiens	DNM1L
 11750026_a_at	dynamin 1 like(DNM1L)	Homo sapiens	DNM1L
@@ -22135,11 +22135,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11720208_a_at	interferon regulatory factor 9(IRF9)	Homo sapiens	IRF9
 11746156_x_at	interferon regulatory factor 9(IRF9)	Homo sapiens	IRF9
 11720209_at	interferon regulatory factor 9(IRF9)	Homo sapiens	IRF9
-11734927_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	2'
-11756326_a_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	2'
-11751334_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	2'
-11748228_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	2'
-11734928_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	2'
+11734927_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	BPNT1
+11756326_a_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	BPNT1
+11751334_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	BPNT1
+11748228_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	BPNT1
+11734928_x_at	3'(2'), 5'-bisphosphate nucleotidase 1(BPNT1)	Homo sapiens	BPNT1
 11754593_x_at	tubulin beta 3 class III(TUBB3)	Homo sapiens	TUBB3
 11744256_a_at	tubulin beta 4A class IVa(TUBB4A)	Homo sapiens	TUBB4A
 11751118_x_at	tubulin beta 4A class IVa(TUBB4A)	Homo sapiens	TUBB4A
@@ -23121,11 +23121,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11738623_s_at	zinc finger protein 268(ZNF268)	Homo sapiens	ZNF268
 11738624_x_at	zinc finger protein 268(ZNF268)	Homo sapiens	ZNF268
 11750610_x_at	zinc finger protein 268(ZNF268)	Homo sapiens	ZNF268
-11745892_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	NADP+ dependent
-11744002_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	NADP+ dependent
-11744003_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	NADP+ dependent
-11745870_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	NADP+ dependent
-11745893_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	NADP+ dependent
+11745892_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	MTHFD2
+11744002_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	MTHFD2
+11744003_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	MTHFD2
+11745870_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	MTHFD2
+11745893_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase(MTHFD2)	Homo sapiens	MTHFD2
 11738922_at	olfactory receptor family 5 subfamily I member 1(OR5I1)	Homo sapiens	OR5I1
 11724083_a_at	ribonuclease P/MRP subunit p40(RPP40)	Homo sapiens	RPP40
 11735157_at	cysteinyl leukotriene receptor 1(CYSLTR1)	Homo sapiens	CYSLTR1
@@ -24489,7 +24489,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11731275_at	C-type lectin domain family 4 member G(CLEC4G)	Homo sapiens	CLEC4G
 11737461_at	leucine rich repeat and Ig domain containing 4(LINGO4)	Homo sapiens	LINGO4
 11738020_at	relaxin family peptide/INSL5 receptor 4(RXFP4)	Homo sapiens	RXFP4
-11762941_at	Putative uncharacterized protein UNQ5815/PRO19632(UNQ5815/PRO19632)	Homo sapiens	UNQ5815/PRO19632
+11762941_at	Putative uncharacterized protein UNQ5815/PRO19632(UNQ5815/PRO19632)	Homo sapiens	NA
 11736902_x_at	ankyrin repeat domain 45(ANKRD45)	Homo sapiens	ANKRD45
 11736901_at	ankyrin repeat domain 45(ANKRD45)	Homo sapiens	ANKRD45
 11734420_at	acyl-CoA synthetase medium chain family member 6(ACSM6)	Homo sapiens	ACSM6
@@ -25176,7 +25176,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11759833_at	NADH:ubiquinone oxidoreductase core subunit S7(NDUFS7)	Homo sapiens	NDUFS7
 11723062_a_at	NADH:ubiquinone oxidoreductase core subunit S7(NDUFS7)	Homo sapiens	NDUFS7
 11746586_a_at	NADH:ubiquinone oxidoreductase core subunit S7(NDUFS7)	Homo sapiens	NDUFS7
-11740666_at	patched domain containing 3 (gene/pseudogene)(PTCHD3)	Homo sapiens	gene/pseudogene
+11740666_at	patched domain containing 3 (gene/pseudogene)(PTCHD3)	Homo sapiens	PTCHD3
 11738821_a_at	NADPH oxidase 5(NOX5)	Homo sapiens	NOX5
 11759929_at	NADPH oxidase 5(NOX5)	Homo sapiens	NOX5
 11745288_a_at	NADPH oxidase 5(NOX5)	Homo sapiens	NOX5
@@ -25233,7 +25233,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11735085_at	FRAS1 related extracellular matrix 2(FREM2)	Homo sapiens	FREM2
 11735083_at	FRAS1 related extracellular matrix 2(FREM2)	Homo sapiens	FREM2
 11735084_s_at	FRAS1 related extracellular matrix 2(FREM2)	Homo sapiens	FREM2
-11762845_a_at	Putative uncharacterized protein UNQ5830/PRO19650/PRO19816(UNQ5830/PRO19650/PRO19816)	Homo sapiens	UNQ5830/PRO19650/PRO19816
+11762845_a_at	Putative uncharacterized protein UNQ5830/PRO19650/PRO19816(UNQ5830/PRO19650/PRO19816)	Homo sapiens	NA
 11737627_at	NIMA related kinase 5(NEK5)	Homo sapiens	NEK5
 11730061_at	keratin 77(KRT77)	Homo sapiens	KRT77
 11730062_a_at	keratin 77(KRT77)	Homo sapiens	KRT77
@@ -26984,10 +26984,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11733993_at	transmembrane protein 150C(TMEM150C)	Homo sapiens	TMEM150C
 11759122_at	transmembrane protein 150C(TMEM150C)	Homo sapiens	TMEM150C
 11733992_a_at	transmembrane protein 150C(TMEM150C)	Homo sapiens	TMEM150C
-11762572_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	NADP+ dependent
-11740964_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	NADP+ dependent
-11762057_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	NADP+ dependent
-11753047_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	NADP+ dependent
+11762572_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	MTHFD2L
+11740964_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	MTHFD2L
+11762057_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	MTHFD2L
+11753047_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like(MTHFD2L)	Homo sapiens	MTHFD2L
 11755087_a_at	chromosome 4 open reading frame 47(C4orf47)	Homo sapiens	C4orf47
 11730694_at	gap junction protein beta 7(GJB7)	Homo sapiens	GJB7
 11763137_at	heat shock protein 90 alpha family class A member 6, pseudogene(HSP90AA6P)	Homo sapiens	HSP90AA6P
@@ -27887,9 +27887,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11731378_a_at	mediator complex subunit 25(MED25)	Homo sapiens	MED25
 11753112_x_at	mediator complex subunit 25(MED25)	Homo sapiens	MED25
 11753525_a_at	mediator complex subunit 25(MED25)	Homo sapiens	MED25
-11730313_a_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	Scianna blood group
-11762094_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	Scianna blood group
-11730314_a_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	Scianna blood group
+11730313_a_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	ERMAP
+11762094_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	ERMAP
+11730314_a_at	erythroblast membrane associated protein (Scianna blood group)(ERMAP)	Homo sapiens	ERMAP
 11740629_a_at	zinc finger protein 611(ZNF611)	Homo sapiens	ZNF611
 11746143_x_at	zinc finger protein 611(ZNF611)	Homo sapiens	ZNF611
 11746142_a_at	zinc finger protein 611(ZNF611)	Homo sapiens	ZNF611
@@ -27965,8 +27965,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11744873_a_at	kallikrein pseudogene 1(KLKP1)	Homo sapiens	KLKP1
 11738180_a_at	BTB domain containing 9(BTBD9)	Homo sapiens	BTBD9
 11728546_a_at	BTB domain containing 9(BTBD9)	Homo sapiens	BTBD9
-11755764_a_at	polycystin 1 like 2 (gene/pseudogene)(PKD1L2)	Homo sapiens	gene/pseudogene
-11734387_at	polycystin 1 like 2 (gene/pseudogene)(PKD1L2)	Homo sapiens	gene/pseudogene
+11755764_a_at	polycystin 1 like 2 (gene/pseudogene)(PKD1L2)	Homo sapiens	PKD1L2
+11734387_at	polycystin 1 like 2 (gene/pseudogene)(PKD1L2)	Homo sapiens	PKD1L2
 11752365_at	X-ray repair cross complementing 6 pseudogene 5(XRCC6P5)	Homo sapiens	XRCC6P5
 11735407_at	lemur tyrosine kinase 3(LMTK3)	Homo sapiens	LMTK3
 11722250_s_at	methyl-CpG binding domain protein 6(MBD6)	Homo sapiens	MBD6
@@ -28237,14 +28237,14 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11750389_a_at	solute carrier family 26 member 7(SLC26A7)	Homo sapiens	SLC26A7
 11737632_at	solute carrier family 26 member 7(SLC26A7)	Homo sapiens	SLC26A7
 11729078_a_at	solute carrier family 26 member 7(SLC26A7)	Homo sapiens	SLC26A7
-11735600_x_at	aldo-keto reductase family 7 like (gene/pseudogene)(AKR7L)	Homo sapiens	gene/pseudogene
+11735600_x_at	aldo-keto reductase family 7 like (gene/pseudogene)(AKR7L)	Homo sapiens	AKR7L
 11757062_at	cell division cycle 26(CDC26)	Homo sapiens	CDC26
 11725738_at	membrane associated ring-CH-type finger 3(MARCHF3)	Homo sapiens	MARCHF3
 11725739_at	membrane associated ring-CH-type finger 3(MARCHF3)	Homo sapiens	MARCHF3
 11745531_a_at	membrane associated ring-CH-type finger 3(MARCHF3)	Homo sapiens	MARCHF3
-11752017_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	NMD candidate
-11721939_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	NMD candidate
-11749942_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	NMD candidate
+11752017_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	SPECC1L-ADORA2A
+11721939_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	SPECC1L-ADORA2A
+11749942_a_at	SPECC1L-ADORA2A readthrough (NMD candidate)(SPECC1L-ADORA2A)	Homo sapiens	SPECC1L-ADORA2A
 11725007_at	dishevelled binding antagonist of beta catenin 3(DACT3)	Homo sapiens	DACT3
 11734456_a_at	solute carrier family 17 member 8(SLC17A8)	Homo sapiens	SLC17A8
 11738625_a_at	solute carrier family 17 member 8(SLC17A8)	Homo sapiens	SLC17A8
@@ -30501,7 +30501,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11758887_at	rhomboid domain containing 1(RHBDD1)	Homo sapiens	RHBDD1
 11755829_a_at	ATPase 13A4(ATP13A4)	Homo sapiens	ATP13A4
 11747022_a_at	ATPase 13A4(ATP13A4)	Homo sapiens	ATP13A4
-11732033_at	N-acetyltransferase 8B (putative, gene/pseudogene)(NAT8B)	Homo sapiens	putative, gene/pseudogene
+11732033_at	N-acetyltransferase 8B (putative, gene/pseudogene)(NAT8B)	Homo sapiens	NAT8B
 11736545_at	MET transcriptional regulator MACC1(MACC1)	Homo sapiens	MACC1
 11750343_a_at	MET transcriptional regulator MACC1(MACC1)	Homo sapiens	MACC1
 11736544_at	MET transcriptional regulator MACC1(MACC1)	Homo sapiens	MACC1
@@ -31889,7 +31889,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11719610_s_at	2-aminoethanethiol dioxygenase(ADO)	Homo sapiens	ADO
 11736466_a_at	F-box DNA helicase 1(FBH1)	Homo sapiens	FBH1
 11745113_a_at	F-box DNA helicase 1(FBH1)	Homo sapiens	FBH1
-11731777_a_at	protein O-linked mannose N-acetylglucosaminyltransferase 2 (beta 1,4-)(POMGNT2)	Homo sapiens	beta 1,4-
+11731777_a_at	protein O-linked mannose N-acetylglucosaminyltransferase 2 (beta 1,4-)(POMGNT2)	Homo sapiens	POMGNT2
 11754343_a_at	mitoguardin 2(MIGA2)	Homo sapiens	MIGA2
 11761461_a_at	mitoguardin 2(MIGA2)	Homo sapiens	MIGA2
 11728336_a_at	leucine rich repeat and Ig domain containing 1(LINGO1)	Homo sapiens	LINGO1
@@ -32508,7 +32508,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11718537_s_at	fumarylacetoacetate hydrolase domain containing 2B(FAHD2B)	Homo sapiens	FAHD2B
 11760829_at	fumarylacetoacetate hydrolase domain containing 2B(FAHD2B)	Homo sapiens	FAHD2B
 11760831_x_at	fumarylacetoacetate hydrolase domain containing 2B(FAHD2B)	Homo sapiens	FAHD2B
-11762833_x_at	DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 11-like(LOC642846)	Homo sapiens	Asp-Glu-Ala-Asp/His
+11762833_x_at	DEAD/H (Asp-Glu-Ala-Asp/His) box polypeptide 11-like(LOC642846)	Homo sapiens	LOC642846
 11763402_at	long intergenic non-protein coding RNA 1069(LINC01069)	Homo sapiens	LINC01069
 11747132_at	uncharacterized LOC101927183(LOC101927183)	Homo sapiens	LOC101927183
 11734487_at	chromosome 5 open reading frame 52(C5orf52)	Homo sapiens	C5orf52
@@ -32576,8 +32576,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11736575_x_at	G protein-coupled receptor 155(GPR155)	Homo sapiens	GPR155
 11751894_x_at	G protein-coupled receptor 155(GPR155)	Homo sapiens	GPR155
 11746456_x_at	G protein-coupled receptor 155(GPR155)	Homo sapiens	GPR155
-11749407_a_at	ZNF667 antisense RNA 1 (head to head)(ZNF667-AS1)	Homo sapiens	head to head
-11762761_a_at	ZNF667 antisense RNA 1 (head to head)(ZNF667-AS1)	Homo sapiens	head to head
+11749407_a_at	ZNF667 antisense RNA 1 (head to head)(ZNF667-AS1)	Homo sapiens	ZNF667-AS1
+11762761_a_at	ZNF667 antisense RNA 1 (head to head)(ZNF667-AS1)	Homo sapiens	ZNF667-AS1
 11732310_a_at	cytosolic thiouridylase subunit 2(CTU2)	Homo sapiens	CTU2
 11761290_x_at	cytosolic thiouridylase subunit 2(CTU2)	Homo sapiens	CTU2
 11746508_x_at	zinc finger FYVE-type containing 27(ZFYVE27)	Homo sapiens	ZFYVE27
@@ -32628,8 +32628,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11716594_a_at	BTB domain containing 1(BTBD1)	Homo sapiens	BTBD1
 11716591_a_at	BTB domain containing 1(BTBD1)	Homo sapiens	BTBD1
 11716592_s_at	BTB domain containing 1(BTBD1)	Homo sapiens	BTBD1
-11738611_s_at	CCL15-CCL14 readthrough (NMD candidate)(CCL15-CCL14)	Homo sapiens	NMD candidate
-11726212_s_at	CCL15-CCL14 readthrough (NMD candidate)(CCL15-CCL14)	Homo sapiens	NMD candidate
+11738611_s_at	CCL15-CCL14 readthrough (NMD candidate)(CCL15-CCL14)	Homo sapiens	CCL15-CCL14
+11726212_s_at	CCL15-CCL14 readthrough (NMD candidate)(CCL15-CCL14)	Homo sapiens	CCL15-CCL14
 11744226_a_at	sperm autoantigenic protein 17(SPA17)	Homo sapiens	SPA17
 11731359_a_at	TAFA chemokine like family member 4(TAFA4)	Homo sapiens	TAFA4
 11720693_a_at	interleukin 17D(IL17D)	Homo sapiens	IL17D
@@ -32676,7 +32676,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11747544_a_at	two pore segment channel 1(TPCN1)	Homo sapiens	TPCN1
 11718090_a_at	two pore segment channel 1(TPCN1)	Homo sapiens	TPCN1
 11741516_at	selenoprotein V(SELENOV)	Homo sapiens	SELENOV
-11738586_at	uncharacterized LOC100128124(HGC6.3)	Homo sapiens	HGC6.3
+11738586_at	uncharacterized LOC100128124(HGC6.3)	Homo sapiens	NA
 11724016_a_at	FRA10A associated CGG repeat 1(FRA10AC1)	Homo sapiens	FRA10AC1
 11724015_at	FRA10A associated CGG repeat 1(FRA10AC1)	Homo sapiens	FRA10AC1
 11738711_at	olfactory receptor family 51 subfamily B member 5(OR51B5)	Homo sapiens	OR51B5
@@ -32986,9 +32986,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11739731_s_at	casein kinase 1 gamma 1(CSNK1G1)	Homo sapiens	CSNK1G1
 11750788_a_at	casein kinase 1 gamma 1(CSNK1G1)	Homo sapiens	CSNK1G1
 11739730_at	casein kinase 1 gamma 1(CSNK1G1)	Homo sapiens	CSNK1G1
-11763671_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	P blood group
-11721503_a_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	P blood group
-11745024_a_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	P blood group
+11763671_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	A4GALT
+11721503_a_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	A4GALT
+11745024_a_at	alpha 1,4-galactosyltransferase (P blood group)(A4GALT)	Homo sapiens	A4GALT
 11739625_at	zinc finger protein 740(ZNF740)	Homo sapiens	ZNF740
 11739626_at	zinc finger protein 740(ZNF740)	Homo sapiens	ZNF740
 11739624_at	zinc finger protein 740(ZNF740)	Homo sapiens	ZNF740
@@ -34122,9 +34122,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11722050_a_at	coiled-coil and C2 domain containing 1A(CC2D1A)	Homo sapiens	CC2D1A
 11729059_x_at	torsin family 4 member A(TOR4A)	Homo sapiens	TOR4A
 11755195_a_at	neurexophilin and PC-esterase domain family member 1(NXPE1)	Homo sapiens	NXPE1
-11721648_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	gene/pseudogene
-11761112_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	gene/pseudogene
-11721649_a_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	gene/pseudogene
+11721648_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	GPATCH4
+11761112_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	GPATCH4
+11721649_a_at	G-patch domain containing 4 (gene/pseudogene)(GPATCH4)	Homo sapiens	GPATCH4
 11737300_a_at	protein phosphatase 1 regulatory inhibitor subunit 14D(PPP1R14D)	Homo sapiens	PPP1R14D
 11730667_x_at	protein phosphatase 1 regulatory inhibitor subunit 14D(PPP1R14D)	Homo sapiens	PPP1R14D
 11750206_a_at	transmembrane protein 214(TMEM214)	Homo sapiens	TMEM214
@@ -34306,11 +34306,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11722846_at	ubiquitin conjugating enzyme E2 R2(UBE2R2)	Homo sapiens	UBE2R2
 11757083_s_at	coiled-coil-helix-coiled-coil-helix domain containing 3(CHCHD3)	Homo sapiens	CHCHD3
 11760429_at	coiled-coil-helix-coiled-coil-helix domain containing 3(CHCHD3)	Homo sapiens	CHCHD3
-11716854_s_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	2'
-11716852_x_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	2'
-11758201_s_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	2'
-11716851_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	2'
-11716853_x_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	2'
+11716854_s_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	BPNT2
+11716852_x_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	BPNT2
+11758201_s_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	BPNT2
+11716851_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	BPNT2
+11716853_x_at	3'(2'), 5'-bisphosphate nucleotidase 2(BPNT2)	Homo sapiens	BPNT2
 11723162_a_at	zinc finger protein 776(ZNF776)	Homo sapiens	ZNF776
 11723161_a_at	zinc finger protein 776(ZNF776)	Homo sapiens	ZNF776
 11723160_a_at	zinc finger protein 776(ZNF776)	Homo sapiens	ZNF776
@@ -35744,7 +35744,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11721744_a_at	nidogen 2(NID2)	Homo sapiens	NID2
 11743607_a_at	component of oligomeric golgi complex 2(COG2)	Homo sapiens	COG2
 11747061_a_at	component of oligomeric golgi complex 2(COG2)	Homo sapiens	COG2
-11738668_at	vomeronasal 1 receptor 5 (gene/pseudogene)(VN1R5)	Homo sapiens	gene/pseudogene
+11738668_at	vomeronasal 1 receptor 5 (gene/pseudogene)(VN1R5)	Homo sapiens	VN1R5
 11734162_a_at	transcription factor EC(TFEC)	Homo sapiens	TFEC
 11732084_a_at	transcription factor EC(TFEC)	Homo sapiens	TFEC
 11748859_a_at	transcription factor EC(TFEC)	Homo sapiens	TFEC
@@ -35881,9 +35881,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11742572_at	olfactory receptor family 5 subfamily D member 14(OR5D14)	Homo sapiens	OR5D14
 11742486_s_at	PRAME family member 19(PRAMEF19)	Homo sapiens	PRAMEF19
 11742461_s_at	PRAME family member 19(PRAMEF19)	Homo sapiens	PRAMEF19
-11728987_a_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNP1, RRM
-11758354_s_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNP1, RRM
-11746457_a_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNP1, RRM
+11728987_a_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNPC3
+11758354_s_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNPC3
+11746457_a_at	RNA binding region (RNP1, RRM) containing 3(RNPC3)	Homo sapiens	RNPC3
 11735378_a_at	centrosomal protein 162(CEP162)	Homo sapiens	CEP162
 11735379_a_at	centrosomal protein 162(CEP162)	Homo sapiens	CEP162
 11723027_at	intelectin 1(ITLN1)	Homo sapiens	ITLN1
@@ -36028,10 +36028,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11739359_a_at	chondroitin sulfate synthase 1(CHSY1)	Homo sapiens	CHSY1
 11746565_a_at	chondroitin sulfate synthase 1(CHSY1)	Homo sapiens	CHSY1
 11757950_s_at	chondroitin sulfate synthase 1(CHSY1)	Homo sapiens	CHSY1
-11756906_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	beta 1,2-
-11746853_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	beta 1,2-
-11716959_s_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	beta 1,2-
-11745366_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	beta 1,2-
+11756906_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	POMGNT1
+11746853_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	POMGNT1
+11716959_s_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	POMGNT1
+11745366_x_at	protein O-linked mannose N-acetylglucosaminyltransferase 1 (beta 1,2-)(POMGNT1)	Homo sapiens	POMGNT1
 11746754_a_at	zinc finger DHHC-type palmitoyltransferase 7(ZDHHC7)	Homo sapiens	ZDHHC7
 11730432_s_at	zinc finger DHHC-type palmitoyltransferase 7(ZDHHC7)	Homo sapiens	ZDHHC7
 11743591_a_at	zinc finger DHHC-type palmitoyltransferase 7(ZDHHC7)	Homo sapiens	ZDHHC7
@@ -36096,7 +36096,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11728079_a_at	TBC1 domain family member 22B(TBC1D22B)	Homo sapiens	TBC1D22B
 11728078_a_at	TBC1 domain family member 22B(TBC1D22B)	Homo sapiens	TBC1D22B
 11728080_a_at	TBC1 domain family member 22B(TBC1D22B)	Homo sapiens	TBC1D22B
-11742594_at	olfactory receptor family 8 subfamily K member 3 (gene/pseudogene)(OR8K3)	Homo sapiens	gene/pseudogene
+11742594_at	olfactory receptor family 8 subfamily K member 3 (gene/pseudogene)(OR8K3)	Homo sapiens	OR8K3
 11759207_at	connector enhancer of kinase suppressor of Ras 2(CNKSR2)	Homo sapiens	CNKSR2
 11760118_a_at	connector enhancer of kinase suppressor of Ras 2(CNKSR2)	Homo sapiens	CNKSR2
 11736639_a_at	connector enhancer of kinase suppressor of Ras 2(CNKSR2)	Homo sapiens	CNKSR2
@@ -39405,7 +39405,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11731747_at	hepatic and glial cell adhesion molecule(HEPACAM)	Homo sapiens	HEPACAM
 11755327_s_at	family with sequence similarity 115, member C pseudogene(LOC154761)	Homo sapiens	LOC154761
 11746146_s_at	family with sequence similarity 115, member C pseudogene(LOC154761)	Homo sapiens	LOC154761
-11728749_a_at	HLA complex group 22 (gene/pseudogene)(HCG22)	Homo sapiens	gene/pseudogene
+11728749_a_at	HLA complex group 22 (gene/pseudogene)(HCG22)	Homo sapiens	HCG22
 11735915_a_at	triggering receptor expressed on myeloid cells like 4(TREML4)	Homo sapiens	TREML4
 11735916_a_at	triggering receptor expressed on myeloid cells like 4(TREML4)	Homo sapiens	TREML4
 11730357_at	potassium voltage-gated channel subfamily E regulatory subunit 4(KCNE4)	Homo sapiens	KCNE4
@@ -39969,9 +39969,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11751681_a_at	dihydrouridine synthase 3 like(DUS3L)	Homo sapiens	DUS3L
 11749301_a_at	dihydrouridine synthase 3 like(DUS3L)	Homo sapiens	DUS3L
 11754597_a_at	dihydrouridine synthase 3 like(DUS3L)	Homo sapiens	DUS3L
-11754270_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	Chido blood group
-11734747_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	Chido blood group
-11749926_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	Chido blood group
+11754270_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	C4B_2
+11734747_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	C4B_2
+11749926_a_at	complement component 4B (Chido blood group), copy 2(C4B_2)	Homo sapiens	C4B_2
 11756609_a_at	carbonic anhydrase 10(CA10)	Homo sapiens	CA10
 11730336_a_at	carbonic anhydrase 10(CA10)	Homo sapiens	CA10
 11751218_a_at	carbonic anhydrase 10(CA10)	Homo sapiens	CA10
@@ -41750,7 +41750,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11738449_a_at	zinc finger FYVE-type containing 28(ZFYVE28)	Homo sapiens	ZFYVE28
 11762049_at	zinc finger FYVE-type containing 28(ZFYVE28)	Homo sapiens	ZFYVE28
 11749006_a_at	zinc finger FYVE-type containing 28(ZFYVE28)	Homo sapiens	ZFYVE28
-11724847_a_at	glucosylceramidase beta 3 (gene/pseudogene)(GBA3)	Homo sapiens	gene/pseudogene
+11724847_a_at	glucosylceramidase beta 3 (gene/pseudogene)(GBA3)	Homo sapiens	GBA3
 11722257_x_at	secernin 2(SCRN2)	Homo sapiens	SCRN2
 11722256_a_at	secernin 2(SCRN2)	Homo sapiens	SCRN2
 11732517_a_at	secernin 2(SCRN2)	Homo sapiens	SCRN2
@@ -42698,10 +42698,10 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11720551_a_at	intermediate filament family orphan 1(IFFO1)	Homo sapiens	IFFO1
 11720552_a_at	intermediate filament family orphan 1(IFFO1)	Homo sapiens	IFFO1
 11716169_at	coiled-coil domain containing 28A(CCDC28A)	Homo sapiens	CCDC28A
-11756196_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	NADP+ dependent
-11728984_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	NADP+ dependent
-11728985_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	NADP+ dependent
-11728986_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	NADP+ dependent
+11756196_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	MTHFD1L
+11728984_a_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	MTHFD1L
+11728985_s_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	MTHFD1L
+11728986_x_at	methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 1 like(MTHFD1L)	Homo sapiens	MTHFD1L
 11749325_a_at	olfactomedin like 2B(OLFML2B)	Homo sapiens	OLFML2B
 11720440_at	olfactomedin like 2B(OLFML2B)	Homo sapiens	OLFML2B
 11720441_x_at	olfactomedin like 2B(OLFML2B)	Homo sapiens	OLFML2B
@@ -43314,7 +43314,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11724429_s_at	zinc finger protein 337(ZNF337)	Homo sapiens	ZNF337
 11747302_s_at	zinc finger protein 337(ZNF337)	Homo sapiens	ZNF337
 11729429_a_at	kinesin family member 26A(KIF26A)	Homo sapiens	KIF26A
-11723430_a_at	ZFP91-CNTF readthrough (NMD candidate)(ZFP91-CNTF)	Homo sapiens	NMD candidate
+11723430_a_at	ZFP91-CNTF readthrough (NMD candidate)(ZFP91-CNTF)	Homo sapiens	ZFP91-CNTF
 11732684_a_at	ATP binding cassette subfamily A member 12(ABCA12)	Homo sapiens	ABCA12
 11732683_a_at	ATP binding cassette subfamily A member 12(ABCA12)	Homo sapiens	ABCA12
 11757561_s_at	NOC2 like nucleolar associated transcriptional repressor(NOC2L)	Homo sapiens	NOC2L
@@ -43604,8 +43604,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11734242_x_at	kinesin family member 19(KIF19)	Homo sapiens	KIF19
 11745352_a_at	kinesin family member 19(KIF19)	Homo sapiens	KIF19
 11753604_a_at	interleukin 21(IL21)	Homo sapiens	IL21
-11756430_a_at	globoside alpha-1,3-N-acetylgalactosaminyltransferase 1 (FORS blood group)(GBGT1)	Homo sapiens	FORS blood group
-11749871_a_at	globoside alpha-1,3-N-acetylgalactosaminyltransferase 1 (FORS blood group)(GBGT1)	Homo sapiens	FORS blood group
+11756430_a_at	globoside alpha-1,3-N-acetylgalactosaminyltransferase 1 (FORS blood group)(GBGT1)	Homo sapiens	GBGT1
+11749871_a_at	globoside alpha-1,3-N-acetylgalactosaminyltransferase 1 (FORS blood group)(GBGT1)	Homo sapiens	GBGT1
 11730162_s_at	solute carrier family 6 member 10, pseudogene(SLC6A10P)	Homo sapiens	SLC6A10P
 11763351_at	transmembrane protein 65(TMEM65)	Homo sapiens	TMEM65
 11743096_at	transmembrane protein 65(TMEM65)	Homo sapiens	TMEM65
@@ -44731,8 +44731,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11747715_s_at	sulfotransferase family 1C member 4(SULT1C4)	Homo sapiens	SULT1C4
 11760361_x_at	sulfotransferase family 1C member 4(SULT1C4)	Homo sapiens	SULT1C4
 11753383_s_at	sulfotransferase family 1C member 4(SULT1C4)	Homo sapiens	SULT1C4
-11718933_s_at	FKBP1A-SDCBP2 readthrough (NMD candidate)(FKBP1A-SDCBP2)	Homo sapiens	NMD candidate
-11718932_a_at	FKBP1A-SDCBP2 readthrough (NMD candidate)(FKBP1A-SDCBP2)	Homo sapiens	NMD candidate
+11718933_s_at	FKBP1A-SDCBP2 readthrough (NMD candidate)(FKBP1A-SDCBP2)	Homo sapiens	FKBP1A-SDCBP2
+11718932_a_at	FKBP1A-SDCBP2 readthrough (NMD candidate)(FKBP1A-SDCBP2)	Homo sapiens	FKBP1A-SDCBP2
 11722311_a_at	coenzyme Q2, polyprenyltransferase(COQ2)	Homo sapiens	COQ2
 11746747_a_at	coenzyme Q2, polyprenyltransferase(COQ2)	Homo sapiens	COQ2
 11761388_at	coenzyme Q2, polyprenyltransferase(COQ2)	Homo sapiens	COQ2
@@ -44770,18 +44770,18 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11756072_s_at	SAA2-SAA4 readthrough(SAA2-SAA4)	Homo sapiens	SAA2-SAA4
 11729749_at	SAA2-SAA4 readthrough(SAA2-SAA4)	Homo sapiens	SAA2-SAA4
 11735080_at	AT-hook DNA binding motif containing 1(AHDC1)	Homo sapiens	AHDC1
-11754087_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	NMD candidate
-11721647_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	NMD candidate
-11722067_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	NMD candidate
-11750587_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	NMD candidate
-11750588_x_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	NMD candidate
+11754087_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	TMX2-CTNND1
+11721647_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	TMX2-CTNND1
+11722067_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	TMX2-CTNND1
+11750587_a_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	TMX2-CTNND1
+11750588_x_at	TMX2-CTNND1 readthrough (NMD candidate)(TMX2-CTNND1)	Homo sapiens	TMX2-CTNND1
 11743013_a_at	ring finger protein 115(RNF115)	Homo sapiens	RNF115
-11726833_a_at	HSPB2-C11orf52 readthrough (NMD candidate)(HSPB2-C11orf52)	Homo sapiens	NMD candidate
-11726430_at	HSPB2-C11orf52 readthrough (NMD candidate)(HSPB2-C11orf52)	Homo sapiens	NMD candidate
+11726833_a_at	HSPB2-C11orf52 readthrough (NMD candidate)(HSPB2-C11orf52)	Homo sapiens	HSPB2-C11orf52
+11726430_at	HSPB2-C11orf52 readthrough (NMD candidate)(HSPB2-C11orf52)	Homo sapiens	HSPB2-C11orf52
 11729285_a_at	NFU1 iron-sulfur cluster scaffold(NFU1)	Homo sapiens	NFU1
 11720381_x_at	NFU1 iron-sulfur cluster scaffold(NFU1)	Homo sapiens	NFU1
-11753624_a_at	ARL2-SNX15 readthrough (NMD candidate)(ARL2-SNX15)	Homo sapiens	NMD candidate
-11731651_x_at	ARL2-SNX15 readthrough (NMD candidate)(ARL2-SNX15)	Homo sapiens	NMD candidate
+11753624_a_at	ARL2-SNX15 readthrough (NMD candidate)(ARL2-SNX15)	Homo sapiens	ARL2-SNX15
+11731651_x_at	ARL2-SNX15 readthrough (NMD candidate)(ARL2-SNX15)	Homo sapiens	ARL2-SNX15
 11716643_s_at	endoplasmic reticulum lectin 1(ERLEC1)	Homo sapiens	ERLEC1
 11741872_a_at	endoplasmic reticulum lectin 1(ERLEC1)	Homo sapiens	ERLEC1
 11716644_a_at	endoplasmic reticulum lectin 1(ERLEC1)	Homo sapiens	ERLEC1
@@ -44807,9 +44807,9 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11753808_s_at	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated(LSM3)	Homo sapiens	LSM3
 11753809_x_at	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated(LSM3)	Homo sapiens	LSM3
 11757092_s_at	LSM3 homolog, U6 small nuclear RNA and mRNA degradation associated(LSM3)	Homo sapiens	LSM3
-11724701_x_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	NMD candidate
-11740203_a_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	NMD candidate
-11744809_a_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	NMD candidate
+11724701_x_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	BORCS7-ASMT
+11740203_a_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	BORCS7-ASMT
+11744809_a_at	BORCS7-ASMT readthrough (NMD candidate)(BORCS7-ASMT)	Homo sapiens	BORCS7-ASMT
 11755481_a_at	DNA helicase B(HELB)	Homo sapiens	HELB
 11740928_at	coiled-coil and C2 domain containing 2B(CC2D2B)	Homo sapiens	CC2D2B
 11732055_s_at	coiled-coil and C2 domain containing 2B(CC2D2B)	Homo sapiens	CC2D2B
@@ -44883,8 +44883,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11747338_a_at	zinc finger protein 544(ZNF544)	Homo sapiens	ZNF544
 11746416_a_at	apurinic/apyrimidinic endodeoxyribonuclease 2(APEX2)	Homo sapiens	APEX2
 11721522_a_at	apurinic/apyrimidinic endodeoxyribonuclease 2(APEX2)	Homo sapiens	APEX2
-11752537_s_at	MROH7-TTC4 readthrough (NMD candidate)(MROH7-TTC4)	Homo sapiens	NMD candidate
-11720318_a_at	MROH7-TTC4 readthrough (NMD candidate)(MROH7-TTC4)	Homo sapiens	NMD candidate
+11752537_s_at	MROH7-TTC4 readthrough (NMD candidate)(MROH7-TTC4)	Homo sapiens	MROH7-TTC4
+11720318_a_at	MROH7-TTC4 readthrough (NMD candidate)(MROH7-TTC4)	Homo sapiens	MROH7-TTC4
 11738424_at	bone morphogenetic protein 10(BMP10)	Homo sapiens	BMP10
 11735320_a_at	RNA binding motif single stranded interacting protein 3(RBMS3)	Homo sapiens	RBMS3
 11735319_a_at	RNA binding motif single stranded interacting protein 3(RBMS3)	Homo sapiens	RBMS3
@@ -45771,11 +45771,11 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11754996_x_at	RPL17-C18orf32 readthrough(RPL17-C18orf32)	Homo sapiens	RPL17-C18orf32
 11744328_x_at	RPL17-C18orf32 readthrough(RPL17-C18orf32)	Homo sapiens	RPL17-C18orf32
 200038_PM_s_at	RPL17-C18orf32 readthrough(RPL17-C18orf32)	Homo sapiens	RPL17-C18orf32
-11758654_s_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	NMD candidate
-11737718_a_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	NMD candidate
-11728393_a_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	NMD candidate
-11715395_a_at	BLOC1S5-TXNDC5 readthrough (NMD candidate)(BLOC1S5-TXNDC5)	Homo sapiens	NMD candidate
-11715396_s_at	BLOC1S5-TXNDC5 readthrough (NMD candidate)(BLOC1S5-TXNDC5)	Homo sapiens	NMD candidate
+11758654_s_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	EEF1E1-BLOC1S5
+11737718_a_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	EEF1E1-BLOC1S5
+11728393_a_at	EEF1E1-BLOC1S5 readthrough (NMD candidate)(EEF1E1-BLOC1S5)	Homo sapiens	EEF1E1-BLOC1S5
+11715395_a_at	BLOC1S5-TXNDC5 readthrough (NMD candidate)(BLOC1S5-TXNDC5)	Homo sapiens	BLOC1S5-TXNDC5
+11715396_s_at	BLOC1S5-TXNDC5 readthrough (NMD candidate)(BLOC1S5-TXNDC5)	Homo sapiens	BLOC1S5-TXNDC5
 11761941_at	centriole, cilia and spindle associated protein(CCSAP)	Homo sapiens	CCSAP
 11720143_at	centriole, cilia and spindle associated protein(CCSAP)	Homo sapiens	CCSAP
 11720145_a_at	centriole, cilia and spindle associated protein(CCSAP)	Homo sapiens	CCSAP
@@ -45793,14 +45793,14 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11752160_a_at	FPGT-TNNI3K readthrough(FPGT-TNNI3K)	Homo sapiens	FPGT-TNNI3K
 11737893_a_at	FPGT-TNNI3K readthrough(FPGT-TNNI3K)	Homo sapiens	FPGT-TNNI3K
 11721618_a_at	leucine rich repeat containing 75B(LRRC75B)	Homo sapiens	LRRC75B
-11752331_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	NMD candidate
-11760510_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	NMD candidate
-11732899_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	NMD candidate
-11742399_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	NMD candidate
+11752331_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	SLX1A-SULT1A3
+11760510_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	SLX1A-SULT1A3
+11732899_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	SLX1A-SULT1A3
+11742399_s_at	SLX1A-SULT1A3 readthrough (NMD candidate)(SLX1A-SULT1A3)	Homo sapiens	SLX1A-SULT1A3
 11755445_a_at	actin related protein 8(ACTR8)	Homo sapiens	ACTR8
 11742953_at	actin related protein 8(ACTR8)	Homo sapiens	ACTR8
-11734566_a_at	INMT-MINDY4 readthrough (NMD candidate)(INMT-MINDY4)	Homo sapiens	NMD candidate
-11756507_x_at	INMT-MINDY4 readthrough (NMD candidate)(INMT-MINDY4)	Homo sapiens	NMD candidate
+11734566_a_at	INMT-MINDY4 readthrough (NMD candidate)(INMT-MINDY4)	Homo sapiens	INMT-MINDY4
+11756507_x_at	INMT-MINDY4 readthrough (NMD candidate)(INMT-MINDY4)	Homo sapiens	INMT-MINDY4
 11749561_at	family with sequence similarity 230 member I(FAM230I)	Homo sapiens	FAM230I
 11758202_s_at	ATP synthase inhibitory factor subunit 1(ATP5IF1)	Homo sapiens	ATP5IF1
 11716821_s_at	ATP synthase inhibitory factor subunit 1(ATP5IF1)	Homo sapiens	ATP5IF1
@@ -46266,8 +46266,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11744634_a_at	zinc finger CCCH-type containing 7A(ZC3H7A)	Homo sapiens	ZC3H7A
 11718543_at	zinc finger and BTB domain containing 44(ZBTB44)	Homo sapiens	ZBTB44
 11718544_s_at	zinc finger and BTB domain containing 44(ZBTB44)	Homo sapiens	ZBTB44
-11744025_a_at	RAB4B-EGLN2 readthrough (NMD candidate)(RAB4B-EGLN2)	Homo sapiens	NMD candidate
-11744026_at	RAB4B-EGLN2 readthrough (NMD candidate)(RAB4B-EGLN2)	Homo sapiens	NMD candidate
+11744025_a_at	RAB4B-EGLN2 readthrough (NMD candidate)(RAB4B-EGLN2)	Homo sapiens	RAB4B-EGLN2
+11744026_at	RAB4B-EGLN2 readthrough (NMD candidate)(RAB4B-EGLN2)	Homo sapiens	RAB4B-EGLN2
 11724986_a_at	coiled-coil domain containing 113(CCDC113)	Homo sapiens	CCDC113
 11742026_a_at	coiled-coil domain containing 113(CCDC113)	Homo sapiens	CCDC113
 11724988_a_at	coiled-coil domain containing 113(CCDC113)	Homo sapiens	CCDC113
@@ -46294,7 +46294,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11721696_a_at	mitochondrial ribosomal protein L18(MRPL18)	Homo sapiens	MRPL18
 11757293_x_at	mitochondrial ribosomal protein L18(MRPL18)	Homo sapiens	MRPL18
 11755263_s_at	long intergenic non-protein coding RNA 652(LINC00652)	Homo sapiens	LINC00652
-11727877_a_at	MIA-RAB4B readthrough (NMD candidate)(MIA-RAB4B)	Homo sapiens	NMD candidate
+11727877_a_at	MIA-RAB4B readthrough (NMD candidate)(MIA-RAB4B)	Homo sapiens	MIA-RAB4B
 11719998_a_at	SYNJ2BP-COX16 readthrough(SYNJ2BP-COX16)	Homo sapiens	SYNJ2BP-COX16
 11732140_at	SYNJ2BP-COX16 readthrough(SYNJ2BP-COX16)	Homo sapiens	SYNJ2BP-COX16
 11720191_s_at	NADH:ubiquinone oxidoreductase complex assembly factor 4(NDUFAF4)	Homo sapiens	NDUFAF4
@@ -46433,8 +46433,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11745710_a_at	CD274 molecule(CD274)	Homo sapiens	CD274
 11728316_at	CD274 molecule(CD274)	Homo sapiens	CD274
 11762857_at	CD274 molecule(CD274)	Homo sapiens	CD274
-11722055_a_at	TMEM256-PLSCR3 readthrough (NMD candidate)(TMEM256-PLSCR3)	Homo sapiens	NMD candidate
-11752824_a_at	TMEM256-PLSCR3 readthrough (NMD candidate)(TMEM256-PLSCR3)	Homo sapiens	NMD candidate
+11722055_a_at	TMEM256-PLSCR3 readthrough (NMD candidate)(TMEM256-PLSCR3)	Homo sapiens	TMEM256-PLSCR3
+11752824_a_at	TMEM256-PLSCR3 readthrough (NMD candidate)(TMEM256-PLSCR3)	Homo sapiens	TMEM256-PLSCR3
 11758149_s_at	Rac GTPase activating protein 1(RACGAP1)	Homo sapiens	RACGAP1
 11723584_x_at	Rac GTPase activating protein 1(RACGAP1)	Homo sapiens	RACGAP1
 11723583_a_at	Rac GTPase activating protein 1(RACGAP1)	Homo sapiens	RACGAP1
@@ -46472,7 +46472,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11758703_s_at	MAF bZIP transcription factor A(MAFA)	Homo sapiens	MAFA
 11759465_s_at	MAF bZIP transcription factor A(MAFA)	Homo sapiens	MAFA
 11725917_s_at	ring finger protein 19B(RNF19B)	Homo sapiens	RNF19B
-11735598_a_at	maestro heat like repeat family member 5 (gene/pseudogene)(MROH5)	Homo sapiens	gene/pseudogene
+11735598_a_at	maestro heat like repeat family member 5 (gene/pseudogene)(MROH5)	Homo sapiens	MROH5
 11742524_at	alpha 1,3-galactosyltransferase 2(A3GALT2)	Homo sapiens	A3GALT2
 11757225_x_at	histone PARylation factor 1 pseudogene(LOC389705)	Homo sapiens	LOC389705
 11757224_s_at	histone PARylation factor 1 pseudogene(LOC389705)	Homo sapiens	LOC389705
@@ -46546,8 +46546,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11759029_at	TNF and HNRNPL related immunoregulatory long non-coding RNA(THRIL)	Homo sapiens	THRIL
 11759028_at	TNF and HNRNPL related immunoregulatory long non-coding RNA(THRIL)	Homo sapiens	THRIL
 11764172_a_at	PPP1R3B divergent transcript(PPP1R3B-DT)	Homo sapiens	PPP1R3B-DT
-11740255_x_at	ubiquitin conjugating enzyme E2 N like (gene/pseudogene)(UBE2NL)	Homo sapiens	gene/pseudogene
-11740254_at	ubiquitin conjugating enzyme E2 N like (gene/pseudogene)(UBE2NL)	Homo sapiens	gene/pseudogene
+11740255_x_at	ubiquitin conjugating enzyme E2 N like (gene/pseudogene)(UBE2NL)	Homo sapiens	UBE2NL
+11740254_at	ubiquitin conjugating enzyme E2 N like (gene/pseudogene)(UBE2NL)	Homo sapiens	UBE2NL
 11729235_s_at	transcription factor E2F6 pseudogene(LOC102724865)	Homo sapiens	LOC102724865
 11757191_s_at	aldo-keto reductase family 1 member C6, pseudogene(AKR1C6P)	Homo sapiens	AKR1C6P
 11750533_a_at	complement C1q like 3(C1QL3)	Homo sapiens	C1QL3
@@ -46556,8 +46556,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11763389_a_at	uncharacterized LOC102724958(LOC102724958)	Homo sapiens	LOC102724958
 11763390_at	uncharacterized LOC102724958(LOC102724958)	Homo sapiens	LOC102724958
 11763458_a_at	uncharacterized LOC102724958(LOC102724958)	Homo sapiens	LOC102724958
-11727256_a_at	ZNF625-ZNF20 readthrough (NMD candidate)(ZNF625-ZNF20)	Homo sapiens	NMD candidate
-11749247_a_at	ZNF625-ZNF20 readthrough (NMD candidate)(ZNF625-ZNF20)	Homo sapiens	NMD candidate
+11727256_a_at	ZNF625-ZNF20 readthrough (NMD candidate)(ZNF625-ZNF20)	Homo sapiens	ZNF625-ZNF20
+11749247_a_at	ZNF625-ZNF20 readthrough (NMD candidate)(ZNF625-ZNF20)	Homo sapiens	ZNF625-ZNF20
 11736109_at	ADP ribosylation factor like GTPase 8A(ARL8A)	Homo sapiens	ARL8A
 11736110_a_at	ADP ribosylation factor like GTPase 8A(ARL8A)	Homo sapiens	ARL8A
 11736108_at	ADP ribosylation factor like GTPase 8A(ARL8A)	Homo sapiens	ARL8A
@@ -46600,7 +46600,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11742567_at	olfactory receptor family 56 subfamily A member 3(OR56A3)	Homo sapiens	OR56A3
 11731866_a_at	Fc receptor like B(FCRLB)	Homo sapiens	FCRLB
 11744982_a_at	Fc receptor like B(FCRLB)	Homo sapiens	FCRLB
-11743216_at	olfactory receptor family 10 subfamily A member 6 (gene/pseudogene)(OR10A6)	Homo sapiens	gene/pseudogene
+11743216_at	olfactory receptor family 10 subfamily A member 6 (gene/pseudogene)(OR10A6)	Homo sapiens	OR10A6
 11759121_at	solute carrier family 5 member 8(SLC5A8)	Homo sapiens	SLC5A8
 11733984_at	solute carrier family 5 member 8(SLC5A8)	Homo sapiens	SLC5A8
 11733985_at	solute carrier family 5 member 8(SLC5A8)	Homo sapiens	SLC5A8
@@ -47028,7 +47028,7 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11733260_s_at	transportin 2(TNPO2)	Homo sapiens	TNPO2
 11755334_s_at	transportin 2(TNPO2)	Homo sapiens	TNPO2
 11739519_a_at	transportin 2(TNPO2)	Homo sapiens	TNPO2
-11754543_s_at	uncharacterized CH507-42P11.6(CH507-42P11.6)	Homo sapiens	CH507-42P11.6
+11754543_s_at	uncharacterized CH507-42P11.6(CH507-42P11.6)	Homo sapiens	NA
 11726320_at	endoplasmic reticulum oxidoreductase 1 alpha(ERO1A)	Homo sapiens	ERO1A
 11726321_a_at	endoplasmic reticulum oxidoreductase 1 alpha(ERO1A)	Homo sapiens	ERO1A
 11754778_a_at	mitochondrial ribosomal protein L55(MRPL55)	Homo sapiens	MRPL55
@@ -47129,8 +47129,8 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11738769_at	olfactory receptor family 4 subfamily F member 15(OR4F15)	Homo sapiens	OR4F15
 11738768_at	olfactory receptor family 4 subfamily F member 6(OR4F6)	Homo sapiens	OR4F6
 11762570_at	olfactory receptor family 4 subfamily F member 13 pseudogene(OR4F13P)	Homo sapiens	OR4F13P
-11727290_a_at	TEN1-CDK3 readthrough (NMD candidate)(TEN1-CDK3)	Homo sapiens	NMD candidate
-11727291_at	TEN1-CDK3 readthrough (NMD candidate)(TEN1-CDK3)	Homo sapiens	NMD candidate
+11727290_a_at	TEN1-CDK3 readthrough (NMD candidate)(TEN1-CDK3)	Homo sapiens	TEN1-CDK3
+11727291_at	TEN1-CDK3 readthrough (NMD candidate)(TEN1-CDK3)	Homo sapiens	TEN1-CDK3
 11748242_a_at	CORO7-PAM16 readthrough(CORO7-PAM16)	Homo sapiens	CORO7-PAM16
 11757649_a_at	CORO7-PAM16 readthrough(CORO7-PAM16)	Homo sapiens	CORO7-PAM16
 11749051_a_at	CORO7-PAM16 readthrough(CORO7-PAM16)	Homo sapiens	CORO7-PAM16
@@ -48596,12 +48596,12 @@ AFFX-HUMISGF3A/M97935_MA_at	signal transducer and activator of transcription 1(S
 11748894_a_at	ACD shelterin complex subunit and telomerase recruitment factor(ACD)	Homo sapiens	ACD
 11718424_at	ACD shelterin complex subunit and telomerase recruitment factor(ACD)	Homo sapiens	ACD
 11761411_at	ACD shelterin complex subunit and telomerase recruitment factor(ACD)	Homo sapiens	ACD
-11758403_s_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
-11741846_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
-11719160_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
-11719159_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
-11744816_a_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
-11719158_a_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RalGDS/AF-6
+11758403_s_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
+11741846_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
+11719160_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
+11719159_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
+11744816_a_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
+11719158_a_at	Ras association (RalGDS/AF-6) and pleckstrin homology domains 1(RAPH1)	Homo sapiens	RAPH1
 11739909_a_at	cyclin dependent kinase 15(CDK15)	Homo sapiens	CDK15
 11762016_at	cyclin dependent kinase 15(CDK15)	Homo sapiens	CDK15
 11727577_a_at	transmembrane protein 237(TMEM237)	Homo sapiens	TMEM237
