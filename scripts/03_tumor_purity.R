@@ -7,6 +7,8 @@ start <- Sys.time()
 expr <- read.table("data/expr.txt",
                    header = TRUE)
 
+probes_genes <- read_tsv("data/probeID_gene.tsv") %>% 
+    select(!entrez_gene)
 
 # gene_names <- read_tsv(file = "data/gene_names.tsv") %>% 
 #     mutate(name_abbr = str_extract(string = Name,
@@ -36,32 +38,44 @@ expr <- read.table("data/expr.txt",
 expr_tib <- expr %>% 
     as_tibble(rownames = "ID") %>% 
     left_join(y = probes_genes) %>% 
-    relocate(gene_symbol)
+    relocate(gene_symbol) %>% 
+    filter(!is.na(gene_symbol)) %>% 
+    filter(!(gene_symbol == "---"))
 
 # prepare data for collapsing rows 
 
-rowID <- rownames(expr)
+#rowID <- rownames(expr)
 
+# genes <- probes_genes %>%
+#     select(ID,gene_symbol) %>%
+#     distinct(ID, .keep_all = T) %>% 
+#     pull()
 ## how to choose which probes to use? 
 
-genes <- probes_genes %>%
-    select(ID,gene_symbol) %>%
-    distinct(ID, .keep_all = T) %>% 
-    pull()
-
 # sanity check
-length(rowID)
-length(genes)
+# length(rowID)
+# length(genes)
 
 # create gene level expression data
-gene_level_expr <- WGCNA::collapseRows(
-    datET = expr,
-    rowGroup = genes,
-    rowID = rowID,
-)
+# gene_level_expr <- WGCNA::collapseRows(
+#     datET = expr,
+#     rowGroup = genes,
+#     rowID = rowID,
+# )
+
+expr_tib <- expr_tib %>% 
+    group_by(gene_symbol) %>% 
+    summarise(across(.cols = !ID, 
+                           .fns = ~mean(.x, na.rm = T),
+                           .names = "{.col}"))
 
 
-gene_expr <- as.data.frame(gene_level_expr$datETcollapsed)
+gene_expr <- as.data.frame(expr_tib %>% 
+                               select(!gene_symbol))
+rownames(gene_expr) <- expr_tib %>% pull(gene_symbol)
+
+
+#gene_expr <- as.data.frame(gene_level_expr$datETcollapsed)
 
 write.table(x = gene_expr, 
             file = "data/gene_expr.txt", 
