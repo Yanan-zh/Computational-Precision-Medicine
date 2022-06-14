@@ -14,7 +14,6 @@ ranks_response_DEG <- read.table("data/response_geneset.txt", header = T)
 ## File with logFC for all genes
 ranks_response_all <- read.table("data/response_geneset_all.txt", header = T)
 
-
 ## File with GO BP gene sets
 GO_BP_genesets <- gmtPathways("data/GeneSymbols.gmt")
 
@@ -22,21 +21,18 @@ GO_BP_genesets <- gmtPathways("data/GeneSymbols.gmt")
 
 # Clean data -------------------------------------------------------------------
 
-## Prepare rank file
+## Prepare rank files
 
-## DEG
+### DEG
 ranks_response_DEG <- setNames(ranks_response_DEG$logFC, 
                                ranks_response_DEG$GeneSymbol) # named vector
 
-## All
+### All
 ranks_response_all <- ranks_response_all %>% 
     select(-adj.P.Val) %>% 
     arrange(desc(logFC)) 
 ranks_response_all <- setNames(ranks_response_all$logFC, 
                                ranks_response_all$GeneSymbol) # named vector
-
-## Ensure all gene names of pathways are present in ranks - else remove them 
-
 
 
 # Run fGSEA analysis -----------------------------------------------------------
