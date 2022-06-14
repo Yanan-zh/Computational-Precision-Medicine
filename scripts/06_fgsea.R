@@ -5,8 +5,7 @@ library("fgsea")
 
 # Load data --------------------------------------------------------------------
 ## File for mapping probe ID to gene ID
-probeID_GeneSymbol <- read.table(file = "data/probeID_GeneSymbol.txt",
-                                 header = T)
+probeID_gene <- read_tsv(file = "data/probeID_gene.tsv")
 
 ## File with logFC for differentially expressed genes
 ranks_response_DEG <- read.table("data/response_geneset.txt", header = T)
