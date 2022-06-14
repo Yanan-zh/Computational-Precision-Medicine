@@ -23,14 +23,18 @@ fit <- lmFit(expr, design)
 
 contrast.matrix <- makeContrasts((M_R+T1_R+W3_R)/3-(M_NR+T1_NR+W3_NR)/3,
                                  (M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4,
+                                 W3_R-T1_R,
+                                 W3_NR-T1_NR,
                                  levels = design)
 colnames(contrast.matrix) <- c("R_vs_NR", 
-                               "Muc_vs_Tumor")
+                               "Muc_vs_Tumor",
+                               "T_vs_PT (R)",
+                               "T_vs_PT (NR)")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
 fit2 <- eBayes(fit2)
 
 tab <- topTable(fit2, coef=2, adjust="BH")
-results <- decideTests(fit2)
+results <- decideTests(fit2, adjust.method = "BH")
 vennDiagram(results)
 
 decideTests(fit2, adjust.method = "BH",
@@ -40,6 +44,12 @@ decideTests(fit2, adjust.method = "BH",
     filter(R_vs_NR != 0,
            Muc_vs_Tumor == 0) %>% 
     rownames()
+
+topTable(fit2, 
+         coef=3, 
+         adjust="BH", 
+         number = nrow(expr), 
+         p.value=0.05)
 
 
 geneset <- topTable(fit2, 
@@ -66,3 +76,21 @@ geneset <- topTable(fit2,
 write.table(geneset, "data/response_geneset.txt", 
             row.names = FALSE)
 
+
+geneset_all <- topTable(fit2, 
+                    coef=1, 
+                    adjust="BH", 
+                    number = nrow(expr), 
+                    p.value=1) %>% 
+    select(logFC, adj.P.Val) %>%
+    rownames_to_column("probeID") %>% 
+    inner_join(read.table("data/probeID_GeneSymbol.txt", 
+                          header = TRUE)) %>% 
+    select(-probeID) %>% 
+    arrange(GeneSymbol, desc(logFC)) %>% 
+    distinct(GeneSymbol, .keep_all = TRUE) %>% 
+    relocate(GeneSymbol) %>% 
+    arrange(desc(logFC))
+
+write.table(geneset_all, "data/response_geneset_all.txt", 
+            row.names = FALSE)
