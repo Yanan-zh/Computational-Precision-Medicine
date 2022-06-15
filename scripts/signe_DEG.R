@@ -1,4 +1,4 @@
-#### Differential Expression Analysis ####
+# Load packages
 library(tidyverse)
 library(limma)
 library(data.table)
@@ -63,6 +63,9 @@ topTable_NR %>%
 
 
 
+
+
+# ------------------------------------------------------------------------------
 
 
 #(M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4
