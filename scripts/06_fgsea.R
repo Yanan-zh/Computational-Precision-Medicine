@@ -4,64 +4,61 @@ library("fgsea")
 
 
 # Load data --------------------------------------------------------------------
-expr <- read.table("data/expr.txt", header = TRUE, sep = "\t")
+## File for mapping probe ID to gene ID
+probeID_gene <- read_tsv(file = "data/probeID_gene.tsv")
 
+## File with logFC for differentially expressed genes
+ranks_response_DEG <- read.table("data/response_geneset.txt", header = T)
 
-## File with ranks: cols = c(probeID, log2FC)
-ranks <- read.table(rnk.file,
-                    header = TRUE, 
-                    colClasses = c("character", "numeric"))
-ranks <- setNames(ranks$t, ranks$ID) # Convert to named numeric vector
-str(ranks)
+## File with logFC for all genes
+ranks_response_all <- read.table("data/response_geneset_all.txt", header = T)
 
 ## File with GO BP gene sets
-GO_BP_genesets <- gmtPathways("GeneSymbols.gmt")
-str(head(pathways))
+GO_BP_genesets <- gmtPathways("data/GeneSymbols.gmt")
 
-## File for mapping probe ID to gene ID
-probeID_GeneSymbol <- read.table(file = "data/probeID_GeneSymbol.txt",
-                                 header = T)
 
 
 # Clean data -------------------------------------------------------------------
 
-## Map probe IDs to gene IDs
-# probes <- ranks$probes %>% as_tibble %>% rename(probeID = value)
-probes <- as.vector(rownames(expr)[1:30]) %>% as_tibble %>% rename(probeID = value)
-left_join(probes, probeID_GeneSymbol,
-          by = "probeID")
+## Prepare rank files
 
-## Ensure all gene names of pathways are present in ranks - else remove them 
+### DEG
+ranks_response_DEG <- setNames(ranks_response_DEG$logFC, 
+                               ranks_response_DEG$GeneSymbol) # named vector
 
-
-
-# ensembl <- useEnsembl(biomart = "ensembl", dataset = "hsapiens_gene_ensembl")
-# probe_to_entrez <- getBM(attributes = c('affy_hg_u133_plus_2', 'entrezgene_id'),
-#                          filters = 'affy_hg_u133_plus_2',
-#                          values = probes, 
-#                          mart = ensembl)
-
+### All
+ranks_response_all <- ranks_response_all %>% 
+    select(-adj.P.Val) %>% 
+    arrange(desc(logFC)) 
+ranks_response_all <- setNames(ranks_response_all$logFC, 
+                               ranks_response_all$GeneSymbol) # named vector
 
 
 # Run fGSEA analysis -----------------------------------------------------------
-fgseaRes <- fgsea(pathways = examplePathways, # list of gene sets to check
-                  stats    = exampleRanks, # ranked named vector
-                  minSize  = 15, # minimum gene set size to include
-                  maxSize  = 500) # maximum gene set size to include
+fgseaRes_DEG <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
+                      stats    = ranks_response_DEG, # ranked named vector
+                      minSize  = 15, # minimum gene set size to include
+                      maxSize  = 500) # maximum gene set size to include
+fgseaRes_all <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
+                      stats    = ranks_response_all, # ranked named vector
+                      minSize  = 15, # minimum gene set size to include
+                      maxSize  = 500) # maximum gene set size to include
+
 
 ## View most significant GO terms
-head(fgseaRes[order(pval), ])
+head(fgseaRes_all[order(pval), ])
+
 
 
 # Plot data --------------------------------------------------------------------
 ## Enrichment plot for a specific GO term
-plotEnrichment(examplePathways[["5991130_Programmed_Cell_Death"]],
-               exampleRanks) + labs(title="Programmed Cell Death")
+plotEnrichment(GO_BP_genesets[["GOBP_ADAPTIVE_IMMUNE_RESPONSE"]],
+               ranks_response_all) + labs(title="GOBP_ADAPTIVE_IMMUNE_RESPONSE")
 
 
 ## Table plot for some selected GO terms
-topPathwaysUp <- fgseaRes[ES > 0][head(order(pval), n=10), pathway]
-topPathwaysDown <- fgseaRes[ES < 0][head(order(pval), n=10), pathway]
+topPathwaysUp <- fgseaRes_all[ES > 0][head(order(pval), n=10), pathway]
+topPathwaysDown <- fgseaRes_all[ES < 0][head(order(pval), n=10), pathway]
 topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
-plotGseaTable(examplePathways[topPathways], exampleRanks, fgseaRes, 
+plotGseaTable(GO_BP_genesets[topPathways], ranks_response_all, fgseaRes_all, 
               gseaParam=0.5)

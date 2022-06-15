@@ -24,21 +24,23 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 install.packages(c("devtools","curl")) ##Installs devtools and the MCPcounter dependancy 'curl'
 library(devtools)
 install_github("ebecht/MCPcounter",ref="master", subdir="Source")
+library(tidyverse)
+library(MCPcounter)
 ```
 
 
 
 ```{r}
-expr = read.table('data/expr.txt')
+expr = read.table('../data/expr.txt') 
 expression = expr %>% data.frame(names = row.names(expr))
 
 ```
 
 
 ```{r}
-matchlist= read.table('data/probeID_GeneSymbol.txt', header = TRUE)
+matchlist= read.table('../data/probeID_GeneSymbol.txt', header = TRUE)
 
-matchlist = matchlist %>%  rename(names=probeID)
+matchlist = matchlist %>% rename(names = probeID)
 ```
 
 ```{r}
@@ -59,16 +61,26 @@ expressionfinal = expressionfinal %>% remove_rownames %>% column_to_rownames(var
 ```
 
 
+
+
+
 ```{r}
+# immune cells expression level
 RESULT = MCPcounter.estimate(expressionfinal,featuresType='HUGO_symbols')
-heatmap(as.matrix(RESULT),col=colorRampPalette(c("blue","white","red"))(100)) 
+
+
+heatmap(as.matrix(RESULT),col=colorRampPalette(c("blue","white","red"))(100) ) 
 ```
 
 
 ```{r}
 
-expressionexclude = expressionfinal %>% filter(rownames(expressionfinal) %in% matchlist[["GeneSymbol"]])
+#expressionexclude = expressionfinal %>% filter(rownames(expressionfinal) #%in% matchlist[["GeneSymbol"]])
 
 ```
 
+
+```{r}
+write.table(expressionfinal, "../data/GeneSymbol_expr.txt", sep = "\t", row.names = TRUE, quote = FALSE)
+```
 
