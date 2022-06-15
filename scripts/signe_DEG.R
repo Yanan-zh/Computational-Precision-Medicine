@@ -8,7 +8,9 @@ library("affy")
 expr <- as.matrix(fread("data/expr.txt", sep = "\t"), rownames=1) %>% 
     data.frame()
 pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
-probeID_gene <- read_tsv("data/probeID_gene.tsv")
+probeID_gene <- read_tsv("data/gene_expr_probe_id.tsv") %>% 
+    select(gene_symbol, ID) %>% 
+    rename(probeID = ID)
 
 # Divide tumor data in responders and non-responders
 R_index <- which(pheno$treatment_response == "Responder (R)" &
@@ -59,10 +61,16 @@ sig_probes_R <- topTable_R %>%
 topTable_NR %>% 
     filter(adj.P.Val < 0.05)
 
-# Map probes to gene names
+# Map probes to gene names and rank
+sig_genes_R <- left_join(x = sig_probes_R,
+                         y = probeID_gene,
+                         by = "probeID") %>% 
+    drop_na() %>% 
+    select(gene_symbol, logFC) %>% 
+    arrange(desc(logFC))
 
-
-
+# Write file
+write_tsv(x = sig_genes_R, file = "data/DEG_R_pre_vs_post.tsv")
 
 
 # ------------------------------------------------------------------------------
