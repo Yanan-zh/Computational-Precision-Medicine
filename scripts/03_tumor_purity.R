@@ -4,77 +4,12 @@ library(tidyverse)
 # load probe level data
 start <- Sys.time()
 
-expr <- read.table("data/expr.txt",
-                   header = TRUE)
+gene_expr_tib <- read_tsv("data/gene_expression.tsv")
 
-probes_genes <- read_tsv("data/probeID_gene.tsv") %>% 
-    select(!entrez_gene)
-
-
-# gene_names <- read_tsv(file = "data/gene_names.tsv") %>% 
-#     mutate(name_abbr = str_extract(string = Name,
-#         pattern = "(?<=\\()[\\w\\-]+?(?=\\))")) 
-
-# write_tsv(gene_names, file = "data/gene_names.tsv")
-
-# rownames(expr) <- gene_names
-
-# associate genes with probes
-# 
-# probes_genes <- read_tsv("data/GPL15207-17536.txt",
-#                          skip = 36) %>% 
-#     dplyr::select(ID,`Gene Symbol`,`Entrez Gene`) %>% 
-#     mutate(across(.fns = ~str_split(.x, 
-#                                     pattern = "\\/\\/\\/"))) %>% 
-#     unnest(cols = everything()) %>% 
-#     mutate(across(.fns = str_trim)) %>% 
-#     rename(c(gene_symbol = `Gene Symbol`,
-#              entrez_gene = `Entrez Gene`))
-# 
-# write_tsv(x = probes_genes,
-#           "data/probeID_gene.tsv")
-
-# merge gene symbols with probe expression data
-
-expr_tib <- expr %>% 
-    as_tibble(rownames = "ID") %>% 
-    left_join(y = probes_genes) %>% 
-    relocate(gene_symbol) %>% 
-    filter(!is.na(gene_symbol)) %>% 
-    filter(!(gene_symbol == "---"))
-
-# prepare data for collapsing rows 
-
-#rowID <- rownames(expr)
-
-# genes <- probes_genes %>%
-#     select(ID,gene_symbol) %>%
-#     distinct(ID, .keep_all = T) %>% 
-#     pull()
-## how to choose which probes to use? 
-
-# sanity check
-# length(rowID)
-# length(genes)
-
-# create gene level expression data
-# gene_level_expr <- WGCNA::collapseRows(
-#     datET = expr,
-#     rowGroup = genes,
-#     rowID = rowID,
-# )
-
-expr_tib <- expr_tib %>% 
-    group_by(gene_symbol) %>% 
-    summarise(across(.cols = !ID, 
-                     .fns = ~mean(.x, na.rm = T),
-                     .names = "{.col}"))
-
-
-gene_expr <- as.data.frame(expr_tib %>% 
+gene_expr <- as.data.frame(gene_expr_tib %>% 
                                select(!gene_symbol))
 
-rownames(gene_expr) <- expr_tib %>% pull(gene_symbol)
+rownames(gene_expr) <- gene_expr_tib %>% pull(gene_symbol)
 
 
 #gene_expr <- as.data.frame(gene_level_expr$datETcollapsed)
