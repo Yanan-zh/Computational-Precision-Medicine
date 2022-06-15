@@ -5,7 +5,8 @@ library(limma)
 # Read data
 expr <- read.table("data/expr.txt", header = TRUE, sep = "\t")
 # expr <- read.table("data/GeneSymbol_expr.txt", header = TRUE, sep = "\t")
-pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t") %>% 
+pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
+pheno <- pheno %>% 
     mutate(group = apply(pheno,1,function(x) {
         if (x[4] == "Non-responder (NR)"){a <- "NR"}
         else {a <- "R"}
@@ -22,12 +23,10 @@ colnames(design)[keep] <- str_extract(colnames(design)[keep], "(?<=group)(.+)")
 fit <- lmFit(expr, design)
 
 contrast.matrix <- makeContrasts((M_R+T1_R+W3_R)/3-(M_NR+T1_NR+W3_NR)/3,
-                                 (M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4,
                                  W3_R-T1_R,
                                  W3_NR-T1_NR,
                                  levels = design)
 colnames(contrast.matrix) <- c("R_vs_NR", 
-                               "Muc_vs_Tumor",
                                "T_vs_PT (R)",
                                "T_vs_PT (NR)")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
