@@ -1,9 +1,11 @@
 #### Differential Expression Analysis ####
 library(tidyverse)
 library(limma)
+library(data.table)
 
 # Read data
-expr <- read.table("data/expr.txt", header = TRUE, sep = "\t")
+expr <- as.matrix(fread("data/expr.txt", sep = "\t"),rownames=1) %>% 
+    data.frame()
 # expr <- read.table("data/GeneSymbol_expr.txt", header = TRUE, sep = "\t")
 pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
 pheno <- pheno %>% 
@@ -22,13 +24,12 @@ keep <- str_detect(colnames(design),"group")
 colnames(design)[keep] <- str_extract(colnames(design)[keep], "(?<=group)(.+)")
 fit <- lmFit(expr, design)
 
-contrast.matrix <- makeContrasts((M_R+T1_R+W3_R)/3-(M_NR+T1_NR+W3_NR)/3,
-                                 W3_R-T1_R,
-                                 W3_NR-T1_NR,
+#(M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4
+contrast.matrix <- makeContrasts(T1_R - T1_NR,
+                                 W3_R - W3_NR,
                                  levels = design)
-colnames(contrast.matrix) <- c("R_vs_NR", 
-                               "T_vs_PT (R)",
-                               "T_vs_PT (NR)")
+colnames(contrast.matrix) <- c("R_vs_NR (T1)", 
+                               "R_vs_NR (W3)")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
 fit2 <- eBayes(fit2)
 
@@ -76,20 +77,20 @@ write.table(geneset, "data/response_geneset.txt",
             row.names = FALSE)
 
 
-geneset_all <- topTable(fit2, 
-                    coef=1, 
+geneset_tre <- topTable(fit2, 
+                    coef=2, 
                     adjust="BH", 
                     number = nrow(expr), 
-                    p.value=1) %>% 
+                    p.value=0.05) %>% 
     select(logFC, adj.P.Val) %>%
-    rownames_to_column("probeID") %>% 
-    inner_join(read.table("data/probeID_GeneSymbol.txt", 
-                          header = TRUE)) %>% 
-    select(-probeID) %>% 
-    arrange(GeneSymbol, desc(logFC)) %>% 
-    distinct(GeneSymbol, .keep_all = TRUE) %>% 
-    relocate(GeneSymbol) %>% 
-    arrange(desc(logFC))
+    rownames_to_column("ID") %>% 
+    inner_join(read_tsv("data/probeID_gene.tsv")) %>% 
+    select(-ID) %>% 
+    arrange(gene_symbol, desc(logFC)) %>% 
+    distinct(gene_symbol, .keep_all = TRUE) %>% 
+    relocate(gene_symbol) %>% 
+    arrange(desc(logFC)) %>% 
+    select(gene_symbol, logFC)
 
-write.table(geneset_all, "data/response_geneset_all.txt", 
+write.table(geneset_all, "data/response_geneset_treatment.tsv", 
             row.names = FALSE)
