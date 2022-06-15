@@ -2,7 +2,6 @@
 library(tidyverse)
 library(limma)
 library(data.table)
-library("affy")
 
 # Read data
 expr <- as.matrix(fread("data/expr.txt", sep = "\t"), rownames=1) %>% 
