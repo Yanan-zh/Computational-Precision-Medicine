@@ -11,11 +11,24 @@ probeID_gene <- read_tsv("data/gene_expr_probe_id.tsv") %>%
     select(gene_symbol, ID) %>% 
     rename(probeID = ID)
 
+# DEG from paper
+true_R <- read_tsv("data/test.txt", col_names = F) %>% 
+    mutate(X1 = str_split(X1, " /// ")) %>% unnest()
+true_NR <- read_tsv("data/test_NR.txt", col_names = F) %>% 
+    mutate(X1 = str_split(X1, " /// ")) %>% unnest(X1)
+
+# All probes + genes
+probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>% 
+    rename(probeID = ID)
+
+
 # Divide tumor data in responders and non-responders
 R_index <- which(pheno$treatment_response == "Responder (R)" &
-                 pheno$tissue == "Tumor")
+                 pheno$tissue == "Tumor" &
+                 !pheno$patient %in% c("MA", "NK", "DF"))
 NR_index <- which(pheno$treatment_response == "Non-responder (NR)" &
-                  pheno$tissue == "Tumor")
+                  pheno$tissue == "Tumor" &
+                  !pheno$patient %in% c("RVS", "IP", "WR", "VJ", "AL", "DM"))
 expr_R <- expr[ ,R_index]
 expr_NR <- expr[ ,NR_index]
 pheno_R <- pheno[R_index, ]
@@ -46,30 +59,38 @@ fit_R <- eBayes(fit_R)
 fit_NR <- lmFit(expr_NR, NR_design)
 fit_NR <- eBayes(fit_NR)
 
-# Extract results
+# Extract results and convert to gene names
 topTable_R <- topTable(fit_R, coef = "3 weeks after start of treatment",
                        number = Inf, adjust.method = "BH") %>% 
-    rownames_to_column("probeID")
+    rownames_to_column("probeID") %>% 
+    left_join(probeID_gene_all, by = "probeID") %>% 
+    drop_na()
 topTable_NR <- topTable(fit_NR, coef = "3 weeks after start of treatment",
                         number = Inf, adjust.method = "BH") %>% 
-    rownames_to_column("probeID")
+    rownames_to_column("probeID") %>% 
+    left_join(probeID_gene, by = "probeID") %>% 
+    drop_na()
 
-# Significant probes
-sig_probes_R <- topTable_R %>% 
-    filter(adj.P.Val < 0.05)
-topTable_NR %>% 
-    filter(adj.P.Val < 0.05)
-
-# Map probes to gene names and rank
-sig_genes_R <- left_join(x = sig_probes_R,
-                         y = probeID_gene,
-                         by = "probeID") %>% 
-    drop_na() %>% 
+# Differential expressed genes (according to logFC)
+DEG_R <- topTable_R %>% 
+    filter(logFC > 1 | logFC < -1) %>% 
+    select(gene_symbol, logFC) %>% 
+    arrange(desc(logFC))
+DEG_NR <- topTable_NR %>% 
+    filter(logFC > 1 | logFC < -1) %>% 
     select(gene_symbol, logFC) %>% 
     arrange(desc(logFC))
 
+# Significant probes
+# sig_probes_R <- topTable_R %>% 
+#     filter(adj.P.Val < 0.05)
+# topTable_NR %>% 
+#     filter(adj.P.Val < 0.05)
+
+
+
 # Write file
-write_tsv(x = sig_genes_R, file = "data/DEG_R_pre_vs_post.tsv")
+write_tsv(x = DEG_R, file = "data/DEG_R_pre_vs_post.tsv")
 
 
 # ------------------------------------------------------------------------------
