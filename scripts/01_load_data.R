@@ -39,8 +39,9 @@ probes_genes <- read_tsv("data/GPL15207-17536.txt",
     unnest(cols = everything()) %>%
     mutate(across(.fns = str_trim)) %>%
     rename(c(gene_symbol = `Gene Symbol`,
-             entrez_gene = `Entrez Gene`))
-
+             entrez_gene = `Entrez Gene`)) %>% 
+    filter(!is.na(gene_symbol)) %>% 
+    filter(!(gene_symbol == "---"))
 
 
 # Save data
