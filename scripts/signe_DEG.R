@@ -5,9 +5,10 @@ library(data.table)
 library("affy")
 
 # Read data
-expr <- as.matrix(fread("data/expr.txt", sep = "\t"),rownames=1) %>% 
+expr <- as.matrix(fread("data/expr.txt", sep = "\t"), rownames=1) %>% 
     data.frame()
 pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
+probeID_gene <- read_tsv("data/probeID_gene.tsv")
 
 # Divide tumor data in responders and non-responders
 R_index <- which(pheno$treatment_response == "Responder (R)" &
@@ -53,7 +54,7 @@ topTable_NR <- topTable(fit_NR, coef = "3 weeks after start of treatment",
     rownames_to_column("probeID")
 
 # Significant probes
-topTable_R %>% 
+sig_probes_R <- topTable_R %>% 
     filter(adj.P.Val < 0.05)
 topTable_NR %>% 
     filter(adj.P.Val < 0.05)
