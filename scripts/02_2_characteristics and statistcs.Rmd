@@ -1,0 +1,111 @@
+---
+title: "Untitled"
+author: "yanan zhao"
+date: '2022-06-16'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(boot) 
+install.packages("table1")
+library(table1)
+```
+
+
+
+```{r}
+expressionfinal = read.table("data/gene_expression.tsv",header = TRUE,row.names = 1)
+
+pheno = read.table('data/pheno.txt',header = TRUE)
+```
+
+
+```{r}
+pheno = pheno %>% mutate(age = str_remove_all(age, "y")) %>% unite(type, tissue:timepoint) %>% mutate(type = gsub("_pretreatment", "", type)) %>% mutate(type = gsub("eeks after start of", "", type))
+
+pheno$age = sapply(pheno$age, as.numeric)
+
+phenotable = pheno %>% group_by(patient) %>% filter(row_number()==1) %>% ungroup()
+```
+
+
+```{r}
+table1(~ factor(gender) + age  | treatment_response, data=phenotable)
+```
+
+
+```{r}
+table1(~ factor(gender) + age  | treatment_response*type, data=pheno,overall=F)
+
+```
+
+
+
+```{r}
+ggplot(pheno, aes(x=type, y=age, fill=treatment_response)) + 
+  geom_boxplot()
+```
+
+
+```{r}
+dfgender = pheno %>% group_by(gender,treatment_response) %>% summarise(count= n())
+
+
+ggplot(dfgender, aes(treatment_response, count, fill=gender)) + 
+  geom_col(position = 'dodge')
+```
+
+
+# Density plot
+```{r}
+df <- data.frame(t(expr[7,]))
+
+ggplot(df, aes(x=df[,1])) +
+  geom_density()+
+  xlab('probe')
+```
+
+
+## bevacizumab AND VEGFA
+
+#T1 vs W3 (R VS NR)
+```{r}
+vegfa = expressionfinal %>%  filter(rownames(expressionfinal)=='VEGFA')
+vegfa = data.frame(t(vegfa))
+
+vegfa['res'] = pheno$treatment_response
+vegfa['type'] = pheno$type
+
+
+vegfat = vegfa %>% filter(type !='Mucosa')
+
+
+ 
+ggplot(vegfat, aes(x=type, y=VEGFA)) + 
+  geom_boxplot(aes(fill = res)) 
+
+```
+
+
+
+# M vs T1
+```{r}
+vegfam = vegfa %>% filter(type !='Tumor_3 w treatment')
+ggplot(vegfam, aes(x=type, y=VEGFA, fill=res)) + 
+  geom_boxplot()
+```
+
+
+
+
+
