@@ -12,13 +12,13 @@ library("readxl")
 #ranks_pre_R_vs_NR <- read.table("data/response_geneset_pre.tsv", header = T)
 
 ## File with logFC for responders pre- and post-treatment
-ranks_R_pre_vs_post <- read.table("data/DEG_R_pre_vs_post.tsv", header = T)
+ranks_R_pre_vs_post <- read.table("results/DEG_R_pre_vs_post.tsv", header = T)
 
 ## File with logFC for non-responders pre- and post-treatment
-ranks_NR_pre_vs_post <- read.table("data/DEG_NR_pre_vs_post.tsv", header = T)
+ranks_NR_pre_vs_post <- read.table("results/DEG_NR_pre_vs_post.tsv", header = T)
 
 ## File with logFC for pre-treatment responders vs non-responders
-ranks_pre_R_vs_NR <- read.table("data/DEG_pre_R_vs_NR.tsv", header = T)
+ranks_pre_R_vs_NR <- read.table("results/DEG_pre_R_vs_NR.tsv", header = T)
 
 ## File with GO BP gene sets
 GO_BP_genesets <- gmtPathways("data/GeneSymbols.gmt")
@@ -44,17 +44,17 @@ ranks_pre_R_vs_NR <- setNames(ranks_pre_R_vs_NR$logFC,
 fgseaRes_R_pre_vs_post <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
                                 stats    = ranks_R_pre_vs_post, # ranked named vector
                                 minSize  = 15, # minimum gene set size to include
-                                maxSize  = 400) 
+                                maxSize  = 500) 
 
 fgseaRes_NR_pre_vs_post <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
                                  stats    = ranks_NR_pre_vs_post, # ranked named vector
                                  minSize  = 15, # minimum gene set size to include
-                                 maxSize  = 400) 
+                                 maxSize  = 500) 
 
 fgseaRes_pre_R_vs_NR <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
                               stats    = ranks_pre_R_vs_NR, # ranked named vector
                               minSize  = 15, # minimum gene set size to include
-                              maxSize  = 400) # maximum gene set size to include
+                              maxSize  = 500) # maximum gene set size to include
 
 ## View most significant GO terms
 head(fgseaRes_R_pre_vs_post[order(pval), ], 10)
@@ -69,10 +69,10 @@ plotEnrichment(GO_BP_genesets[["GOBP_CELL_MIGRATION"]],
 
 
 ## Table plot for some selected GO terms for responders
-topPathwaysUp <- fgseaRes_pre_R_vs_NR[ES > 0][head(order(pval), n=10), pathway]
-topPathwaysDown <- fgseaRes_pre_R_vs_NR[ES < 0][head(order(pval), n=10), pathway]
+topPathwaysUp <- fgseaRes_R_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
+topPathwaysDown <- fgseaRes_R_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
 topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
-plotGseaTable(GO_BP_genesets[topPathways], ranks_pre_R_vs_NR, fgseaRes_pre_R_vs_NR, 
+plotGseaTable(GO_BP_genesets[topPathways], ranks_R_pre_vs_post, fgseaRes_R_pre_vs_post, 
               gseaParam=0.5)
 
 
