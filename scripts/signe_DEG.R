@@ -23,10 +23,10 @@ probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>%
 
 
 # DEG from paper
-true_R <- read_tsv("data/test.txt", col_names = F) %>% 
-    mutate(X1 = str_split(X1, " /// ")) %>% unnest()
-true_NR <- read_tsv("data/test_NR.txt", col_names = F) %>% 
-    mutate(X1 = str_split(X1, " /// ")) %>% unnest(X1)
+# true_R <- read_tsv("data/test.txt", col_names = F) %>% 
+#     mutate(X1 = str_split(X1, " /// ")) %>% unnest()
+# true_NR <- read_tsv("data/test_NR.txt", col_names = F) %>% 
+#     mutate(X1 = str_split(X1, " /// ")) %>% unnest(X1)
 
 
 # Divide tumor data in responders and non-responders
@@ -78,14 +78,19 @@ topTable_NR <- topTable(fit_NR, coef = "3 weeks after start of treatment",
     left_join(probeID_gene_all, by = "probeID") %>% 
     drop_na()
 
+
 # Differential expressed genes (according to logFC)
 DEG_R <- topTable_R %>% 
     filter(logFC > 1 | logFC < -1) %>% 
     select(gene_symbol, logFC) %>% 
+    group_by(gene_symbol) %>%
+    slice(which.max(abs(logFC))) %>% # select gene with largest absolute logFC
     arrange(desc(logFC))
 DEG_NR <- topTable_NR %>% 
     filter(logFC > 1 | logFC < -1) %>% 
     select(gene_symbol, logFC) %>% 
+    group_by(gene_symbol) %>%
+    slice(which.max(abs(logFC))) %>%  
     arrange(desc(logFC))
 
 # Significant genes
@@ -131,7 +136,6 @@ fit_pre <- eBayes(fit_pre)
 topTable_pre <- topTable(fit_pre, coef = "Responder (R)",
                          number = Inf, adjust.method = "BH") %>% 
     rownames_to_column("probeID") %>% 
-    #left_join(probeID_gene, by = "probeID") %>%
     left_join(probeID_gene_all, by = "probeID") %>% 
     drop_na()
 
@@ -139,6 +143,8 @@ topTable_pre <- topTable(fit_pre, coef = "Responder (R)",
 DEG_pre <- topTable_pre %>% 
     filter(logFC > 1 | logFC < -1) %>% 
     select(gene_symbol, logFC) %>% 
+    group_by(gene_symbol) %>% 
+    slice(which.max(abs(logFC))) %>% # select gene with largest absolute logFC
     arrange(desc(logFC))
 
 # Significant genes
