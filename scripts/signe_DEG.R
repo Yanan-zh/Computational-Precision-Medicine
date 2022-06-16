@@ -88,16 +88,19 @@ DEG_NR <- topTable_NR %>%
     select(gene_symbol, logFC) %>% 
     arrange(desc(logFC))
 
-# Significant probes
-# sig_probes_R <- topTable_R %>% 
-#     filter(adj.P.Val < 0.05)
-# topTable_NR %>% 
-#     filter(adj.P.Val < 0.05)
+# Significant genes
+topTable_R %>% 
+    filter(adj.P.Val < 0.05)
+# 0
+topTable_NR %>% 
+    filter(adj.P.Val < 0.05)
+# 0
 
 
 # Write file
-write_tsv(x = DEG_R, file = "data/DEG_R_pre_vs_post.tsv")
-write_tsv(x = DEG_NR, file = "data/DEG_NR_pre_vs_post.tsv")
+write_tsv(x = DEG_R, file = "results/DEG_R_pre_vs_post.tsv")
+write_tsv(x = DEG_NR, file = "results/DEG_NR_pre_vs_post.tsv")
+
 
 
 ############################################################################
@@ -141,7 +144,8 @@ DEG_pre <- topTable_pre %>%
 # Significant genes
 topTable_pre %>% 
      filter(adj.P.Val < 0.05)
+# 0
 
 
 # Write file
-write_tsv(x = DEG_pre, file = "data/DEG_pre_R_vs_NR.tsv")
+write_tsv(x = DEG_pre, file = "results/DEG_pre_R_vs_NR.tsv")
