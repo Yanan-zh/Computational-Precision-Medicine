@@ -11,15 +11,22 @@ probeID_gene <- read_tsv("data/gene_expr_probe_id.tsv") %>%
     select(gene_symbol, ID) %>% 
     rename(probeID = ID)
 
+# All probes + genes
+probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>% 
+    rename(probeID = ID)
+
+############################################################################
+###                   Responder pre- vs post-treatment                   ###
+###                                and                                   ###
+###                Non-responder pre- vs post-treatment                  ###
+############################################################################
+
+
 # DEG from paper
 true_R <- read_tsv("data/test.txt", col_names = F) %>% 
     mutate(X1 = str_split(X1, " /// ")) %>% unnest()
 true_NR <- read_tsv("data/test_NR.txt", col_names = F) %>% 
     mutate(X1 = str_split(X1, " /// ")) %>% unnest(X1)
-
-# All probes + genes
-probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>% 
-    rename(probeID = ID)
 
 
 # Divide tumor data in responders and non-responders
@@ -68,7 +75,7 @@ topTable_R <- topTable(fit_R, coef = "3 weeks after start of treatment",
 topTable_NR <- topTable(fit_NR, coef = "3 weeks after start of treatment",
                         number = Inf, adjust.method = "BH") %>% 
     rownames_to_column("probeID") %>% 
-    left_join(probeID_gene, by = "probeID") %>% 
+    left_join(probeID_gene_all, by = "probeID") %>% 
     drop_na()
 
 # Differential expressed genes (according to logFC)
@@ -88,8 +95,53 @@ DEG_NR <- topTable_NR %>%
 #     filter(adj.P.Val < 0.05)
 
 
-
 # Write file
 write_tsv(x = DEG_R, file = "data/DEG_R_pre_vs_post.tsv")
 write_tsv(x = DEG_NR, file = "data/DEG_NR_pre_vs_post.tsv")
 
+
+############################################################################
+###              Pre-treatment responder vs non-responder                ###
+############################################################################
+
+# Extract tumor pre-treatment data
+pre_index <- which(pheno$tissue == "Tumor" &
+                   pheno$timepoint == "pretreatment") 
+expr_pre <- expr[ ,pre_index]
+pheno_pre <- pheno[pre_index, ]
+
+# Factor variable for grouping
+pre_treatment_response <- factor(pheno_pre$treatment_response)
+pre_treatment_response <- relevel(pre_treatment_response, ref = "Non-responder (NR)")
+
+# Design matrix
+pre_design <- model.matrix(~ pre_treatment_response)
+colnames(pre_design) <- gsub("pre_treatment_response", "", colnames(pre_design))
+rownames(pre_design) <- colnames(expr_pre)
+
+
+# Differential expression analysis
+fit_pre <- lmFit(expr_pre, pre_design)
+fit_pre <- eBayes(fit_pre)
+
+# Extract results and convert to gene names
+topTable_pre <- topTable(fit_pre, coef = "Responder (R)",
+                         number = Inf, adjust.method = "BH") %>% 
+    rownames_to_column("probeID") %>% 
+    #left_join(probeID_gene, by = "probeID") %>%
+    left_join(probeID_gene_all, by = "probeID") %>% 
+    drop_na()
+
+# Differential expressed genes (according to logFC)
+DEG_pre <- topTable_pre %>% 
+    filter(logFC > 1 | logFC < -1) %>% 
+    select(gene_symbol, logFC) %>% 
+    arrange(desc(logFC))
+
+# Significant genes
+topTable_pre %>% 
+     filter(adj.P.Val < 0.05)
+
+
+# Write file
+write_tsv(x = DEG_pre, file = "data/DEG_pre_R_vs_NR.tsv")
