@@ -32,16 +32,26 @@ library(MCPcounter)
 
 ```{r}
 expr = read.table('../data/expr.txt') 
-expression = expr %>% data.frame(names = row.names(expr))
 
 ```
 
 
 ```{r}
-matchlist= read.table('../data/probeID_GeneSymbol.txt', header = TRUE)
+matchlist= read.table('../data/probeID_gene.tsv', header = TRUE)
 
 matchlist = matchlist %>% rename(names = probeID)
 ```
+
+```{r}
+p2g <- split(matchlist$ID, matchlist$gene_symbol)
+gene_exp <- t(sapply(p2g, function(x) colSums(expr[rownames(expr) %in% x,])))
+
+
+probe_exp[which.max(rowSums(probe_exp[rownames(probe_exp) %in% x,])),]
+```
+
+
+
 
 ```{r}
 mcp = left_join(expression, matchlist, by = "names") 
@@ -66,6 +76,11 @@ expressionfinal = expressionfinal %>% remove_rownames %>% column_to_rownames(var
 
 ```{r}
 # immune cells expression level
+
+expressionfinal = read.table("../data/gene_expression.tsv",header = TRUE) %>% remove_rownames %>% column_to_rownames(var="gene_symbol") 
+
+
+
 RESULT = MCPcounter.estimate(expressionfinal,featuresType='HUGO_symbols')
 
 
@@ -75,12 +90,46 @@ heatmap(as.matrix(RESULT),col=colorRampPalette(c("blue","white","red"))(100) )
 
 ```{r}
 
+P = test_for_infiltration(RESULT,platform=c("HG1"))
+P
 #expressionexclude = expressionfinal %>% filter(rownames(expressionfinal) #%in% matchlist[["GeneSymbol"]])
 
 ```
 
 
 ```{r}
-write.table(expressionfinal, "../data/GeneSymbol_expr.txt", sep = "\t", row.names = TRUE, quote = FALSE)
+pca <- prcomp(t(RESULT))
+
+## Check out how much variance is explained
+summary(pca)
+
+## Plot PCA
+df <- data.frame(PC1 = pca$x[,1], PC2 = pca$x[,2])
+
+df$condition <- pheno$treatment_response
+ggplot(df, aes(x = PC1, y = PC2, color=condition)) +
+  geom_point()
 ```
+
+
+```{r}
+MCPtem = data.frame(t(RESULT))
+MCPtem$res = pheno$treatment_response
+    
+ggplot(MCPtem, aes(x = MCPtem$res, y =MCPtem$Endothelial.cells)) +
+  geom_boxplot()
+
+
+
+```
+
+
+
+```{r}
+write.table(RESULT, "../data/MCPcounter.txt", sep = "\t", row.names = TRUE, quote = FALSE)
+
+#write.table(expressionfinal, "../data/GeneSymbol_expr.txt", sep = "\t", row.names = TRUE, quote = FALSE)
+```
+
+
 
