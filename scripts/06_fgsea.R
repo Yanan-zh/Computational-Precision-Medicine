@@ -1,7 +1,7 @@
 # Load packages ----------------------------------------------------------------
 library("tidyverse")
 library("fgsea")
-
+library("readxl")
 
 # Load data --------------------------------------------------------------------
 
@@ -42,9 +42,9 @@ ranks_pre_R_vs_NR <- setNames(ranks_pre_R_vs_NR$logFC,
 # Run fGSEA analysis -----------------------------------------------------------
 
 fgseaRes_R_pre_vs_post <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
-                              stats    = ranks_R_pre_vs_post, # ranked named vector
-                              minSize  = 15, # minimum gene set size to include
-                              maxSize  = 400) 
+                                stats    = ranks_R_pre_vs_post, # ranked named vector
+                                minSize  = 15, # minimum gene set size to include
+                                maxSize  = 400) 
 
 fgseaRes_NR_pre_vs_post <- fgsea(pathways = GO_BP_genesets, # list of gene sets to check
                                  stats    = ranks_NR_pre_vs_post, # ranked named vector
@@ -75,7 +75,23 @@ topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
 plotGseaTable(GO_BP_genesets[topPathways], ranks_pre_R_vs_NR, fgseaRes_pre_R_vs_NR, 
               gseaParam=0.5)
 
+
+
 # Write files ------------------------------------------------------------------
+
+## To tsv
 write_tsv(x = fgseaRes_R_pre_vs_post, file = "results/fgsea_R_pre_vs_post.tsv")
-write_tsv(x = fgseaRes_NR_pre_vs_post, file = "results/fgsea_NR_pre_vs_post.tsv")
-write_tsv(x = fgseaRes_pre_R_vs_NR, file = "results/fgsea_pre_R_vs_NR.tsv")
+write_tsv(x = fgseaRes_NR_pre_vs_post, file = "results/fgseaRes_NR_pre_vs_post.tsv")
+write_tsv(x = fgseaRes_pre_R_vs_NR, file = "results/fgseaRes_pre_R_vs_NR.tsv")
+
+## To xlsx
+fgseaRes_R_pre_vs_post <- fgseaRes_R_pre_vs_post %>% 
+    rowwise() %>% mutate(leadingEdge = paste(unlist(leadingEdge), collapse = ','))
+fgseaRes_NR_pre_vs_post <- fgseaRes_NR_pre_vs_post %>% 
+    rowwise() %>% mutate(leadingEdge = paste(unlist(leadingEdge), collapse = ','))
+fgseaRes_pre_R_vs_NR <- fgseaRes_pre_R_vs_NR %>% 
+    rowwise() %>% mutate(leadingEdge = paste(unlist(leadingEdge), collapse = ','))
+
+write_xlsx(x = fgseaRes_R_pre_vs_post, path = "results/fgsea_R_pre_vs_post.xlsx")
+write_xlsx(x = fgseaRes_NR_pre_vs_post, path = "results/fgsea_NR_pre_vs_post.xlsx")
+write_xlsx(x = fgseaRes_pre_R_vs_NR, path = "results/fgsea_pre_R_vs_NR.xlsx")
