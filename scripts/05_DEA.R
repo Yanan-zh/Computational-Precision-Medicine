@@ -26,10 +26,10 @@ fit <- lmFit(expr, design)
 
 #(M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4
 contrast.matrix <- makeContrasts(T1_R - T1_NR,
-                                 W3_R - W3_NR,
+                                 (M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4,
                                  levels = design)
 colnames(contrast.matrix) <- c("R_vs_NR (T1)", 
-                               "R_vs_NR (W3)")
+                               "Muc_vs_Tumor")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
 fit2 <- eBayes(fit2)
 
@@ -58,19 +58,18 @@ geneset <- topTable(fit2,
          number = nrow(expr), 
          p.value=0.05) %>% 
     select(logFC) %>%
-    rownames_to_column("probeID") %>% 
-    filter(!probeID %in% (topTable(fit2, 
-                                coef=2, 
+    rownames_to_column("ID") %>% 
+    filter(ID %in% (topTable(fit2, 
+                                coef=3, 
                                 adjust="BH", 
                                 number = nrow(expr), 
                                 p.value=0.05) %>% rownames())) %>% 
     arrange(desc(logFC)) %>% 
-    inner_join(read.table("data/probeID_GeneSymbol.txt", 
-                          header = TRUE)) %>% 
-    select(-probeID) %>% 
-    arrange(GeneSymbol) %>% 
-    distinct(GeneSymbol, .keep_all = TRUE) %>% 
-    relocate(GeneSymbol) %>% 
+    inner_join(read_tsv("data/probeID_gene.tsv")) %>% 
+    select(-ID) %>% 
+    arrange(gene_symbol) %>% 
+    distinct(gene_symbol, .keep_all = TRUE) %>% 
+    relocate(gene_symbol) %>% 
     arrange(desc(logFC))
 
 write.table(geneset, "data/response_geneset.txt", 
