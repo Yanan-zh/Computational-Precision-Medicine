@@ -18,7 +18,8 @@ pheno <- tab[1:(div-1),] %>%
 colnames(pheno) <- apply(pheno, 2, function(x) {str_extract(x,"(.+)(?=:)")[1]})
 pheno <- pheno %>% 
     mutate(across(.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
-    rename(treatment_response = "treatment response")
+    rename(treatment_response = "treatment response") %>% 
+    distinct()
 
 # Microarray platform data
 # probeID_GeneSymbol <- microarray_platform %>% 
