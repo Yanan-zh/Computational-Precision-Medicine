@@ -20,7 +20,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 
-```{r}
+```{r, include=FALSE}
 install.packages(c("devtools","curl")) ##Installs devtools and the MCPcounter dependancy 'curl'
 library(devtools)
 install_github("ebecht/MCPcounter",ref="master", subdir="Source")
@@ -32,42 +32,42 @@ library("ggrepel")
 
 
 ```{r}
-expr = read.table('../data/expr.txt') 
+expressionfinal = read.table("../data/gene_expression.tsv",header = TRUE,row.names = 1)
 
+pheno = read.table('../data/pheno.txt',header = TRUE)
+```
+
+```{r}
+#matchlist= read.table('../data/probeID_gene.tsv', header = TRUE)
+
+#matchlist = matchlist %>% rename(names = probeID)
+```
+
+```{r}
+#p2g <- split(matchlist$ID, matchlist$gene_symbol)
+#gene_exp <- t(sapply(p2g, function(x) colSums(expr[rownames(expr) %in% x,])))
+
+
+#probe_exp[which.max(rowSums(probe_exp[rownames(probe_exp) %in% x,])),]
+```
+
+
+
+
+```{r}
+#mcp = left_join(expression, matchlist, by = "names") 
 ```
 
 
 ```{r}
-matchlist= read.table('../data/probeID_gene.tsv', header = TRUE)
 
-matchlist = matchlist %>% rename(names = probeID)
-```
-
-```{r}
-p2g <- split(matchlist$ID, matchlist$gene_symbol)
-gene_exp <- t(sapply(p2g, function(x) colSums(expr[rownames(expr) %in% x,])))
+#expressionall = mcp %>% select(-51) %>% filter(!grepl('---',GeneSymbol)) %>% na.omit() 
 
 
-probe_exp[which.max(rowSums(probe_exp[rownames(probe_exp) %in% x,])),]
-```
+#expressionfinal = aggregate(expressionall[, 1:50], list(expressionall$GeneSymbol), mean)
 
 
-
-
-```{r}
-mcp = left_join(expression, matchlist, by = "names") 
-```
-
-
-```{r}
-
-expressionall = mcp %>% select(-51) %>% filter(!grepl('---',GeneSymbol)) %>% na.omit() 
-
-
-expressionfinal = aggregate(expressionall[, 1:50], list(expressionall$GeneSymbol), mean)
-
-
-expressionfinal = expressionfinal %>% remove_rownames %>% column_to_rownames(var="Group.1") 
+#expressionfinal = expressionfinal %>% remove_rownames %>% column_to_rownames(var="Group.1") 
 
 ```
 
@@ -100,6 +100,13 @@ P
 
 
 ```{r}
+pheno = pheno %>% mutate(age = str_remove_all(age, "y")) %>% unite(type, tissue:timepoint) %>% mutate(type = gsub("_pretreatment", "", type)) %>% mutate(type = gsub("eeks after start of", "", type))
+
+pheno$age = sapply(pheno$age, as.numeric)
+```
+
+
+```{r}
 pca <- prcomp(t(RESULT))
 
 ## Check out how much variance is explained
@@ -125,8 +132,6 @@ MCPtem$res = pheno$treatment_response
 ggplot(MCPtem, aes(x = MCPtem$res, y =MCPtem$Endothelial.cells)) +
   geom_boxplot()
 
-
-
 ```
 
 
@@ -142,9 +147,7 @@ library(ConsensusClusterPlus)
 ```
 
 
-```{r}
-cov(result,result, method ="pearson")
-```
+
 ```{r}
 library(corrplot)
 
@@ -188,20 +191,6 @@ ggplot(df, aes(x = PC1, y = PC2, label = rownames(df), color = condition)) +
 
 ```
 
-
-```{r}
-Kvec = 2:6
-x1 = 0.1; x2 = 0.9 # threshold defining the intermediate sub-interval
-PAC = rep(NA,length(Kvec)) 
-names(PAC) = paste("K=",Kvec,sep="") # from 2 to maxK
-for(i in Kvec){
-  M = cluster[[i]]$consensusMatrix
-  Fn = ecdf(M[lower.tri(M)])
-  PAC[i-1] = Fn(x2) - Fn(x1)
-}#end for i
-# The optimal K
-optK = Kvec[which.min(PAC)]
-```
 
 
 
