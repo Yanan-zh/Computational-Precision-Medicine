@@ -95,8 +95,10 @@ DEG_NR <- topTable_NR %>%
 
 # Significant genes
 topTable_R %>% 
-    filter(adj.P.Val < 0.05)
-# 0
+    filter(adj.P.Val < 0.05) %>% 
+    group_by(gene_symbol) %>% 
+    slice(which.min(adj.P.Val))
+# 2
 topTable_NR %>% 
     filter(adj.P.Val < 0.05)
 # 0
@@ -111,6 +113,11 @@ write_tsv(x = DEG_NR, file = "results/DEG_NR_pre_vs_post.tsv")
 ############################################################################
 ###              Pre-treatment responder vs non-responder                ###
 ############################################################################
+
+purity <- read_tsv(file = "data/tumor_purity.tsv")
+
+purity <- purity %>% 
+    select(TumorPurity)
 
 # Extract tumor pre-treatment data
 pre_index <- which(pheno$tissue == "Tumor" &
