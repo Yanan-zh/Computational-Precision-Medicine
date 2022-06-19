@@ -1,28 +1,21 @@
 # Load packages ----------------------------------------------------------------
 library("tidyverse")
 library("fgsea")
-library("readxl")
+library("writexl")
 
 # Load data --------------------------------------------------------------------
 
-## File with logFC for all genes
-#ranks_response_all <- read.table("data/response_geneset_all.txt", header = T)
-
-## File with logFC for pre-treatment responder vs non-responder
-#ranks_pre_R_vs_NR <- read.table("data/response_geneset_pre.tsv", header = T)
-
 ## File with logFC for responders pre- and post-treatment
-ranks_R_pre_vs_post <- read.table("results/DEG_R_pre_vs_post.tsv", header = T)
+ranks_R_pre_vs_post <- read.table("results/DEG_R_pre_vs_post_purity.tsv", header = T)
 
 ## File with logFC for non-responders pre- and post-treatment
-ranks_NR_pre_vs_post <- read.table("results/DEG_NR_pre_vs_post.tsv", header = T)
+ranks_NR_pre_vs_post <- read.table("results/DEG_NR_pre_vs_post_purity.tsv", header = T)
 
 ## File with logFC for pre-treatment responders vs non-responders
-ranks_pre_R_vs_NR <- read.table("results/DEG_pre_R_vs_NR.tsv", header = T)
+ranks_pre_R_vs_NR <- read.table("results/DEG_pre_R_vs_NR_purity.tsv", header = T)
 
 ## File with GO BP gene sets
 GO_BP_genesets <- gmtPathways("data/GeneSymbols.gmt")
-#GO_entrez <- gmtPathways("data/Entrez.gmt")
 
 
 
@@ -63,18 +56,37 @@ head(fgseaRes_pre_R_vs_NR[order(pval), ], 10)
 
 
 # Plot data --------------------------------------------------------------------
-## Enrichment plot for a specific GO term for responders
-plotEnrichment(GO_BP_genesets[["GOBP_CELL_MIGRATION"]],
-               ranks_pre_R_vs_NR) + labs(title="GOBP_CELL_MIGRATION")
+## Enrichment plot for a specific GO term 
+# plotEnrichment(GO_BP_genesets[["GOBP_CELL_MIGRATION"]],
+#                ranks_pre_R_vs_NR) + labs(title="GOBP_CELL_MIGRATION")
 
 
-## Table plot for some selected GO terms for responders
-topPathwaysUp <- fgseaRes_R_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
-topPathwaysDown <- fgseaRes_R_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
-topPathways <- c(topPathwaysUp, rev(topPathwaysDown))
-plotGseaTable(GO_BP_genesets[topPathways], ranks_R_pre_vs_post, fgseaRes_R_pre_vs_post, 
+## Table plot of top up- and down-regulated GO BP
+topUpGO_R_pre_post <- fgseaRes_R_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
+topDownGO_R_pre_post <- fgseaRes_R_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
+topGO_R_pre_post <- c(topUpGO_R_pre_post, rev(topDownGO_R_pre_post))
+plt_R_pre_post <- plotGseaTable(GO_BP_genesets[topGO_R_pre_post], 
+                  ranks_R_pre_vs_post, 
+                  fgseaRes_R_pre_vs_post, 
+                  gseaParam=0.5)
+
+## Table plot of top up- and down regulated GO BP
+topUpGO_NR_pre_post <- fgseaRes_pre_R_vs_NR[ES > 0][head(order(pval), n=10), pathway]
+topDownGO_NR_pre_post <- fgseaRes_pre_R_vs_NR[ES < 0][head(order(pval), n=10), pathway]
+topGO_NR_pre_post <- c(topUpGO_NR_pre_post, rev(topDownGO_NR_pre_post))
+plotGseaTable(GO_BP_genesets[topGO_NR_pre_post], 
+              ranks_NR_pre_vs_post, 
+              fgseaRes_pre_R_vs_NR, 
               gseaParam=0.5)
 
+## Table plot of top up- and down regulated GO BP
+topUpGO_pre_R_NR <- fgseaRes_NR_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
+topDownGO_pre_R_NR <- fgseaRes_NR_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
+topGO_pre_R_NR <- c(topUpGO_pre_R_NR, rev(topDownGO_pre_R_NR))
+plotGseaTable(GO_BP_genesets[topGO_pre_R_NR], 
+              ranks_pre_R_vs_NR, 
+              fgseaRes_NR_pre_vs_post, 
+              gseaParam=0.5)
 
 
 # Write files ------------------------------------------------------------------

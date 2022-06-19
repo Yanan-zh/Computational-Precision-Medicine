@@ -15,6 +15,10 @@ probeID_gene <- read_tsv("data/gene_expr_probe_id.tsv") %>%
 probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>% 
     rename(probeID = ID)
 
+# Tumor purity
+purity <- read_tsv(file = "data/tumor_purity.tsv") %>% 
+    select(TumorPurity)
+
 ############################################################################
 ###                   Responder pre- vs post-treatment                   ###
 ###                                and                                   ###
@@ -40,6 +44,8 @@ expr_R <- expr[ ,R_index]
 expr_NR <- expr[ ,NR_index]
 pheno_R <- pheno[R_index, ]
 pheno_NR <- pheno[NR_index, ]
+purity_R <- purity[R_index, ] %>% pull()
+purity_NR <- purity[NR_index, ] %>% pull()
 
 # Factor variable for grouping
 R_timepoint <- factor(pheno_R$timepoint)
@@ -50,12 +56,12 @@ R_patient <- factor(pheno_R$patient)
 NR_patient <- factor(pheno_NR$patient)
 
 # Design matrix
-R_design <- model.matrix(~ 0 + R_patient + R_timepoint)
+R_design <- model.matrix(~ R_patient + R_timepoint + purity_R)
 colnames(R_design) <- gsub("R_patient", "", colnames(R_design))
 colnames(R_design) <- gsub("R_timepoint", "", colnames(R_design))
 rownames(R_design) <- colnames(expr_R)
 
-NR_design <- model.matrix(~ 0 + NR_patient + NR_timepoint)
+NR_design <- model.matrix(~ NR_patient + NR_timepoint + purity_NR)
 colnames(NR_design) <- gsub("NR_patient", "", colnames(NR_design))
 colnames(NR_design) <- gsub("NR_timepoint", "", colnames(NR_design))
 rownames(NR_design) <- colnames(expr_NR)
@@ -98,15 +104,15 @@ topTable_R %>%
     filter(adj.P.Val < 0.05) %>% 
     group_by(gene_symbol) %>% 
     slice(which.min(adj.P.Val))
-# 2
+# 4
 topTable_NR %>% 
     filter(adj.P.Val < 0.05)
 # 0
 
 
 # Write file
-write_tsv(x = DEG_R, file = "results/DEG_R_pre_vs_post.tsv")
-write_tsv(x = DEG_NR, file = "results/DEG_NR_pre_vs_post.tsv")
+write_tsv(x = DEG_R, file = "results/DEG_R_pre_vs_post_purity.tsv")
+write_tsv(x = DEG_NR, file = "results/DEG_NR_pre_vs_post_purity.tsv")
 
 
 
@@ -114,23 +120,21 @@ write_tsv(x = DEG_NR, file = "results/DEG_NR_pre_vs_post.tsv")
 ###              Pre-treatment responder vs non-responder                ###
 ############################################################################
 
-purity <- read_tsv(file = "data/tumor_purity.tsv")
-
-purity <- purity %>% 
-    select(TumorPurity)
 
 # Extract tumor pre-treatment data
 pre_index <- which(pheno$tissue == "Tumor" &
                    pheno$timepoint == "pretreatment") 
 expr_pre <- expr[ ,pre_index]
 pheno_pre <- pheno[pre_index, ]
+purity_pre <- purity[pre_index, ] %>% pull()
+    
 
 # Factor variable for grouping
 pre_treatment_response <- factor(pheno_pre$treatment_response)
 pre_treatment_response <- relevel(pre_treatment_response, ref = "Non-responder (NR)")
 
 # Design matrix
-pre_design <- model.matrix(~ pre_treatment_response)
+pre_design <- model.matrix(~ pre_treatment_response + purity_pre)
 colnames(pre_design) <- gsub("pre_treatment_response", "", colnames(pre_design))
 rownames(pre_design) <- colnames(expr_pre)
 
@@ -161,4 +165,4 @@ topTable_pre %>%
 
 
 # Write file
-write_tsv(x = DEG_pre, file = "results/DEG_pre_R_vs_NR.tsv")
+write_tsv(x = DEG_pre, file = "results/DEG_pre_R_vs_NR_purity.tsv")
