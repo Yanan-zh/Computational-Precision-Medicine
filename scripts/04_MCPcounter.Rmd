@@ -26,6 +26,7 @@ library(devtools)
 install_github("ebecht/MCPcounter",ref="master", subdir="Source")
 library(tidyverse)
 library(MCPcounter)
+library("ggrepel")
 ```
 
 
@@ -97,6 +98,7 @@ P
 ```
 
 
+
 ```{r}
 pca <- prcomp(t(RESULT))
 
@@ -106,10 +108,14 @@ summary(pca)
 ## Plot PCA
 df <- data.frame(PC1 = pca$x[,1], PC2 = pca$x[,2])
 
-df$condition <- pheno$treatment_response
-ggplot(df, aes(x = PC1, y = PC2, color=condition)) +
-  geom_point()
+df$condition <- pheno$type
+ggplot(df, aes(x = PC1, y = PC2, label = rownames(df), color = condition)) +
+    geom_text(size = 3)
+
+
 ```
+
+
 
 
 ```{r}
@@ -121,6 +127,80 @@ ggplot(MCPtem, aes(x = MCPtem$res, y =MCPtem$Endothelial.cells)) +
 
 
 
+```
+
+
+```{r}
+info = pheno 
+info$sample = rownames(df)
+```
+
+
+```{r}
+BiocManager::install("ConsensusClusterPlus")
+library(ConsensusClusterPlus)
+```
+
+
+```{r}
+cov(result,result, method ="pearson")
+```
+```{r}
+library(corrplot)
+
+a = data.frame(t(RESULT))
+
+corrplot(cor(a), type = "upper", order = "hclust", 
+         tl.col = "black", tl.srt = 45)
+```
+
+
+
+```{r}
+cluster = ConsensusClusterPlus(RESULT,maxK=6,reps=50,pItem=0.8,pFeature=1, title= 'mcp_cluster',clusterAlg="hc",distance="pearson",seed=1262118388.71279,plot="png")
+
+
+calcICL(cluster,title="untitled_consensus_cluster",plot=NULL,writeTable=FALSE)
+
+```
+
+```{r}
+x = data.frame(cluster[[3]]$consensusClass) 
+
+x$treat=pheno$treatment_response 
+x$type=pheno$type
+x
+
+```
+
+```{r}
+pca <- prcomp(t(RESULT))
+
+## Check out how much variance is explained
+summary(pca)
+
+## Plot PCA
+df <- data.frame(PC1 = pca$x[,1], PC2 = pca$x[,2])
+
+df$condition <- as.character(x$cluster..3...consensusClass)
+ggplot(df, aes(x = PC1, y = PC2, label = rownames(df), color = condition)) +
+    geom_text(size = 3)
+
+```
+
+
+```{r}
+Kvec = 2:6
+x1 = 0.1; x2 = 0.9 # threshold defining the intermediate sub-interval
+PAC = rep(NA,length(Kvec)) 
+names(PAC) = paste("K=",Kvec,sep="") # from 2 to maxK
+for(i in Kvec){
+  M = cluster[[i]]$consensusMatrix
+  Fn = ecdf(M[lower.tri(M)])
+  PAC[i-1] = Fn(x2) - Fn(x1)
+}#end for i
+# The optimal K
+optK = Kvec[which.min(PAC)]
 ```
 
 
