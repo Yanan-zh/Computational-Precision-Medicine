@@ -19,6 +19,10 @@ probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>%
 purity <- read_tsv(file = "data/tumor_purity.tsv") %>% 
     select(TumorPurity)
 
+# PCs from MCP counter
+MCP_c <- read.table(file = "results/MCPcounter_pc1_pc2.txt")
+
+
 ############################################################################
 ###                   Responder pre- vs post-treatment                   ###
 ###                                and                                   ###
@@ -26,7 +30,7 @@ purity <- read_tsv(file = "data/tumor_purity.tsv") %>%
 ############################################################################
 
 
-# Divide tumor data in responders and non-responders
+# Divide data in responders and non-responders
 R_index <- which(pheno$treatment_response == "Responder (R)" &
                  pheno$tissue == "Tumor" &
                  !pheno$patient %in% c("MA", "NK", "DF"))
@@ -39,6 +43,10 @@ pheno_R <- pheno[R_index, ]
 pheno_NR <- pheno[NR_index, ]
 purity_R <- purity[R_index, ] %>% pull()
 purity_NR <- purity[NR_index, ] %>% pull()
+MCP_PC1_R <- MCP_c[R_index, ] %>% pull(PC1)
+MCP_PC2_R <- MCP_c[R_index, ] %>% pull(PC2)
+MCP_PC1_NR <- MCP_c[NR_index, ] %>% pull(PC1)
+MCP_PC2_NR <- MCP_c[NR_index, ] %>% pull(PC2)
 
 
 # Factor variable for grouping
@@ -63,7 +71,7 @@ rownames(NR_design) <- colnames(expr_NR)
 
 
 # Differential expression analysis
-fit_R <- lmFit(combat_expr_R, R_design)
+fit_R <- lmFit(expr_R, R_design)
 fit_R <- eBayes(fit_R)
 fit_NR <- lmFit(expr_NR, NR_design)
 fit_NR <- eBayes(fit_NR)
