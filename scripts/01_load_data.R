@@ -16,8 +16,9 @@ colnames(pheno)[7] <- 'batch'
 pheno <- pheno %>% 
     mutate(across(1:6,.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
     rename(treatment_response = "treatment response") %>% 
-    mutate(batch = case_when(batch == "batch \"15\"" ~ 15,
-                             batch == "batch \"16\"" ~ 16))
+    mutate(batch = case_when(batch == "batch \"15\"" ~ "B15",
+                             batch == "batch \"16\"" ~ "B16")) %>% 
+    mutate(batch = as.factor(batch))
 
 # Index of duplicate samples
 duplicates <- pheno %>% 
