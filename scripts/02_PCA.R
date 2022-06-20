@@ -1,4 +1,5 @@
-library(ggplot2)
+library(tidyverse)
+library(data.table)
 
 ### Function for PCA ###
 
@@ -30,7 +31,8 @@ PCAplot <- function(dat, color, shape = NULL,legend=TRUE,plot.title=""){
 
 ### Load data ###
 
-expr <- read.table("data/expr.txt", header = TRUE, sep = "\t")
+expr <- as.matrix(fread("data/expr.txt", sep = "\t"),rownames=1) %>% 
+    data.frame()
 pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
 
 
@@ -56,3 +58,12 @@ PCAplot(expr_R,
 PCAplot(expr, 
         color = paste(pheno$tissue,pheno$timepoint,sep=": "),
         shape = pheno$treatment_response)
+
+
+# PCA showing batches
+dat <- fread("data/GSE60331_series_matrix.txt", fill = TRUE)
+batch <- dat[57,] %>% str_extract('(?<=\"\")(\\d+)') %>% as.integer() %>% .[-1]
+batch <- batch[!str_detect(dat[32,], "rep2")[-1]]
+PCAplot(expr,
+        color = as.factor(batch)) 
+
