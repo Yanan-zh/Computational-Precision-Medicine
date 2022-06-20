@@ -6,6 +6,9 @@ library(data.table)
 # Read data
 expr <- as.matrix(fread("data/expr.txt", sep = "\t"),rownames=1) %>% 
     data.frame()
+dat <- fread("data/GSE60331_series_matrix.txt", fill = TRUE)
+batch <- dat[57,] %>% str_extract('(?<=\"\")(\\d+)') %>% as.integer() %>% .[-1]
+batch <- batch[!str_detect(dat[32,], "rep2")[-1]]
 # expr <- read.table("data/GeneSymbol_expr.txt", header = TRUE, sep = "\t")
 pheno <- read.table("data/pheno.txt", header = TRUE, sep = "\t")
 pheno <- pheno %>% 
@@ -18,20 +21,21 @@ pheno <- pheno %>%
         }else{b <- "M"}
         str_c(b,a,sep="_")
     }))
+# Tumor purity
+purity <- read_tsv(file = "data/tumor_purity.tsv") %>% 
+    pull(TumorPurity)
+pheno$purity <- purity
+pheno$batch <- batch
 
-design <- model.matrix(~0+group+patient, data = pheno)
+design <- model.matrix(~group+patient+ purity + batch, data = pheno)
 keep <- str_detect(colnames(design),"group")
 colnames(design)[keep] <- str_extract(colnames(design)[keep], "(?<=group)(.+)")
 fit <- lmFit(expr, design)
 
 #(M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4
 contrast.matrix <- makeContrasts(T1_R - T1_NR,
-                                 M_R-M_NR,
-                                 (M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4,
                                  levels = design)
-colnames(contrast.matrix) <- c("R_vs_NR", 
-                               "M",
-                               "Muc_vs_Tumor")
+colnames(contrast.matrix) <- c("R_vs_NR")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
 fit2 <- eBayes(fit2)
 
@@ -54,35 +58,36 @@ topTable(fit2,
          p.value=0.05)
 
 
-geneset <- topTable(fit2, 
-         coef=1, 
-         adjust="BH", 
-         number = nrow(expr), 
-         p.value=0.05) %>% 
-    select(logFC) %>%
-    rownames_to_column("ID") %>% 
-    filter(ID %in% (topTable(fit2, 
-                                coef=3, 
-                                adjust="BH", 
-                                number = nrow(expr), 
-                                p.value=0.05) %>% rownames())) %>% 
-    arrange(desc(logFC)) %>% 
-    inner_join(read_tsv("data/probeID_gene.tsv")) %>% 
-    select(-ID) %>% 
-    arrange(gene_symbol) %>% 
-    distinct(gene_symbol, .keep_all = TRUE) %>% 
-    relocate(gene_symbol) %>% 
-    arrange(desc(logFC))
+# geneset <- topTable(fit2, 
+#          coef=1, 
+#          adjust="BH", 
+#          number = nrow(expr), 
+#          p.value=0.05) %>% 
+#     select(logFC) %>%
+#     rownames_to_column("ID") %>% 
+#     filter(ID %in% (topTable(fit2, 
+#                                 coef=3, 
+#                                 adjust="BH", 
+#                                 number = nrow(expr), 
+#                                 p.value=0.05) %>% rownames())) %>% 
+#     arrange(desc(logFC)) %>% 
+#     inner_join(read_tsv("data/probeID_gene.tsv")) %>% 
+#     select(-ID) %>% 
+#     arrange(gene_symbol) %>% 
+#     distinct(gene_symbol, .keep_all = TRUE) %>% 
+#     relocate(gene_symbol) %>% 
+#     arrange(desc(logFC))
+# 
+# write.table(geneset, "data/response_geneset.txt", 
+#             row.names = FALSE)
 
-write.table(geneset, "data/response_geneset.txt", 
-            row.names = FALSE)
 
-
-geneset_all80 <- topTable(fit2, 
+geneset_all <- topTable(fit2, 
                     coef=1, 
                     adjust="BH", 
                     number = nrow(expr), 
-                    p.value=0.05) %>% 
+                    p.value=0.05,
+                    lfc = 1) %>% 
     select(logFC, adj.P.Val) %>%
     rownames_to_column("ID") %>% 
     inner_join(read_tsv("data/probeID_gene.tsv")) %>% 
