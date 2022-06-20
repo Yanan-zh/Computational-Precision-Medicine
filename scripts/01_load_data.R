@@ -16,14 +16,16 @@ expr <- expr[-1,-1] %>% select(-duplicates)
 
 # Meta data
 pheno <- tab[1:(div-1),] %>% 
-    filter(V1 == "!Sample_characteristics_ch1") %>% 
+    filter(V1 %in% c("!Sample_characteristics_ch1","!Sample_description")) %>% 
     select(-V1) %>% t %>% 
     as.data.frame()
+
 colnames(pheno) <- apply(pheno, 2, function(x) {str_extract(x,"(.+)(?=:)")[1]})
+colnames(pheno)[7] <- 'batch'
+
 pheno <- pheno %>% 
-    mutate(across(.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
-    rename(treatment_response = "treatment response") %>% 
-    slice(-duplicates)
+    mutate(across(1:6,.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
+    rename(treatment_response = "treatment response") 
 
 
 probes_genes <- read_tsv("data/GPL15207-17536.txt",
