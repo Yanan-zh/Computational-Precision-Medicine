@@ -26,13 +26,6 @@ purity <- read_tsv(file = "data/tumor_purity.tsv") %>%
 ############################################################################
 
 
-# DEG from paper
-# true_R <- read_tsv("data/test.txt", col_names = F) %>% 
-#     mutate(X1 = str_split(X1, " /// ")) %>% unnest()
-# true_NR <- read_tsv("data/test_NR.txt", col_names = F) %>% 
-#     mutate(X1 = str_split(X1, " /// ")) %>% unnest(X1)
-
-
 # Divide tumor data in responders and non-responders
 R_index <- which(pheno$treatment_response == "Responder (R)" &
                  pheno$tissue == "Tumor" &
@@ -47,6 +40,7 @@ pheno_NR <- pheno[NR_index, ]
 purity_R <- purity[R_index, ] %>% pull()
 purity_NR <- purity[NR_index, ] %>% pull()
 
+
 # Factor variable for grouping
 R_timepoint <- factor(pheno_R$timepoint)
 R_timepoint <- relevel(R_timepoint, ref = "pretreatment")
@@ -54,6 +48,7 @@ NR_timepoint <- factor(pheno_NR$timepoint)
 NR_timepoint <- relevel(NR_timepoint, ref = "pretreatment")
 R_patient <- factor(pheno_R$patient)
 NR_patient <- factor(pheno_NR$patient)
+
 
 # Design matrix
 R_design <- model.matrix(~ R_patient + R_timepoint + purity_R)
@@ -66,11 +61,13 @@ colnames(NR_design) <- gsub("NR_patient", "", colnames(NR_design))
 colnames(NR_design) <- gsub("NR_timepoint", "", colnames(NR_design))
 rownames(NR_design) <- colnames(expr_NR)
 
+
 # Differential expression analysis
-fit_R <- lmFit(expr_R, R_design)
+fit_R <- lmFit(combat_expr_R, R_design)
 fit_R <- eBayes(fit_R)
 fit_NR <- lmFit(expr_NR, NR_design)
 fit_NR <- eBayes(fit_NR)
+
 
 # Extract results and convert to gene names
 topTable_R <- topTable(fit_R, coef = "3 weeks after start of treatment",
@@ -132,10 +129,13 @@ purity_pre <- purity[pre_index, ] %>% pull()
 # Factor variable for grouping
 pre_treatment_response <- factor(pheno_pre$treatment_response)
 pre_treatment_response <- relevel(pre_treatment_response, ref = "Non-responder (NR)")
+pre_batch <- factor(pheno_pre$batch)
+
 
 # Design matrix
-pre_design <- model.matrix(~ pre_treatment_response + purity_pre)
+pre_design <- model.matrix(~ pre_treatment_response + purity_pre + pre_batch)
 colnames(pre_design) <- gsub("pre_treatment_response", "", colnames(pre_design))
+colnames(pre_design) <- gsub("pre_batch", "", colnames(pre_design))
 rownames(pre_design) <- colnames(expr_pre)
 
 
