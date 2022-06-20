@@ -26,6 +26,7 @@ colnames(pheno)[7] <- 'batch'
 pheno <- pheno %>% 
     mutate(across(1:6,.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
     rename(treatment_response = "treatment response") 
+pheno <- pheno[-c(23, 24, 25), ]
 
 
 probes_genes <- read_tsv("data/GPL15207-17536.txt",
