@@ -57,35 +57,35 @@ head(fgseaRes_pre_R_vs_NR[order(pval), ], 10)
 
 # Plot data --------------------------------------------------------------------
 ## Enrichment plot for a specific GO term 
-# plotEnrichment(GO_BP_genesets[["GOBP_CELL_MIGRATION"]],
-#                ranks_pre_R_vs_NR) + labs(title="GOBP_CELL_MIGRATION")
+plotEnrichment(GO_BP_genesets[["GOBP_BLOOD_VESSEL_MORPHOGENESIS"]],
+               ranks_R_pre_vs_post) + labs(title="GOBP_BLOOD_VESSEL_MORPHOGENESIS")
 
 
 ## Table plot of top up- and down-regulated GO BP
 topUpGO_R_pre_post <- fgseaRes_R_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
 topDownGO_R_pre_post <- fgseaRes_R_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
 topGO_R_pre_post <- c(topUpGO_R_pre_post, rev(topDownGO_R_pre_post))
-plt_R_pre_post <- plotGseaTable(GO_BP_genesets[topGO_R_pre_post], 
-                  ranks_R_pre_vs_post, 
-                  fgseaRes_R_pre_vs_post, 
-                  gseaParam=0.5)
-
-## Table plot of top up- and down regulated GO BP
-topUpGO_NR_pre_post <- fgseaRes_pre_R_vs_NR[ES > 0][head(order(pval), n=10), pathway]
-topDownGO_NR_pre_post <- fgseaRes_pre_R_vs_NR[ES < 0][head(order(pval), n=10), pathway]
-topGO_NR_pre_post <- c(topUpGO_NR_pre_post, rev(topDownGO_NR_pre_post))
-plotGseaTable(GO_BP_genesets[topGO_NR_pre_post], 
-              ranks_NR_pre_vs_post, 
-              fgseaRes_pre_R_vs_NR, 
+plotGseaTable(GO_BP_genesets[topGO_R_pre_post], 
+              ranks_R_pre_vs_post, 
+              fgseaRes_R_pre_vs_post, 
               gseaParam=0.5)
 
 ## Table plot of top up- and down regulated GO BP
-topUpGO_pre_R_NR <- fgseaRes_NR_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
-topDownGO_pre_R_NR <- fgseaRes_NR_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
+topUpGO_NR_pre_post <- fgseaRes_NR_pre_vs_post[ES > 0][head(order(pval), n=10), pathway]
+topDownGO_NR_pre_post <- fgseaRes_NR_pre_vs_post[ES < 0][head(order(pval), n=10), pathway]
+topGO_NR_pre_post <- c(topUpGO_NR_pre_post, rev(topDownGO_NR_pre_post))
+plotGseaTable(GO_BP_genesets[topGO_NR_pre_post], 
+              ranks_NR_pre_vs_post, 
+              fgseaRes_NR_pre_vs_post, 
+              gseaParam=0.5)
+
+## Table plot of top up- and down regulated GO BP
+topUpGO_pre_R_NR <- fgseaRes_pre_R_vs_NR[ES > 0][head(order(pval), n=10), pathway]
+topDownGO_pre_R_NR <- fgseaRes_pre_R_vs_NR[ES < 0][head(order(pval), n=10), pathway]
 topGO_pre_R_NR <- c(topUpGO_pre_R_NR, rev(topDownGO_pre_R_NR))
 plotGseaTable(GO_BP_genesets[topGO_pre_R_NR], 
               ranks_pre_R_vs_NR, 
-              fgseaRes_NR_pre_vs_post, 
+              fgseaRes_pre_R_vs_NR, 
               gseaParam=0.5)
 
 
