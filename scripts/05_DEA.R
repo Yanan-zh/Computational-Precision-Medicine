@@ -26,9 +26,11 @@ fit <- lmFit(expr, design)
 
 #(M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4
 contrast.matrix <- makeContrasts(T1_R - T1_NR,
+                                 M_R-M_NR,
                                  (M_R+M_NR)/2-(T1_R+T1_NR+W3_R+W3_NR)/4,
                                  levels = design)
-colnames(contrast.matrix) <- c("R_vs_NR (T1)", 
+colnames(contrast.matrix) <- c("R_vs_NR", 
+                               "M",
                                "Muc_vs_Tumor")
 fit2 <-  contrasts.fit(fit, contrast.matrix)
 fit2 <- eBayes(fit2)
@@ -76,8 +78,8 @@ write.table(geneset, "data/response_geneset.txt",
             row.names = FALSE)
 
 
-geneset_tre <- topTable(fit2, 
-                    coef=2, 
+geneset_all80 <- topTable(fit2, 
+                    coef=1, 
                     adjust="BH", 
                     number = nrow(expr), 
                     p.value=0.05) %>% 
