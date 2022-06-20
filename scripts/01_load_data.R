@@ -3,16 +3,6 @@ tab <- read.table("data/GSE60331_series_matrix.txt", sep = "\t", skip = 31, fill
 div <- which(tab[,1] == "!series_matrix_table_begin") # This line divides expr and pheno
 #microarray_platform <- read.table("data/GPL15207-17536.txt", sep="\t", header = T, fill = T)
 
-# Index of duplicate samples
-duplicates <- pheno %>% 
-    duplicated() %>% 
-    which()
-
-# Expression data
-expr <- tab[(div+1):(nrow(tab)-1),]
-colnames(expr) <- expr[1,]
-rownames(expr) <- expr[,1]
-expr <- expr[-1,-1] %>% select(-duplicates)
 
 # Meta data
 pheno <- tab[1:(div-1),] %>% 
@@ -25,8 +15,24 @@ colnames(pheno)[7] <- 'batch'
 
 pheno <- pheno %>% 
     mutate(across(1:6,.fns = ~str_extract(.x, "(?<=:\\s)(.+)"))) %>% 
-    rename(treatment_response = "treatment response") 
-pheno <- pheno[-c(23, 24, 25), ]
+    rename(treatment_response = "treatment response") %>% 
+    mutate(batch = case_when(batch == "batch \"15\"" ~ 15,
+                             batch == "batch \"16\"" ~ 16))
+
+# Index of duplicate samples
+duplicates <- pheno %>% 
+    select(-batch) %>% 
+    duplicated() %>% 
+    which()
+
+pheno <- pheno[-duplicates, ]
+
+# Expression data
+expr <- tab[(div+1):(nrow(tab)-1),]
+colnames(expr) <- expr[1,]
+rownames(expr) <- expr[,1]
+expr <- expr[-1,-1] %>% select(-duplicates)
+
 
 
 probes_genes <- read_tsv("data/GPL15207-17536.txt",
