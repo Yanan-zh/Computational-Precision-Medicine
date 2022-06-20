@@ -20,13 +20,25 @@ pheno_trans <- pheno %>%
                                       timepoint,
                                       sep = "_") %>% 
                as_factor()) %>% 
-    filter(tissue == "Tumor")
+    filter(tissue == "Tumor") 
 
 i <- which(pheno$tissue == "Tumor")
 
 purity <- read_tsv(file = "data/tumor_purity.tsv") %>% 
     select(TumorPurity)
 purity <- purity[i, ] %>% pull()
+
+
+MCP <- read.table(file = "data/MCPcounter.txt",
+                  sep = "\t", 
+                  header = T) %>% 
+    t() %>% 
+    as_tibble()
+
+MCP <- MCP[i, ]
+CD8 <- MCP %>% pull(`CD8 T cells`)
+B_lin <- MCP %>% pull(`B lineage`)
+
 
 ### diff expression on gene_level
 
@@ -40,26 +52,48 @@ expr_probe <- read.table("data/expr.txt",
 expr_probe <- expr_probe[, i]
 
 
+
+
+patient_1 <- as.factor(pheno_trans$patient)
+response_timepoint <- relevel(pheno_trans$response_timepoint,
+                              ref = "NR_T0")
+
 ### Design for multilevel model
-design <- model.matrix(~0 + pheno_trans$response_timepoint +
-                           purity)
-colnames(design)[1:4] <- levels(pheno_trans$response_timepoint)
+design <- model.matrix(~0 + response_timepoint + purity + B_lin + CD8)
+design %>% view()
+
+keep <- str_detect(colnames(design),"response_timepoint")
+# keep_2 <- str_detect(colnames(design), "patient")
+
+colnames(design)[keep] <- str_extract(colnames(design)[keep], 
+                                      "(?<=response_timepoint)(.+)")
+# colnames(design)[1] <- "NR_T0"
+
+# colnames(design)[keep_2] <- str_extract(colnames(design)[keep_2],
+#                                         "(?<=patient_)(.+)")
+
 
 ### within patient correlation of gene expression model
+# corfit_gene <- duplicateCorrelation(expr_gene,
+#                                design,
+#                                block = pheno_trans$patient,
+#                                )
+# ### within patient correlation of probe expression model
+# corfit_probe <- duplicateCorrelation(expr_probe,
+#                                design,
+#                                block = pheno_trans$patient)
+# 
+?lmFit
+
 corfit_gene <- duplicateCorrelation(expr_gene,
-                               design,
-                               block = pheno_trans$patient,
-                               )
-### within patient correlation of probe expression model
-corfit_probe <- duplicateCorrelation(expr_probe,
-                               design,
-                               block = pheno_trans$patient)
-
-
-
+                                    design = design,
+                                    block = pheno_trans$patient)
+corfit_probe <- duplicateCorrelation(expr_gene,
+                                     design = design,
+                                     block = pheno_trans$patient)
 
 fit_gene <- lmFit(expr_gene, 
-             design = design, 
+             design = design,
              block = pheno_trans$patient,
              correlation = corfit_gene$consensus)
 
@@ -70,10 +104,10 @@ fit_probe <- lmFit(expr_probe,
 
 # contrasts 
 cont <- makeContrasts(
-    NR_pre_treat = NR_T0-NR_T1,
-    R_pre_treat = R_T0-R_T1,
-    Treat_NR_R = NR_T1-R_T1,
-    Pre_NR_T = NR_T0-R_T0,
+    NR_pre_treat = NR_T1-NR_T0,
+    R_pre_treat = R_T1-R_T0,
+    Treat_NR_R = R_T1-NR_T1,
+    Pre_NR_R = R_T0-NR_T0,
     levels = design
 )
 
@@ -92,7 +126,7 @@ top_table_gene_1 <- topTable(fit_2_gene,
                              coef = "R_pre_treat",
                              adjust.method = "BH",
                              number = Inf)
-
+fit_2_gene$correlation
 
 R_pre_treat_gene <- top_table_gene_1 %>% 
     as_tibble(rownames = "gene_symbol") %>% 
@@ -145,19 +179,20 @@ Treat_NR_R_probe <- top_table_probe_3 %>%
     select(ID, logFC)
 ### Difference in non versus responders before treatment
 top_table_gene_4 <- topTable(fit_2_gene, 
-                               coef = "Pre_NR_T",
+                               coef = "Pre_NR_R",
                                adjust.method = "BH",
                                number = Inf)
-Pre_NR_T_gene <- top_table_gene_4 %>% 
+Pre_NR_R_gene <- top_table_gene_4 %>% 
     as_tibble(rownames = "gene_symbol") %>% 
     filter(logFC > 1 | logFC < -1) %>% 
     select(gene_symbol, logFC)
 
 top_table_probe_4 <- topTable(fit_2_probe, 
-                                coef = "Pre_NR_T",
+                                coef = "Pre_NR_R",
                                 adjust.method = "BH",
                                 number = Inf)
-Pre_NR_T_probe <- top_table_probe_4 %>% 
+
+Pre_NR_R_probe <- top_table_probe_4 %>% 
     as_tibble(rownames = "ID") %>% 
     filter(logFC > 1 | logFC < -1) %>% 
     select(ID, logFC)
@@ -174,8 +209,8 @@ result_tables_text <- c(
         "NR_pre_treat_probe",
         "Treat_NR_R_gene",
         "Treat_NR_R_probe",
-        "Pre_NR_T_gene",
-        "Pre_NR_T_probe"
+        "Pre_NR_R_gene",
+        "Pre_NR_R_probe"
     )
 
 result_tables <- list(
@@ -185,8 +220,8 @@ result_tables <- list(
     NR_pre_treat_probe,
     Treat_NR_R_gene,
     Treat_NR_R_probe,
-    Pre_NR_T_gene,
-    Pre_NR_T_probe
+    Pre_NR_R_gene,
+    Pre_NR_R_probe
 )
 
 signi_tables <- list(
