@@ -19,10 +19,8 @@ probeID_gene_all <- read_tsv("data/probeID_gene.tsv") %>%
 purity <- read_tsv(file = "data/tumor_purity.tsv") %>% 
     select(TumorPurity)
 
-# PCs from MCP counter
-# MCP_R <- read.table(file = "results/MCPcounter_PC1_2_R.txt")
-# MCP_NR <- read.table(file = "results/MCPcounter_PC1_2_NR.txt")
-# MCP_pre <- read.table(file = "results/MCPcounter_PC1_2_PRE.txt")
+# PCs from MCP counter for pre-treatment
+MCP_pre <- read.table(file = "results/MCPcounter_PC1_2_PRE.txt")
 
 
 ############################################################################
@@ -111,7 +109,6 @@ topTable_R %>%
 topTable_NR %>% 
     filter(adj.P.Val < 0.05)
 # 0
-
 
 # Write file
 write_tsv(x = DEG_R, file = "results/DEG_R_pre_vs_post_purity.tsv")
