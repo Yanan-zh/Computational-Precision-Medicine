@@ -27,7 +27,7 @@ purity <- read_tsv(file = "data/tumor_purity.tsv") %>%
 pheno$purity <- purity
 pheno$batch <- batch
 
-design <- model.matrix(~group+patient+ purity + batch, data = pheno)
+design <- model.matrix(~group+ purity + batch, data = pheno)
 keep <- str_detect(colnames(design),"group")
 colnames(design)[keep] <- str_extract(colnames(design)[keep], "(?<=group)(.+)")
 fit <- lmFit(expr, design)

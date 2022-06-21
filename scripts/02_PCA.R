@@ -57,13 +57,19 @@ PCAplot(expr_R,
 # PCA for all samples
 PCAplot(expr, 
         color = paste(pheno$tissue,pheno$timepoint,sep=": "),
-        shape = pheno$treatment_response)
+        shape = pheno$treatment_response) +
+    labs(shape = "Treatment Response",
+         color = "Tissue and Timepoint",
+         title = "Tissue and Responders") +
+    theme_minimal() +
+    ggthemes::scale_color_colorblind()
 
 
 # PCA showing batches
-dat <- fread("data/GSE60331_series_matrix.txt", fill = TRUE)
-batch <- dat[57,] %>% str_extract('(?<=\"\")(\\d+)') %>% as.integer() %>% .[-1]
-batch <- batch[!str_detect(dat[32,], "rep2")[-1]]
 PCAplot(expr,
-        color = as.factor(batch)) 
+        color = pheno$batch) +
+    labs(color = "Batch", 
+         title = "Batch Effect") + 
+    theme_minimal() +
+    ggthemes::scale_color_colorblind()
 
