@@ -20,7 +20,9 @@ purity <- read_tsv(file = "data/tumor_purity.tsv") %>%
     select(TumorPurity)
 
 # PCs from MCP counter
-MCP_c <- read.table(file = "results/MCPcounter_pc1_pc2.txt")
+MCP_R <- read.table(file = "results/MCPcounter_PC1_2_R.txt")
+MCP_NR <- read.table(file = "results/MCPcounter_PC1_2_NR.txt")
+MCP_pre <- read.table(file = "results/MCPcounter_PC1_2_PRE.txt")
 
 
 ############################################################################
@@ -43,10 +45,10 @@ pheno_R <- pheno[R_index, ]
 pheno_NR <- pheno[NR_index, ]
 purity_R <- purity[R_index, ] %>% pull()
 purity_NR <- purity[NR_index, ] %>% pull()
-MCP_PC1_R <- MCP_c[R_index, ] %>% pull(PC1)
-MCP_PC2_R <- MCP_c[R_index, ] %>% pull(PC2)
-MCP_PC1_NR <- MCP_c[NR_index, ] %>% pull(PC1)
-MCP_PC2_NR <- MCP_c[NR_index, ] %>% pull(PC2)
+# MCP_PC1_R <- MCP_c[R_index, ] %>% pull(PC1)
+# MCP_PC2_R <- MCP_c[R_index, ] %>% pull(PC2)
+# MCP_PC1_NR <- MCP_c[NR_index, ] %>% pull(PC1)
+# MCP_PC2_NR <- MCP_c[NR_index, ] %>% pull(PC2)
 
 
 # Factor variable for grouping
@@ -59,7 +61,7 @@ NR_patient <- factor(pheno_NR$patient)
 
 
 # Design matrix
-R_design <- model.matrix(~ R_patient + R_timepoint + purity_R)
+R_design <- model.matrix(~ R_patient + R_timepoint + purity_R + MCP_R$PC1)
 colnames(R_design) <- gsub("R_patient", "", colnames(R_design))
 colnames(R_design) <- gsub("R_timepoint", "", colnames(R_design))
 rownames(R_design) <- colnames(expr_R)
